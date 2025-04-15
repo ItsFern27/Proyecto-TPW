@@ -1,0 +1,1 @@
+no seria mejor que la carpeta "peliculas" esté en la carpeta "html"?

@@ -56,12 +56,12 @@
 
    .encabezado {
        background-color: black;
-       height: 60px;
+       height: 60px;                /* Función: Expande el cuadro */
        width: auto;
        display: flex;
        justify-content: space-between;
        align-items: center;
-       padding: 10px 20px;
+       padding: 10px 20px;          /* Función: Expande el cuadro a partir del contenido (rellena más cuadro cuando no tiene espacio) [Y px] [X px] */
    }
 
    .menu a {
@@ -107,10 +107,11 @@
    }
 
    /* ====== ESTILO GENERAL PARA EL MAIN====== */
-   .fondo {
-       width: max-content ;
-       height:  max-content;
-
+   .fondo {     /* Esta clase estaba sin usar para la imagen */
+       background-image: url(/img/preview.jpg); 
+       background-size: cover;                      /* Cubre toda la pagina con la imagen (creo q también la estira) */
+       background-attachment: fixed;                /* Hace que la img quede estática */
+       margin: 0%;                                  /* Corta los bordes de los lados que tenía el cuadro de navegación */
    }
 
    .pelicula {

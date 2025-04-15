@@ -1,10 +1,90 @@
-* {
-    margin: 0%;
-   }
+/* Esta parte está en proceso de organización, casi no se entiende nada de lo desorganizado que por ahora está*/
 
 .fondo_contacto {
-    background-color: rgba(0, 0, 0, 0.425);
+    background: linear-gradient(rgba(0, 0, 0, 0.473)), url(/img/preview.jpg);
+    background-color: white;
+    background-size: cover;                      /* Cubre toda la pagina con la imagen (creo q también la estira) */
+    background-attachment: fixed;                /* Hace que la img quede estática */
+    margin: 0%;                                  /* Corta los bordes de los lados que tenía el cuadro de navegación */
     
-    width: 100vw;
-    height: 100vh;
+}
+
+.subtitulo_contacto {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    letter-spacing: 5px;
+}
+
+.texto_contacto {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    color: #e0e0e0;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    text-align: justify;
+}
+
+
+.display_contacto {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 90vh;
+}
+
+.caja_contacto {
+    width: 550px;
+    padding: 50px;
+}
+
+.form_contacto {
+    background-color: rgba(255, 0, 0, 0);
+    padding: 50px;
+    text-align: center;
+    gap: 1500px;
+}
+
+.inputtext {
+    width: 100%;
+    height: 40px;
+    letter-spacing: 1px;
+    background: rgba(255 255 255 / .1);
+    outline: none;
+    border: 3px solid transparent;
+    transition: .3s;
+    color: #e0e0e0;
+}
+
+.textareatext {
+    width: 100%;
+    height: 130px;
+    letter-spacing: 1px;
+    background: rgba(255 255 255 / .1);
+    outline: none;
+    border: 3px solid transparent;
+    transition: .3s;
+    color: #e0e0e0;
+}
+
+.buttontext {
+    width: 100%;
+    height: 40px;
+    background: rgb(161, 161, 161);
+    outline: none;
+    border: 3px solid transparent;
+    transition: .3s;
+    color: #000000;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
 }

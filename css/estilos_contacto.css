@@ -1,0 +1,10 @@
+.cuerpo_contacto {
+    margin: 0;
+}
+
+.fondo_contacto {
+    background-color: rgba(0, 0, 0, 0.425);
+    
+    width: 100vw;
+    height: 100vh;
+}

@@ -14,9 +14,9 @@
        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
        font-size: 20px;
        font-weight: 600;
-       color: grey;
+       color: rgb(252, 252, 252);
        text-align: left;
-       margin-bottom: 10px;
+       margin-bottom: 10px; 
        padding-left: 10px;
    }
 
@@ -130,3 +130,27 @@
    }
 
    /* ====== ESTILO GENERAL PARA EL FOUTER====== */
+
+
+
+   /* ====== ESTILO GENERAL PARA LOS VIDEOS DE LAS PÁGINAS====== */
+.nombre-pelicula{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 75px;
+    color: rgb(255, 225, 225);
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.993);
+    padding: 0px;
+
+}  
+   
+.fondo-trailer {
+    background-color: rgb(0, 0, 0); 
+    height: 470px;
+    display: flex; /* Flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    
+}

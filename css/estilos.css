@@ -117,22 +117,28 @@
 
    .anticipio {
        position: relative;
-       background-color: rgba(0, 0, 0, 0.66);/* Fondo casi negro */
+       background-color: rgba(0, 0, 0, 0.66);
+       /* Fondo casi negro */
        padding: 40px;
-       max-width: 1000px;/*ancho del bloque*/
+       max-width: 1000px;
+       /*ancho del bloque*/
        clip-path: polygon(0 0, 43% 0, 75% 100%, 0% 100%);
        color: wheat;
-       flex: 1 1 500px; /* Ocupa espacio flexible mínimo 500px */
+       flex: 1 1 500px;
+       /* Ocupa espacio flexible mínimo 500px */
    }
 
    .contenido-anticipio {
        display: flex;
-       flex-wrap: wrap;/*los elementos bajan si no caben(responsive)*/
-       
-       align-items: flex-start;/*coloca los items a la izq*/
+       flex-wrap: wrap;
+       /*los elementos bajan si no caben(responsive)*/
+
+       align-items: flex-start;
+       /*coloca los items a la izq*/
        justify-content: center;
-       gap: 30px;/*espacio entre texto y img*/
-    
+       gap: 30px;
+       /*espacio entre texto y img*/
+
    }
 
    .texto-anticipio {
@@ -143,15 +149,15 @@
 
    }
 
-   .imagen-anticipio img{
-    max-width: 700px;
-    height: auto;
-    border-radius: 10px;
-    position: relative;
-    top: 130px;
-    right: 100px;
-    
-  }
+   .imagen-anticipio img {
+       max-width: 700px;
+       height: auto;
+       border-radius: 10px;
+       position: relative;
+       top: 130px;
+       right: 100px;
+
+   }
 
    .fondo {
        /* Esta clase estaba sin usar para la imagen */

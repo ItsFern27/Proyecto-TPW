@@ -6,10 +6,11 @@
     <link rel="icon" href="../img/logito.png" type="image/png">
     <title>MetaCine</title>
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos_contacto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body class="fondo"> <!-- El background ahora se encuentra en el css -->
+<body class="fondo_contacto"> <!-- El background ahora se encuentra en el css -->
     <!--ENCABEZADO-->
     <header class="encabezado">
         <!--Parte izquierda del cuadro-->
@@ -20,7 +21,7 @@
 
         <!--Parte centro del cuadro-->
         <nav class="menu">
-            <a href="#" class="activo">HOME</a>
+            <a href="index.html" class="activo">HOME</a>
             <a href="#">PELÍCULAS</a>
             <a href="#">CINES</a>
             <a href="#">CHOCOLATERÍA</a>
@@ -41,16 +42,35 @@
     </header>
 
     <main>
-        <!--SOLO SEGUIR LA SINTAXIS, NO AGREGAR ESTILOS-->
-        <section>
-            <div>
-                
+        <section class="display_contacto">
+            <div class="caja_contacto">
+                <h2 class="subtitulo_contacto">CONTÁCTATE CON NOSOTROS</h2>
+                <div class="texto_contacto">
+                    <p>Para asegurar la calidad y optimización de nuestro servicio, por favor llenar todos los campos que solicitamos.¡Gracias!</p>
+                    <p><i class="fa-solid fa-phone"></i> 999 999 999</p>
+                    <p><i class="fa-solid fa-envelope"></i> contacto@metacine.com</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Mall del Sur</p>
+                </div>
             </div>
-            <h2 class="subtitulo">Películas en estreno:</h2>
-            <a href="../peliculas/p1.html" target="_blank"><img src="../img/en progreso.jpg" alt="p1"
-                    class="pelicula"></a>
+            
+            <form class="form_contacto">
+                <div><input class="inputtext" type="text" required placeholder="Nombres"></div><br>
+                <div><input class="inputtext" type="text" required placeholder="Apellidos"></div><br>
+                <div><input class="inputtext" type="email" required placeholder="Correo electrónico"></div><br>
+                <div><input class="inputtext" type="text" required placeholder="Asunto"></div><br>
+                <div><textarea class="textareatext" cols="30" rows="10" placeholder="Mensaje"></textarea></div><br>
+                <button class="buttontext" type="submit">Enviar</button>
+            </form>
         </section>
     </main>
+
+    <!-- footer provisional -->
+    <footer style="background-color: black; height: 100px; text-align: center; display: flex; justify-content: center; align-items: center; gap: 300px; color: white; padding: 10px 0px;">
+        <div>Libro de Reclamaciones</div>
+        <div>Trabaja con nosotros</div>
+        <div><a href="contacto.html">Contacto</a></div>
+        <div>Políticas y condiciones</div>
+    </footer>
 </body>
 
 </html>

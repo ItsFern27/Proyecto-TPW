@@ -162,7 +162,7 @@
 
    .fondo {
        /* Esta clase estaba sin usar para la imagen */
-       background-image: url(/cine-web/img/preview.jpg);
+       background-image: url(../img/preview.jpg);
        background-size: cover;
        /* Cubre toda la pagina con la imagen (creo q también la estira) */
        background-attachment: fixed;

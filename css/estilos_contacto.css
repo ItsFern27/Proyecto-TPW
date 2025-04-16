@@ -1,7 +1,7 @@
 /* Esta parte está en proceso de organización, casi no se entiende nada de lo desorganizado que por ahora está*/
 
 .fondo_contacto {
-    background: linear-gradient(rgba(0, 0, 0, 0.473)), url(/img/preview.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.473)), url(../img/preview.jpg);
     background-color: white;
     background-size: cover;                      /* Cubre toda la pagina con la imagen (creo q también la estira) */
     background-attachment: fixed;                /* Hace que la img quede estática */

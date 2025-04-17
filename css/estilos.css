@@ -74,6 +74,10 @@
        font-weight: bold;
    }
 
+   .menu a:hover{
+    color: grey;
+   }
+
    .acciones {
        display: flex;
        align-items: center;

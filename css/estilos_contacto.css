@@ -66,7 +66,11 @@
     color: #e0e0e0;
 }
 
-.textareatext {
+.inputtext:hover {
+    background: rgba(255, 255, 255, 0.171);
+}
+
+.messagetext {
     width: 100%;
     height: 130px;
     letter-spacing: 1px;
@@ -76,6 +80,10 @@
     transition: .3s;
     color: #e0e0e0;
     resize: none;
+}
+
+.messagetext:hover {
+    background: rgba(255, 255, 255, 0.171);
 }
 
 .buttontext {
@@ -88,8 +96,13 @@
     color: #000000;
     border-radius: 10px;
     cursor: pointer;
+    font-size: 15px;
     font-weight: bold;
     font-family:Arial, Helvetica, sans-serif;
+}
+
+.buttontext:hover {
+    background: rgb(255, 255, 255);
 }
 
 /* FOOTER */

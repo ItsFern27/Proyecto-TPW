@@ -43,7 +43,7 @@
 
     <main>
         <section class="display_contacto">
-            <div class="caja_contacto">
+            <div class="caja_contacto">                
                 <h2 class="subtitulo_contacto">CONTÁCTATE CON NOSOTROS</h2>
                 <div class="texto_contacto">
                     <p>Para asegurar la calidad y optimización de nuestro servicio, por favor llenar todos los campos que solicitamos.¡Gracias!</p>
@@ -54,22 +54,25 @@
             </div>
             
             <form class="form_contacto">
-                <div><input class="inputtext" type="text" required placeholder="Nombres"></div><br>
-                <div><input class="inputtext" type="text" required placeholder="Apellidos"></div><br>
-                <div><input class="inputtext" type="email" required placeholder="Correo electrónico"></div><br>
-                <div><input class="inputtext" type="text" required placeholder="Asunto"></div><br>
-                <div><textarea class="textareatext" cols="30" rows="10" placeholder="Mensaje"></textarea></div><br>
+                <input class="inputtext" type="text" required placeholder="Nombres">
+                <input class="inputtext" type="text" required placeholder="Apellidos">
+                <input class="inputtext" type="email" required placeholder="Correo electrónico">
+                <input class="inputtext" type="text" required placeholder="Asunto">
+                <textarea class="textareatext" cols="30" rows="10" placeholder="Mensaje"></textarea>
                 <button class="buttontext" type="submit">Enviar</button>
             </form>
         </section>
     </main>
 
     <!-- footer provisional -->
-    <footer style="background-color: black; height: 100px; text-align: center; display: flex; justify-content: center; align-items: center; gap: 300px; color: white; padding: 10px 0px;">
-        <div>Libro de Reclamaciones</div>
-        <div>Trabaja con nosotros</div>
-        <div><a href="contacto.html">Contacto</a></div>
-        <div>Políticas y condiciones</div>
+    <footer class="footer_contacto">
+        <div class="botones_footer">
+            <a href="#"><button class="btn-normal">Libro de Reclamaciones</button></a>
+            <a href="#"><button class="btn-normal">Quiénes somos</button></a>
+            <a href="#"><button class="btn-normal">Trabaja con nosotros</button></a>
+            <a href="#"><button class="btn-normal">Términos y condiciones</button></a>
+            <a href="#"><button class="btn-contacto">Contactanos</button></a>
+        </div>
     </footer>
 </body>
 

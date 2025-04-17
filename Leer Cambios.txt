@@ -1,0 +1,5 @@
+Alguno que le sepa al index añada el footer que hice en la pag. de contacto,
+no cambié o edité las clases del footer (de estilos.css) para evitar confusiones.
+
+Las clases del footer que hice estan en estilos_contacto.css
+(Todo lo del footer debería estar a partir de la línea 95)*

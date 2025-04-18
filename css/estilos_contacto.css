@@ -1,6 +1,11 @@
-/* Esta parte está en proceso de organización, casi no se entiende nada de lo desorganizado que por ahora está*/
-/* Me conecté para organizar esto y terminé rehaciendo el contacto entero xd*/
+/* GENERAL */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
+/* BODY DE LA PAGINA DE CONTACTO*/
 .fondo_contacto {
     background: linear-gradient(rgba(0, 0, 0, 0.473)), url(../img/preview.jpg);
     background-size: cover;                      /* Cubre toda la pagina con la imagen (creo q también la estira) */
@@ -133,8 +138,3 @@
     margin: 0px 70px;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}

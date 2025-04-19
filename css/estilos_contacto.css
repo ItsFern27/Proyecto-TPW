@@ -8,9 +8,12 @@ body {
 /* BODY DE LA PAGINA DE CONTACTO*/
 .fondo_contacto {
     background: linear-gradient(rgba(0, 0, 0, 0.473)), url(../img/preview.jpg);
-    background-size: cover;                      /* Cubre toda la pagina con la imagen (creo q también la estira) */
-    background-attachment: fixed;                /* Hace que la img quede estática */
-    margin: 0;                                  /* Corta los bordes de los lados que tenía el cuadro de navegación */
+    background-size: cover;
+    /* Cubre toda la pagina con la imagen (creo q también la estira) */
+    background-attachment: fixed;
+    /* Hace que la img quede estática */
+    margin: 0;
+    /* Corta los bordes de los lados que tenía el cuadro de navegación */
 }
 
 .subtitulo_contacto {
@@ -103,12 +106,12 @@ body {
     cursor: pointer;
     font-size: 15px;
     font-weight: bold;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .buttontext:hover {
     background: rgb(255, 255, 255);
 }
 
-
-
+/* FOOTER */
+/*traslado a estilos.css*/

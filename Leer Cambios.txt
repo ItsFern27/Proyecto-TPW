@@ -13,3 +13,6 @@
   Las clases del footer que hice estan en estilos_contacto.css
   (Todo lo del footer debería estar a partir de la línea 95)*
 
++ 18/04/25 - 
+- Agregué nuevos estilos desde "ESTILO GENERAL PARA LOS VIDEOS DE LAS PÁGINAS" hacia abajo.
+- Agregué los horarios de las funciones

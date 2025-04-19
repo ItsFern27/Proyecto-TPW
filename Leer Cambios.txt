@@ -1,0 +1,18 @@
++ 17/04/25 - 15:21
+- Corregí el head de la página de contacto
+
+- Puse hovers al pasar por un input de la pagina de contacto
+
+- index.html: Corregí lo de "multicines" a "Metacine" del header
+
+- estilos.css: añadí un hover al texto del header*
+
+- Alguno que le sepa al index añada el footer que hice en la pag. de contacto,
+  no cambié o edité las clases del footer (de estilos.css) para evitar confusiones.
+
+  Las clases del footer que hice estan en estilos_contacto.css
+  (Todo lo del footer debería estar a partir de la línea 95)*
+
++ 18/04/25 - 
+- Agregué nuevos estilos desde "ESTILO GENERAL PARA LOS VIDEOS DE LAS PÁGINAS" hacia abajo.
+- Agregué los horarios de las funciones

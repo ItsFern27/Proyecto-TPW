@@ -16,3 +16,12 @@
 + 18/04/25 - 
 - Agregué nuevos estilos desde "ESTILO GENERAL PARA LOS VIDEOS DE LAS PÁGINAS" hacia abajo.
 - Agregué los horarios de las funciones
+
+
++ 19/04/25 - 14:05
+- Corregí el footer en todas las paginas, ahora se muestra correctamente.
+(solo tuve q borrar el height=1000px de la clase fondo de estilos.css & edité el footer en general para todos en estilos.css pq en teoría el footer siempre será igual en todas las paginas del sitio)
+
+- Agregué algunos links q no te llevaban a la página de determinada sección
+
+- index.html: Corregí lo de "multicines" a "Metacine" del header

@@ -176,7 +176,14 @@
        display: flex;
        flex-direction: column;
        min-height: 100vh;
-       height: 1000px;
+   }
+
+
+   .fondo-peliculas {
+       background-color: white;
+       height: auto;
+       padding: 10px;
+       border-radius: 10px;
    }
 
    .pelicula {
@@ -195,22 +202,22 @@
        transform: scale(1.05);
    }
 
-   .fondo-peliculas {
-       background-color: white;
-       height: auto;
-       padding: 10px;
-       border-radius: 10px;
-   }
 
    /* ====== ESTILO GENERAL PARA EL FOUTER====== */
-   .footer {
-       background-color: black;
-       color: white;
-       text-align: center;
-       padding: 20px;
-       margin-top: auto;
-       height: 100px;
-   }
+   footer {
+    background-color: black;
+    color: white;
+    height: 80px;
+    width: auto;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    justify-content: center;
+}
 
    .btn-normal {
     background: transparent;
@@ -219,6 +226,17 @@
     margin: auto;
     font-size: 16px;
     cursor: pointer;
+}
+
+.botones_footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.botones_footer a {
+    margin: 0px 70px;
 }
 
    .btn-contacto {

@@ -184,7 +184,7 @@
        height: 550px;
        border-radius: 10px;
        margin: 15px;
-       object-fit: cover; 
+       object-fit: cover;
        border: 1px solid #444;
        transition: transform 0.3s ease;
        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -219,7 +219,7 @@
     margin: auto;
     font-size: 16px;
     cursor: pointer;
-}
+   }
 
    .btn-contacto {
        background: transparent;
@@ -249,7 +249,7 @@
    /* ====== ESTILO GENERAL PARA LOS VIDEOS DE LAS PÁGINAS====== */
    
     /* Fondo para la descripción de la película */
-    .fondo-pag-peli {
+   .fondo-pag-peli {
        background-color: white;
        padding: 10px;
        border-radius: 10px;
@@ -321,8 +321,8 @@
     width: 100%; /* Ancho de toda de la pantalla */
     height: 100%; /* Alto de toda de la pantalla */
     background-color: rgba(0, 0, 0, 0.8); /* Fondo transparente */
-    justify-content: center; 
-    align-items: center;
+       justify-content: center;
+       align-items: center;
 }
 
 /* Mostrar el modal cuando el checkbox está marcado */
@@ -413,4 +413,4 @@
     height: 400px; /* Mantiene la proporción de la imagen */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para la imagen */
-}
+   }

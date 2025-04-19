@@ -2,7 +2,7 @@
 <html>
 
 <html lang="es">
-    
+
 <head>
     <meta charset='utf-8'>
     <link rel="icon" href="../img/logito.png" type="image/png">
@@ -24,8 +24,8 @@
 
         <!--Parte centro del cuadro-->
         <nav class="menu">
-            <a href="#" class="activo">HOME</a>
-            <a href="#">PELÍCULAS</a>
+            <a href="../html/index.html">HOME</a>
+            <a href="#" class="activo">PELÍCULAS</a>
             <a href="#">CINES</a>
             <a href="#">CHOCOLATERÍA</a>
             <a href="#">VENTA CORPORATIVA</a>
@@ -46,23 +46,36 @@
 
     <main>
         <div class="fondo-pag-peli">
-            <div class="fondo-trailer">
-                <iframe src="https://www.youtube.com/embed/1XSysnj2Bk0" width="912" height="459"
-                    title="Walter White in Mario Kart Wii" frameborder="0"
-                    allow="autoplay; clipboard-write; picture-in-picture" allowfullscreen>
-                </iframe>
-            </div>
+            
+                <div class="fondo-trailer-flow">
+                <!-- Botón para abrir el tráiler -->
+                <label for="trailer-checkbox" class="btn-trailer">
+                    <img src="../img/trailer-icon.png" alt="Mirar tráiler" class="btn-trailer-img">
+                </label>
+                <!-- Checkbox oculto para controlar el modal -->
+                <input type="checkbox" id="trailer-checkbox" class="modal-checkbox">
+
+                <!-- Modal para el tráiler -->
+                <div class="modal">
+                    <div class="modal-contenido">
+                        <label for="trailer-checkbox" class="cerrar">&times;</label>
+                        <iframe src="https://www.youtube.com/embed/jYC6kazBD9A" width="912" height="459" frameborder="0" allow="autoplay; clipboard-write; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                </div>
+            
 
             <div class="descripcion">
-                <h1 class="nombre-pelicula">Walter White in Mario Kart Wii</h1>
-                <p class="subtitulo">Sinopsis: Aquí va una breve descripción de la película.<br>
-                    Es una historia emocionante que te mantendrá al borde de tu asiento.</p>
-                <p class="subtitulo">Duración: 2 horas 15 minutos</p>
-                <p class="subtitulo">Clasificación: PG-13</p>
-                <p class="subtitulo">Género: Acción, Aventura</p>
-                <p class="subtitulo">Director: Nombre del Director</p>
-                <p class="subtitulo">Reparto: Actor 1, Actor 2, Actor 3</p>
-            </div>
+                <h1 class="nombre-pelicula">FLOW</h1>
+                <p class="descripcion-pelicula">Sinopsis: Un gato se despierta en un mundo cubierto de agua, donde la raza humana parece haber desaparecido.<br>
+                     Busca refugio en un barco con un grupo de otros animales. Pero llevarse bien con ellos resulta ser un reto aún 
+                     <br>mayor que superar su miedo al agua. Todos tendrán que aprender a superar sus diferencias y 
+                    adaptarse a este <br>nuevo mundo en el que se encuentran.
+                <p class="descripcion-pelicula"><img src="../img/duracion.jpg" alt="duracion" width="23px"><b>Duración:</b><br> 83 min</p>
+                <p class="descripcion-pelicula">Clasificación: PG-13</p>
+                <p class="descripcion-pelicula">Género: Animación, Aventura</p>
+                <p class="descripcion-pelicula">Director: Gints Zilbalodis</p>
+                </div>
         </div>
     </main>
 </body>

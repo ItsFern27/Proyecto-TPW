@@ -241,9 +241,9 @@
    }
 
    .nombre-pelicula {
-       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+       font-family: "Helvetica", cursive;
        font-size: 75px;
-       color: rgb(255, 225, 225);
+       color: rgb(0, 0, 0);
 
        margin-top: 0px;
        margin-bottom: 0px;
@@ -251,15 +251,80 @@
        padding: 0px;
 
    }
+   .descripcion-pelicula {
+    font-family: "arial", cursive;
+    font-size: 18px;
+    color: rgb(100, 100, 100);
 
-   .fondo-trailer {
-       background-color: rgb(0, 0, 0);
-       height: 470px;
-       display: flex;
-       /* Flexbox para centrar el contenido */
-       justify-content: center;
-       /* Centra horizontalmente */
-       align-items: center;
-       /* Centra verticalmente */
+    
 
-   }
+}
+   
+   
+   .fondo-trailer-flow {
+    background-image: url('../img/flow.png'); /* Fondo para la película FLOW */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;           
+    height: 470px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para la imagen del botón */
+.btn-trailer-img {
+    width: 101px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+    transition: transform 0.3s ease; /* Efecto de animación */
+}
+
+.btn-trailer-img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+/* Ocultar el checkbox */
+.modal-checkbox {
+    display: none;
+}
+
+/* Estilo para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mostrar el modal cuando el checkbox está marcado */
+.modal-checkbox:checked + .modal {
+    display: flex;
+}
+
+/* Contenido del modal */
+.modal-contenido {
+    position: relative;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Botón para cerrar el modal */
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}

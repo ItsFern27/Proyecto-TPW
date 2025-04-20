@@ -14,7 +14,6 @@
        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
        font-size: 20px;
        font-weight: 600;
-
        color: black;
        text-align: left;
        margin-bottom: 10px;
@@ -74,8 +73,8 @@
        font-weight: bold;
    }
 
-   .menu a:hover{
-    color: grey;
+   .menu a:hover {
+       color: grey;
    }
 
    .acciones {
@@ -183,8 +182,9 @@
        width: 180px;
        height: 550px;
        border-radius: 10px;
-       margin: 15px;
-       object-fit: cover; 
+       margin: 30px;
+       /*espaciado mejor*/
+       object-fit: cover;
        border: 1px solid #444;
        transition: transform 0.3s ease;
        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -206,20 +206,48 @@
    .footer {
        background-color: black;
        color: white;
-       text-align: center;
-       padding: 20px;
+       height: 80px;
+       width: auto;
        margin-top: auto;
-       height: 100px;
+       display: flex;
+       align-items: center;
+       font-weight: bold;
+       font-size: 18px;
+       font-family: Arial, Helvetica, sans-serif;
+       text-decoration: none;
+       justify-content: center;
+       padding: 10px;
+   }
+
+   .botones_footer {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 100%;
+   }
+
+   .botones_footer a {
+       margin: 0px 70px;
    }
 
    .btn-normal {
-    background: transparent;
-    border: transparent;
-    color: white;
-    margin: auto;
-    font-size: 16px;
-    cursor: pointer;
-}
+       background: transparent;
+       border: transparent;
+       color: white;
+       margin: auto;
+       font-size: 16px;
+       cursor: pointer;
+       border-radius: 10px;
+       background: transparent;
+       transition: background-color 0.3s, transform 0.2s;
+   }
+
+   /*animacion light al boton normal*/
+   .btn-normal:hover {
+       background-color: lightgray;
+       transform: scale(1.1);
+   }
+
 
    .btn-contacto {
        background: transparent;
@@ -247,14 +275,15 @@
    }
 
    /* ====== ESTILO GENERAL PARA LOS VIDEOS DE LAS PÁGINAS====== */
-   
-    /* Fondo para la descripción de la película */
-    .fondo-pag-peli {
+
+   /* Fondo para la descripción de la película */
+   .fondo-pag-peli {
        background-color: white;
        padding: 10px;
        border-radius: 10px;
    }
-    /* Estilo y color para el Título de la película */
+
+   /* Estilo y color para el Título de la película */
    .nombre-pelicula {
        font-family: "Helvetica", cursive;
        font-size: 75px;
@@ -265,152 +294,274 @@
        padding: 0px;
    }
 
-    /* Estilo y color para la sinopsis de la película */
+   /* Estilo y color para la sinopsis de la película */
    .descripcion-pelicula {
-    font-family: "arial", cursive;
-    font-size: 18px;
-    color: rgb(25, 25, 25);
-}
-/*ESTILO PARA EL FONDO DE CADA TRAILER ( LA IMAGEN LARGA) CADA PELI TENDRA UN ESTILO PARA ESO */
-    /* Estilo y Fondo para la película FLOW */
+       font-family: "arial", cursive;
+       font-size: 18px;
+       color: rgb(25, 25, 25);
+   }
+
+   /*ESTILO PARA EL FONDO DE CADA TRAILER ( LA IMAGEN LARGA) CADA PELI TENDRA UN ESTILO PARA ESO */
+   /* Estilo y Fondo para la película FLOW */
    .fondo-trailer-flow {
-    background-image: url('../img/flow.png'); /* Cambia la ruta a la imagen que desees usar */
-    background-size: cover; /* Cubre toda la parte de extremo a extremo */
-    background-position: center; /* Centra la imagen */         
-    height: 470px; /* Altura de la imagen */
-    display: flex; /* Activa lo de abajo para centrar los objetos */
-    justify-content: center; /* Centra el contenido horizontalmente (Osea el boton del play para el trailer) */
-    align-items: center;/* Centra el contenido verticalmente (Osea el boton del play para el trailer) */
-}
+       background-image: url('../img/flow.png');
+       /* Cambia la ruta a la imagen que desees usar */
+       background-size: cover;
+       /* Cubre toda la parte de extremo a extremo */
+       background-position: center;
+       /* Centra la imagen */
+       height: 470px;
+       /* Altura de la imagen */
+       display: flex;
+       /* Activa lo de abajo para centrar los objetos */
+       justify-content: center;
+       /* Centra el contenido horizontalmente (Osea el boton del play para el trailer) */
+       align-items: center;
+       /* Centra el contenido verticalmente (Osea el boton del play para el trailer) */
+   }
 
- /* Estilo y Fondo para la película TIPOS MALOS 2 */
- .fondo-trailer-tiposmalos2 {
-    background-image: url('../img/tiposmalos2.png'); /* Cambia la ruta a la imagen que desees usar */
-    background-size: cover; /* Cubre toda la parte de extremo a extremo */
-    background-position: center; /* Centra la imagen */         
-    height: 470px; /* Altura de la imagen */
-    display: flex; /* Activa lo de abajo para centrar los objetos */
-    justify-content: center; /* Centra el contenido horizontalmente (Osea el boton del play para el trailer) */
-    align-items: center;/* Centra el contenido verticalmente (Osea el boton del play para el trailer) */
-}
+   /* Estilo y Fondo para la película TIPOS MALOS 2 */
+   .fondo-trailer-tiposmalos2 {
+       background-image: url('../img/tiposmalos2.png');
+       /* Cambia la ruta a la imagen que desees usar */
+       background-size: cover;
+       /* Cubre toda la parte de extremo a extremo */
+       background-position: center;
+       /* Centra la imagen */
+       height: 470px;
+       /* Altura de la imagen */
+       display: flex;
+       /* Activa lo de abajo para centrar los objetos */
+       justify-content: center;
+       /* Centra el contenido horizontalmente (Osea el boton del play para el trailer) */
+       align-items: center;
+       /* Centra el contenido verticalmente (Osea el boton del play para el trailer) */
+   }
 
 
-/*==== Estilo para la imagen del botón======== */
-.btn-trailer-img {
-    width: 101px; /* Ajusta el tamaño de la imagen */
-    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
-    transition: transform 0.3s ease; /* Efecto de animación */
-}
+   /*==== Estilo para la imagen del botón======== */
+   .btn-trailer-img {
+       width: 101px;
+       /* Ajusta el tamaño de la imagen */
+       cursor: pointer;
+       /* Cambia el cursor al pasar sobre la imagen */
+       transition: transform 0.3s ease;
+       /* Efecto de animación */
+   }
 
-.btn-trailer-img:hover {
-    transform: scale(1.1); /* Aumenta un poco el tamaño al pasar el mouse */
-}
+   .btn-trailer-img:hover {
+       transform: scale(1.1);
+       /* Aumenta un poco el tamaño al pasar el mouse */
+   }
 
-/* Ocultar el checkbox */
-.modal-checkbox {
-    display: none;
-}
+   /* Ocultar el checkbox */
+   .modal-checkbox {
+       display: none;
+   }
 
-/* Estilo para el fondo grande del video (el transparente) cuando damos click al play */
-.modal {
-    display: none; /* Oculto por defecto */
-    position: fixed; /* Fijo para que cubra toda la pantalla */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-    left: 0; /* Alineado a la izquierda */
-    top: 0; /* Alineado a la parte superior */
-    width: 100%; /* Ancho de toda de la pantalla */
-    height: 100%; /* Alto de toda de la pantalla */
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo transparente */
-    justify-content: center; 
-    align-items: center;
-}
+   /* Estilo para el fondo grande del video (el transparente) cuando damos click al play */
+   .modal {
+       display: none;
+       /* Oculto por defecto */
+       position: fixed;
+       /* Fijo para que cubra toda la pantalla */
+       z-index: 1000;
+       /* Asegura que esté por encima de otros elementos */
+       left: 0;
+       /* Alineado a la izquierda */
+       top: 0;
+       /* Alineado a la parte superior */
+       width: 100%;
+       /* Ancho de toda de la pantalla */
+       height: 100%;
+       /* Alto de toda de la pantalla */
+       background-color: rgba(0, 0, 0, 0.8);
+       /* Fondo transparente */
+       justify-content: center;
+       align-items: center;
+   }
 
-/* Mostrar el modal cuando el checkbox está marcado */
-.modal-checkbox:checked + .modal {
-    display: flex;
-}
+   /* Mostrar el modal cuando el checkbox está marcado */
+   .modal-checkbox:checked+.modal {
+       display: flex;
+   }
 
-/* Estilo para el fondo pequeño del video al darle play*/
-.modal-contenido {
-    position: relative;
-    background-color: #000;
-    padding: 20px;
+   /* Estilo para el fondo pequeño del video al darle play*/
+   .modal-contenido {
+       position: relative;
+       background-color: #000;
+       padding: 20px;
+       border-radius: 10px;
+       text-align: center;
+   }
+
+   /* Botón para cerrar el modal */
+   .cerrar {
+       position: absolute;
+       top: 10px;
+       right: 20px;
+       color: white;
+       font-size: 24px;
+       font-weight: bold;
+       cursor: pointer;
+   }
+
+   /* Contenedor principal para la descripción y los horarios */
+   .contenido-pelicula {
+       display: flex;
+       flex-wrap: wrap;
+       /* Permite que los elementos bajen si no caben */
+       gap: 20px;
+       /* El espaciado con el texto de la sinopsis */
+       justify-content: space-between;
+       /* Espacio entre columnas */
+       align-items: flex-start;
+       /* Alinea los elementos al inicio verticalmente */
+       margin-top: 20px;
+   }
+
+   /* Estilo para la columna de horarios */
+   .horarios {
+       flex: 1;
+       /* Para la cantidad de objetos en el fondo */
+       background-color: #f9f9f9;
+       /* Color del fondo de los horarios */
+       padding: 50px;
+       /* Para la proporción del fondo*/
+   }
+
+   /* Estilo para el título de los horarios */
+   .titulo-horarios {
+       font-size: 20px;
+       font-weight: bold;
+       margin-bottom: 10px;
+       color: #333;
+   }
+
+   /* Espaciado entre cada cine */
+   .cine {
+       margin-bottom: 20px;
+   }
+
+   /* Color para cada sede de cine */
+   .cine h3 {
+       font-size: 18px;
+       color: #444;
+       margin-bottom: 5px;
+   }
+
+   /* Color para un <p></p> */
+   .cine p {
+       font-size: 14px;
+       color: #666;
+       margin-bottom: 10px;
+   }
+
+   /* Estilo y color de los botones de horarios */
+   .horarios-funcion button {
+       background-color: #000000;
+       color: white;
+       border: none;
+       border-radius: 5px;
+       padding: 8px 12px;
+       margin: 5px;
+       cursor: pointer;
+       font-size: 14px;
+   }
+
+   /* color cuando pones el cursor encima del boton de horario */
+   .horarios-funcion button:hover {
+       background-color: #7e7d7d;
+   }
+
+   /* Estilo para la columna de la imagen */
+   .imagen-pelicula img {
+       height: 400px;
+       /* Mantiene la proporción de la imagen */
+       border-radius: 10px;
+       /* Bordes redondeados */
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+       /* Sombra para la imagen */
+   }
+
+   .cinestbl {
+    background-color: azure;
     border-radius: 10px;
-    text-align: center;
-}
+    margin: 30px;
+    /*espaciado mejor*/
+    object-fit: cover;
+    border: 1px solid #444;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   }
 
-/* Botón para cerrar el modal */
-.cerrar {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    color: white;
-    font-size: 24px;
-    font-weight: bold; 
-    cursor: pointer; 
-}
+   /* clase de las tablas de los cines */
+   .img-cines {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 30px;
+    /*espaciado mejor*/
+    object-fit: cover;
+    border: 1px solid #444;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
 
-/* Contenedor principal para la descripción y los horarios */
-.contenido-pelicula {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
-    gap: 20px; /* El espaciado con el texto de la sinopsis */
-    justify-content: space-between; /* Espacio entre columnas */
-    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
-    margin-top: 20px;
-}
+    .cines-tbltext {
+        text-align: center;
+        vertical-align: middle;
+        width: 500px;
+        height: 300px;
+        font-size: 30px;
+        padding: 0 20px;
+        color: rgb(29, 28, 28);
+        display: flex;
+        justify-content: center;
+        padding-top: 60px;
+    }
 
-/* Estilo para la columna de horarios */
-.horarios {
-    flex: 1; /* Para la cantidad de objetos en el fondo */
-    background-color: #f9f9f9; /* Color del fondo de los horarios */
-    padding: 50px; /* Para la proporción del fondo*/
-}
+    .horario-configposicion-textbtn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+    }
 
-/* Estilo para el título de los horarios */
-.titulo-horarios {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-}
+    .btn-horario {
+        margin-top: 20px;
+        font-size: 20px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 
-/* Espaciado entre cada cine */
-.cine {
-    margin-bottom: 20px;
-}
-/* Color para cada sede de cine */
-.cine h3 {
-    font-size: 18px;
-    color: #444;
-    margin-bottom: 5px;
-}
-/* Color para un <p></p> */
-.cine p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 10px;
-}
+    .cines-horarios {
+        background-color: azure;
+        width: 90%;
+        padding: 8px;
+        text-align: center;
+        border-collapse: collapse;
+        border-radius: 10px;
+        margin: 30px;
+        /*espaciado mejor*/
+        border: 1px solid #444;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
 
-/* Estilo y color de los botones de horarios */
-.horarios-funcion button {
-    background-color: #000000;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 8px 12px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 14px;
-}
-/* color cuando pones el cursor encima del boton de horario */
-.horarios-funcion button:hover {
-    background-color: #7e7d7d;
-}
+    /* Opcional: Estilos para celdas */
+    .cines-horarios th, 
+    .cines-horarios td {
+        padding: 12px;
+        border: 1px solid #ef6868;
+    }
 
-/* Estilo para la columna de la imagen */
-.imagen-pelicula img {
-    height: 400px; /* Mantiene la proporción de la imagen */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para la imagen */
-}
+    .cines-horarios th {
+        background-color: #bf6e6e;
+    }

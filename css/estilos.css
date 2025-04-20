@@ -309,6 +309,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
 
+    /* clase de text de las tablas de cine.html */
     .cines-tbltext {
         text-align: center;
         vertical-align: middle;
@@ -322,6 +323,7 @@
         padding-top: 60px;
     }
 
+    /* clase de configuración de los elementos de las tablas de cines.html */
     .horario-configposicion-textbtn {
         display: flex;
         flex-direction: column;
@@ -330,6 +332,7 @@
         gap: 20px;
     }
 
+    /* clase de text de las tablas de cines.html */
     .btn-horario {
         margin-top: 20px;
         font-size: 20px;
@@ -341,11 +344,13 @@
         cursor: pointer;
     }
 
+    /* clase de boton de la tabla en cines.html */
     .btn-horario:hover {
         background-color: #bf6e6e;
         transform: scale(1.1);
     }
 
+    /* clase de tabla horarios del modal cine1 en cines.html */
     .cines-horarios {
         background-color: azure;
         width: 90%;
@@ -367,6 +372,7 @@
         border: 1px solid #bf6e6e;
     }
 
+     /* clase de color de las tablas del horario de cines.html */
     .cines-horarios th {
         background-color: #68a5ef;
     }

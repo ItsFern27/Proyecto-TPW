@@ -8,9 +8,12 @@ body {
 /* BODY DE LA PAGINA DE CONTACTO*/
 .fondo_contacto {
     background: linear-gradient(rgba(0, 0, 0, 0.473)), url(../img/preview.jpg);
-    background-size: cover;                      /* Cubre toda la pagina con la imagen (creo q también la estira) */
-    background-attachment: fixed;                /* Hace que la img quede estática */
-    margin: 0;                                  /* Corta los bordes de los lados que tenía el cuadro de navegación */
+    background-size: cover;
+    /* Cubre toda la pagina con la imagen (creo q también la estira) */
+    background-attachment: fixed;
+    /* Hace que la img quede estática */
+    margin: 0;
+    /* Corta los bordes de los lados que tenía el cuadro de navegación */
 }
 
 .subtitulo_contacto {
@@ -35,7 +38,7 @@ body {
 }
 
 
-.display_contacto {
+.seccion_contacto {
     background-size: cover;
     background-position: center;
     display: flex;
@@ -72,7 +75,7 @@ body {
 }
 
 .inputtext:hover {
-    background: rgba(255, 255, 255, 0.171);
+    background: rgba(255, 255, 255, 0.301);
 }
 
 .messagetext {
@@ -103,7 +106,7 @@ body {
     cursor: pointer;
     font-size: 15px;
     font-weight: bold;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .buttontext:hover {
@@ -111,30 +114,4 @@ body {
 }
 
 /* FOOTER */
-
-.footer_contacto {
-    background-color: black;
-    color: white;
-    height: 80px;
-    width: auto;
-    margin-top: auto;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    justify-content: center;
-}
-
-.botones_footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.botones_footer a {
-    margin: 0px 70px;
-}
-
+/*traslado a estilos.css*/

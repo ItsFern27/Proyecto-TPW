@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <link rel="icon" href="../img/logito.png" type="image/png">
+    <title>MetaCine I Contacto</title>
+    <meta name="description" content="Disfruta las mejores películas, estrenos, contenido exclusivo, alquiler de salas, audio de alta calidad, promociones y la experiencia del cine en Perú.">
+    <meta name="keywords" content="cine, películas, cartelera, estrenos, cine Perú, cine cercano, metacine, contacto">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos_contacto.css">
+    <link rel="stylesheet" href="../css/estilos_trabaja.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="fondo_contacto"> <!-- El background ahora se encuentra en el css -->
+    <!--ENCABEZADO-->
+    <header class="encabezado">
+        <!--Parte izquierda del cuadro-->
+        <div class="logo-titulo">
+            <img src="../img/logoMETACINES.jpg" alt="Logo MetaCine" class="logo-mini">
+            <h1 class="titulo">Metacine</h1>
+        </div>
+
+        <!--Parte centro del cuadro-->
+        <nav class="menu">
+            <a href="index.html">HOME</a>
+            <a href="index.html/#cartelera">PELÍCULAS</a>
+            <a href="#">CINES</a>
+            <a href="#">CHOCOLATERÍA</a>
+            <a href="#">VENTA CORPORATIVA</a>
+            <a href="#">PROMOCIONES</a>
+        </nav>
+
+        <!--Parte derecha del cuadro-->
+        <div class="acciones">
+            <button class="btn-socio">¿Eres socio?</button>
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/metacines-multicines-509143361/"><i class="fab fa-linkedin-in"></i></a> <!--añadiendo redes sociales-->
+                <a href="https://www.instagram.com/metacines_mult/"><i class="fab fa-instagram"></i></a><!--añadiendo redes sociales-->
+                <a href="https://www.facebook.com/profile.php?id=61575268895729"><i class="fab fa-facebook-f"></i></a><!--añadiendo redes sociales-->
+            </div>
+            <img src="../img/icone-utilisateur-gris.png" alt="Perfil" class="perfil-icon">
+        </div>
+    </header>
+
+    <main>
+        <section class="seccion_contacto">
+            <div class="caja_contacto">
+              <h1 class="subtitulo_contacto">TRABAJA CON NOSOTROS</h1>
+              <div class="texto_contacto">
+                <p>Nos complace que quieras ser parte de nuestro equipo completa los datos solicitados y nos pondremos en contacto
+                  contigo</p>
+                <p><i class="fa-solid fa-phone"></i> +51 953 283 238</p>
+                <p><i class="fa-solid fa-envelope"></i> metacinesmulticines@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Mall del Sur - Centro de Contacto</p>
+              </div>
+            </div>
+            
+            <div class="form-container-trbj">
+              <h2>Ingresa tus datos personales</h2>
+              <form action="#" method="post" enctype="multipart/form-data">
+                <div class="form-group-trbj">
+                  <input type="text" name="nombres" placeholder="Nombres" required>
+                  <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group-trbj">
+                  <input type="text" name="apellidos" placeholder="Apellidos" required>
+                  <input type="text" name="direccion" placeholder="Dirección" required>
+                </div>
+                <div class="form-group-trbj">
+                  <input type="text" name="dni" placeholder="DNI" required>
+                  <input type="text" name="distrito" placeholder="Distrito" required>
+                </div>
+                <div class="form-group-trbj">
+                  <input type="date" name="fecha_nacimiento" required>
+                  <input type="text" name="educacion" placeholder="Nivel de educación" required>
+                </div>
+                <div class="form-file-captcha-trbj">
+                  <label class="file-label-trbj">
+                    📄 Adjuntar Curriculum Vitae <br><span>(Word o PDF)</span>
+                    <input type="file" name="cv" accept=".pdf,.doc,.docx" required>
+                  </label>
+                  <div class="captcha-trbj">
+                    <input type="checkbox" required> No soy un robot
+                  </div>
+                </div>
+                <button type="submit" class="btn-enviar-trbj">Enviar</button>
+              </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer provisional -->
+    <footer class="footer">
+        <div class="botones_footer">
+            <a href="../html/libro-reclamaciones.html"><button class="btn-normal">Libro de Reclamaciones</button></a>
+            <a href="/cine-web/html/#sobre-nosotros"><button class="btn-normal">Quiénes somos</button></a>
+            <a href="#"><button class="btn-normal">Trabaja con nosotros</button></a>
+            <a href="#"><button class="btn-normal">Términos y condiciones</button></a>
+            <a href="contacto.html"><button class="btn-contacto">Contactanos</button></a>
+        </div>
+    </footer>
+</body>
+
+</html>

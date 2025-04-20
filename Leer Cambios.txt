@@ -13,6 +13,40 @@
   Las clases del footer que hice estan en estilos_contacto.css
   (Todo lo del footer debería estar a partir de la línea 95)*
 
+
+
 + 18/04/25 - 
+
 - Agregué nuevos estilos desde "ESTILO GENERAL PARA LOS VIDEOS DE LAS PÁGINAS" hacia abajo.
+
 - Agregué los horarios de las funciones
+
+
+
++ 19/04/25 - 11:07
+
+Se agregaron las redes sociales con la cuenta creada: metacinesmulticines@gmail.com.
+
+Se creó una nueva página de solicitud de trabajo con su respectivo formulario.
+
+Se implementó y vinculó un nuevo archivo CSS exclusivo para la sección de trabajo (estilos_trabaja.css).
+
+Se ajustó el diseño del formulario para evitar desplazamientos al enfocar los inputs.
+
+Se corrigió y mejoró la estructura del footer en todas las páginas afectadas.
+
+
+
++ 19/04/25 - 16:20
+
+- Corregí el footer en todas las paginas, ahora se muestra correctamente.
+(solo tuve q borrar el height=1000px de la clase fondo de estilos.css & edité el footer en general para todos en estilos.css pq en teoría el footer siempre será igual en todas las paginas del sitio)
+
+- Agregué algunos links q no te llevaban a la página de determinada sección
+
+- Corregí la palabra Metacine a Multicines en algunas páginas
+
+- En la línea 47 de contacto, y 48 de trabajo, cambié el class a seccion_contacto para un mejor orden (basicamente le cambie el nombre a la clase que habia ahí desde estilos_contacto.css)
+/// Like si no viste la S en el logo de Metacines, todo este tiempo creí que se llamaba Metacine sin más - F ///
+
++

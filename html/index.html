@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset='utf-8'>
-    <meta name="description" content="Disfruta las mejores películas, estrenos, contenido exclusivo, alquiler de salas, audio de alta calidad, promociones y la experiencia del cine en Perú.">
+    <meta name="description"
+        content="Disfruta las mejores películas, estrenos, contenido exclusivo, alquiler de salas, audio de alta calidad, promociones y la experiencia del cine en Perú.">
     <meta name="keywords" content="cine, películas, cartelera, estrenos, cine Perú, cine cercano, metacine">
     <link rel="icon" href="../img/logito.png" type="image/png">
     <title>MetaCine</title>
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/estilos_contacto.css">
+    <link rel="stylesheet" href="../css/estilo_login.css">
+    <link rel="stylesheet" href="../css/estilos_trabaja.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -35,18 +39,74 @@
 
         <!--Parte derecha del cuadro-->
         <div class="acciones">
-            <a href="login.html"><button class="btn-socio">¿Eres socio?</button></a>
+            <label for="modal-toggle-login" class="btn-socio">¿Eres
+                socio?</label><!--el label actua como boton y activa el modal-->
             <div class="redes">
-                <a href="https://www.linkedin.com/in/metacines-multicines-509143361/"><i class="fab fa-linkedin-in"></i></a> <!--añadiendo redes sociales-->
-                <a href="https://www.instagram.com/metacines_mult/"><i class="fab fa-instagram"></i></a><!--añadiendo redes sociales-->
-                <a href="https://www.facebook.com/profile.php?id=61575268895729"><i class="fab fa-facebook-f"></i></a><!--añadiendo redes sociales-->
+                <a href="https://www.linkedin.com/in/metacines-multicines-509143361/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a> <!--añadiendo redes sociales-->
+                <a href="https://www.instagram.com/metacines_mult/" target="_blank"><i
+                        class="fab fa-instagram"></i></a><!--añadiendo redes sociales-->
+                <a href="https://www.facebook.com/profile.php?id=61575268895729" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a><!--añadiendo redes sociales-->
             </div>
             <img src="../img/icone-utilisateur-gris.png" alt="Perfil" class="perfil-icon">
         </div>
     </header>
 
+    <!--MODAL LOGIN-->
+    <!-- Botón en el header -->
+    <label for="modal-toggle-login" class="btn-open-modal"></label>
+
+    <!-- Checkbox oculto para alternar -->
+    <!-- Radios ocultos -->
+    <input type="radio" name="form-toggle" id="show-login" hidden checked>
+    <input type="radio" name="form-toggle" id="show-register" hidden>
+
+    <!-- Toggle del modal -->
+    <input type="checkbox" id="modal-toggle-login" class="modal-checkbox-login" hidden>
+
+
+    <!-- Modal -->
+    <section class="modal-login">
+        <div class="modal-contenedor-login">
+
+            <!-- Imagen -->
+            <div class="modal-img-container">
+                <img src="../img/img-login.jpg" class="modal-img-login" alt="Imagen decorativa">
+            </div>
+
+            <!-- Área del formulario -->
+            <div class="modal-formulario-container">
+
+                <!-- Formulario de LOGIN -->
+                <div class="formulario-login formulario-toggle">
+                    <h2 class="modal-titulo-login">Iniciar Sesión</h2>
+                    <form action="index.html" method="get">
+                        <input type="text" placeholder="Usuario" required>
+                        <input type="password" placeholder="Contraseña" required>
+                        <button type="submit">Ingresar</button>
+                    </form>
+                    <label for="show-register" class="switch-form"><h5 class="modal-parrafo-login">¿No tienes cuenta? <u>Regístrate</u></h6></label>
+                </div>
+
+                <!-- Formulario de REGISTRO -->
+                <div class="formulario-register formulario-toggle">
+                    <h2 class="modal-titulo-login">Crear Cuenta</h2>
+                    <form action="index.html" method="get">
+                        <input type="text" placeholder="Nombre completo" required>
+                        <input type="email" placeholder="Correo electrónico" required>
+                        <input type="password" placeholder="Contraseña" required>
+                        <button type="submit">Registrarse</button>
+                    </form>
+                    <label for="show-login" class="switch-form"><h5 class="modal-parrafo-login">¿Ya tienes cuenta? <u>Inicia sesión</u></h5></label>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <main>
-        <section class="contenido-anticipio">   
+        <section class="contenido-anticipio">
             <div class="anticipio">
                 <div class="texto-anticipio">
                     <a name="sobre-nosotros"></a>
@@ -83,30 +143,67 @@
                     <td>
                         <table>
                             <tr>
-                                <td> <a href="../peliculas/p1.html" target="_self"><img src="../img/p1.jpg" alt="p1" class="pelicula"></a> <div class="subtitulo"> Flow </div> </td>
-                                <td> <a href="../peliculas/p2.html" target="_blank"><img src="../img/p2.jpg" alt="p2" class="pelicula"></a> <div class="subtitulo"> Los Tipos Malos </div> </td>
-                                <td> <a href="../peliculas/p3.html" target="_blank"><img src="../img/p3.jpg" alt="p3" class="pelicula"></a> <div class="subtitulo"> El gato con botas: <br> El último deseo </div> </td>
+                                <td> <a href="../peliculas/p1.html" target="_self"><img src="../img/p1.jpg" alt="p1"
+                                            class="pelicula"></a>
+                                    <div class="subtitulo"> Flow </div>
+                                </td>
+                                <td> <a href="../peliculas/p2.html" target="_self"><img src="../img/p2.jpg" alt="p2"
+                                            class="pelicula"></a>
+                                    <div class="subtitulo"> Los Tipos Malos </div>
+                                </td>
+                                <td> <a href="../peliculas/p3.html" target="_self"><img src="../img/p3.jpg" alt="p3"
+                                            class="pelicula"></a>
+                                    <div class="subtitulo"> El gato con botas: <br> El último deseo </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td> <a href="../peliculas/p4.html" target="_blank"><img src="../img/p4.jpg" alt="p4" class="pelicula"></a> <br> <div class="subtitulo">Colorful Stage La Película: <br> Miku no Puede cantar </div> </td>
-                                <td> <a href="../peliculas/p5.html" target="_blank"><img src="../img/p5.jpg" alt="p5" class="pelicula"></a> <br> <div class="subtitulo">Terremoto Magnitud 9.0</div> </td>
-                                <td> <a href="../peliculas/p6.html" target="_blank"><img src="../img/p6.jpg" alt="p6" class="pelicula"></a> <br> <div class="subtitulo">Star Wars III <br> La Venganza de los Sith <br> (20 Aniv) </div> </td>
+                                <td> <a href="../peliculas/p4.html" target="_self"><img src="../img/p4.jpg" alt="p4"
+                                            class="pelicula"></a> <br>
+                                    <div class="subtitulo">Colorful Stage La Película: <br> Miku no Puede cantar </div>
+                                </td>
+                                <td> <a href="../peliculas/p5.html" target="_self"><img src="../img/p5.jpg" alt="p5"
+                                            class="pelicula"></a> <br>
+                                    <div class="subtitulo">Terremoto Magnitud 9.0</div>
+                                </td>
+                                <td> <a href="../peliculas/p6.html" target="_self"><img src="../img/p6.jpg" alt="p6"
+                                            class="pelicula"></a> <br>
+                                    <div class="subtitulo">Star Wars III <br> La Venganza de los Sith <br> (20 Aniv)
+                                    </div>
+                                </td>
                             </tr>
                         </table>
                     </td>
 
                     <td>
                         <table>
-                            
+
                             <tr>
-                                <td> <a href="../peliculas/p7.html" target="_blank"><img src="../img/p7.jpg" alt="p7" class="pelicula"></a> <br> <div class="subtitulo"> Jurassic Park </div> </td>
-                                <td> <a href="../peliculas/p8.html" target="_blank"><img src="../img/p8.jpg" alt="p8" class="pelicula"></a> <br> <div class="subtitulo"> Soy leyenda </div> </td>
-                                <td> <a href="../peliculas/p9.html" target="_blank"><img src="../img/p9.jpg" alt="p9" class="pelicula"></a> <br> <div class="subtitulo"> Avengers End Game </div> </td>
+                                <td> <a href="../peliculas/p7.html" target="_self"><img src="../img/p7.jpg" alt="p7"
+                                            class="pelicula"></a> <br>
+                                    <div class="subtitulo"> Jurassic Park </div>
+                                </td>
+                                <td> <a href="../peliculas/p8.html" target="_self"><img src="../img/p8.jpg" alt="p8"
+                                            class="pelicula"></a> <br>
+                                    <div class="subtitulo"> Soy leyenda </div>
+                                </td>
+                                <td> <a href="../peliculas/p9.html" target="_self"><img src="../img/p9.jpg" alt="p9"
+                                            class="pelicula"></a> <br>
+                                    <div class="subtitulo"> Avengers End Game </div>
+                                </td>
                             </tr>
                             <tr>
-                                <td> <a href="../peliculas/p10.html" target="_blank"><img src="../img/p10.jpg" alt="p10" class="pelicula"></a> <br> <div class="subtitulo"> Volver al Futuro </div> </td>
-                                <td> <a href="../peliculas/p11.html" target="_blank"><img src="../img/p11.jpg" alt="p11" class="pelicula"></a> <br> <div class="subtitulo"> WALL - E </div> </td>
-                                <td> <a href="../peliculas/p12.html" target="_blank"><img src="../img/p12.jpg" alt="p12" class="pelicula"></a> <br> <div class="subtitulo"> Ready Player One </div> </td>
+                                <td> <a href="../peliculas/p10.html" target="_self"><img src="../img/p10.jpg" alt="p10"
+                                            class="pelicula"></a> <br>
+                                    <div class="subtitulo"> Volver al Futuro </div>
+                                </td>
+                                <td> <a href="../peliculas/p11.html" target="_self"><img src="../img/p11.jpg" alt="p11"
+                                            class="pelicula"></a> <br>
+                                    <div class="subtitulo"> WALL - E </div>
+                                </td>
+                                <td> <a href="../peliculas/p12.html" target="_self"><img src="../img/p12.jpg" alt="p12"
+                                            class="pelicula"></a> <br>
+                                    <div class="subtitulo"> Ready Player One </div>
+                                </td>
                             </tr>
                         </table>
                     </td>
@@ -121,7 +218,7 @@
     <footer>
         <div class="botones_footer">
             <a href="../html/libro-reclamaciones.html"><button class="btn-normal">Libro de Reclamaciones</button></a>
-            <a href="#"><button class="btn-normal">Quiénes somos</button></a>
+            <a href="#sobre-nosotros"><button class="btn-normal">Quiénes somos</button></a>
             <a href="../html/trabaja-con-nosotros.html"><button class="btn-normal">Trabaja con nosotros</button></a>
             <a href="../Términos y Condiciones de Uso.pdf"><button class="btn-normal">Términos y condiciones</button></a>
             <a href="../html/contacto.html"><button class="btn-contacto">Contáctanos</button></a>

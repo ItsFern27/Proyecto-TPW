@@ -272,7 +272,7 @@
     color: rgb(25, 25, 25);
 }
 /*ESTILO PARA EL FONDO DE CADA TRAILER ( LA IMAGEN LARGA) CADA PELI TENDRA UN ESTILO PARA ESO */
-    /* Estilo y Fondo para la película FLOW */
+    /*FLOW */
    .fondo-trailer-flow {
     background-image: url('../img/flow.png'); /* Cambia la ruta a la imagen que desees usar */
     background-size: cover; /* Cubre toda la parte de extremo a extremo */
@@ -283,7 +283,7 @@
     align-items: center;/* Centra el contenido verticalmente (Osea el boton del play para el trailer) */
 }
 
- /* Estilo y Fondo para la película TIPOS MALOS 2 */
+ /*TIPOS MALOS 2 */
  .fondo-trailer-tiposmalos2 {
     background-image: url('../img/tiposmalos2.png'); /* Cambia la ruta a la imagen que desees usar */
     background-size: cover; /* Cubre toda la parte de extremo a extremo */
@@ -294,6 +294,16 @@
     align-items: center;/* Centra el contenido verticalmente (Osea el boton del play para el trailer) */
 }
 
+ /*EL GATO CON BOTAS */
+ .fondo-trailer-elgatoconbotas {
+    background-image: url('../img/gatoconbotas.png'); /* Cambia la ruta a la imagen que desees usar */
+    background-size: cover; /* Cubre toda la parte de extremo a extremo */
+    background-position: center; /* Centra la imagen */         
+    height: 470px; /* Altura de la imagen */
+    display: flex; /* Activa lo de abajo para centrar los objetos */
+    justify-content: center; /* Centra el contenido horizontalmente (Osea el boton del play para el trailer) */
+    align-items: center;/* Centra el contenido verticalmente (Osea el boton del play para el trailer) */
+}
 
 /*==== Estilo para la imagen del botón======== */
 .btn-trailer-img {

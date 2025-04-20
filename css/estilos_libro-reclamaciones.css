@@ -1,4 +1,10 @@
 /* GENERAL */
+/* Para posicionar correctamente el cuerpo (header, main y footer)*/
+/* Oderna el header, main y footer en forma de filas,
+luego se modifica para que lo haga como columnas, y
+finalmente que ocupe el espacio de toda la ventana del
+navegador */
+
 body {
     display: flex;
     flex-direction: column;
@@ -19,6 +25,11 @@ main {
     margin: 0;
     /* Corta los bordes de los lados que tenía el cuadro de navegación */
 }
+
+
+
+
+/*<!-- Sección Libro Reclamaciones -->*/
 
 .section_libro-reclamaciones {
     display: flex;
@@ -47,7 +58,36 @@ main {
     padding-bottom: 10px;
 }
 
-/* - Datos del consumidor reclamante - */
+/* Botón del Form */
+.btnform_libro-reclamaciones {
+    border: none;
+    margin-top: 3%;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: black;
+    color: aliceblue;
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.btnform_libro-reclamaciones:hover {
+    margin-top: 3%;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: rgb(163, 163, 163);
+    color: aliceblue;
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+
+/* ------- Datos del consumidor reclamante ------- */
 
 .dcr_libro-reclamaciones input {
     border: 1px solid rgba(0, 0, 0, 0.356);
@@ -79,7 +119,9 @@ main {
     margin-right: 10px;
 }
 
-/* - Detalle de su Reclamo - */
+
+/* ------- Detalle de su Reclamo ------- */
+
 .dtsr_libro-reclamaciones {
     list-style: none;
     padding: 0;
@@ -92,7 +134,7 @@ main {
 }
 
 
-/* - Identificacion del Bien Contratado - */
+/* ------- Identificacion del Bien Contratado ------- */
 .idb_libro-reclamaciones {
     list-style: none;
     padding: 0;
@@ -105,7 +147,7 @@ main {
 }
 
 
-/* - Detalle del Reclamo - */
+/* ------- Detalle del Reclamo ------- */
 .textarea-dtr_libro-reclamaciones {
     border: 1px solid rgba(0, 0, 0, 0.356);
     border-radius: 10px;
@@ -113,7 +155,7 @@ main {
 }
 
 
-/* - Monto del Reclamo - */
+/* ------- Monto del Reclamo ------- */
 .monto_libro-reclamaciones {
     display: flex; flex-direction: row; align-items: center;
 }
@@ -134,30 +176,4 @@ main {
     outline: none;
     background: none;
     font-size: 20px;
-}
-
-.btnform_libro-reclamaciones {
-    border: none;
-    margin-top: 3%;
-    border-radius: 30px;
-    cursor: pointer;
-    background-color: black;
-    color: aliceblue;
-    width: 150px;
-    height: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    transition: .3s;
-}
-
-.btnform_libro-reclamaciones:hover {
-    margin-top: 3%;
-    border-radius: 30px;
-    cursor: pointer;
-    background-color: rgb(163, 163, 163);
-    color: aliceblue;
-    width: 150px;
-    height: 50px;
-    font-weight: bold;
-    font-size: 16px;
 }

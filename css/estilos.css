@@ -339,6 +339,7 @@
         border: none;
         border-radius: 8px;
         cursor: pointer;
+        transition: .3s;
     }
 
     .btn-horario:hover {

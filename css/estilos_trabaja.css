@@ -2,16 +2,12 @@
 
 .form-container-trbj {
     max-width: 800px;
-    margin: 40px auto;
     background-color: #5757574e;
     padding: 30px;
     box-shadow: 0 8px 15px rgb(0, 0, 0);
-}
 
-.form-container-trbj {
     text-align: center;
     color: #acacac;
-    margin-bottom: 25px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -61,7 +57,7 @@
 
 .file-label-trbj span {
     font-size: 13px;
-    color: #555;
+    color: #555555;
 }
 
 .captcha-trbj {

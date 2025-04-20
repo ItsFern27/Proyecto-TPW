@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <link rel="icon" href="../img/logito.png" type="image/png"> <!-- Icono de la pestaña -->
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'> <!-- Compatibilidad con navegadores antiguos -->
+    <title>METACINE</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'> <!-- Escala de la página -->
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/estilos.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="../css/estilos_contacto.css">
+    <link rel="stylesheet" href="../css/estilos_peli.css">
+    <link rel="stylesheet" href="../css/estilo_login.css">
+</head>
+
+<body class="fondo"> <!-- El background ahora se encuentra en el css -->
+    <!--ENCABEZADO-->
+    <header class="encabezado">
+        <!--Parte izquierda del cuadro-->
+        <div class="logo-titulo">
+            <img src="../img/logoMETACINES.jpg" alt="Logo MetaCine" class="logo-mini">
+            <h1 class="titulo">Metacine</h1>
+        </div>
+
+        <!--Parte centro del cuadro-->
+        <nav class="menu">
+            <a href="../html/index.html">HOME</a>
+            <a class="activo" href="../html/index.html">PELÍCULAS</a>
+            <a href="#">CINES</a>
+            <a href="#">CHOCOLATERÍA</a>
+            <a href="#">VENTA CORPORATIVA</a>
+            <a href="../html/contacto.html">PROMOCIONES</a>
+        </nav>
+
+        <!--Parte derecha del cuadro-->
+        <div class="acciones">
+            <a href="../html/contacto.html"><button class="btn-socio">¿Eres socio?</button></a>
+            <div class="redes">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <img src="../img/icone-utilisateur-gris.png" alt="Perfil" class="perfil-icon">
+        </div>
+    </header>
+    <br>
+
+    <main>
+        <div class="fondo-pag-peli">
+
+            <div class="fondo-trailer-star">
+                <label for="trailer-checkbox" class="btn-trailer"> <!-- Botón para abrir el tráiler -->
+                    <img src="../img/trailer-icon.png" alt="Mirar tráiler" class="btn-trailer-img">
+                </label>
+                <input type="checkbox" id="trailer-checkbox"
+                    class="modal-checkbox"><!-- Checkbox oculto para controlar el modal -->
+
+                <!-- Modal para el tráiler -->
+                <div class="modal">
+                    <div class="modal-contenido">
+                        <label for="trailer-checkbox" class="cerrar">&times;</label>
+                        <iframe src="https://www.youtube.com/embed/d3XN49jmmGM" width="912" height="459" frameborder="0"
+                            allow="autoplay; clipboard-write; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <!--Imagen de la película-->
+            <div class="contenido-pelicula">
+                <div class="imagen-pelicula">
+                    <img src="../img/p6.jpg">
+                </div>
+                <div> <!-- Información de la película -->
+                    <h1 class="nombre-pelicula">Star Wars III:<br></h1>
+                    <p class="nombre-pelicula">20 Aniversario</p>
+                    <p class="descripcion-pelicula"><b>Sinopsis</b>: Las Guerras de clones empezaron hace 3 años, en donde los Jedi<br>
+                                                        rescatan a Palpatine del conde Dooku,y Obi-wan le sigue la pista a una nueva <br>
+                                                        amenaza, mientras Anakin actúa como agente doble</p>
+                    <p class="descripcion-pelicula"><img src="../img/duracion.png" alt="duracion"
+                            width="23px"><b>Duración:</b> 140 min</p>
+                    <p class="descripcion-pelicula"><img src="../img/clasificación.png" alt="clasificacion"
+                            width="23px"><b>Clasificación:</b> PG-13</p>
+                    <p class="descripcion-pelicula"><img src="../img/genero.png" alt="genero"
+                            width="23px"><b>Género:</b> Ciencia Ficción, Acción</p>
+                    <p class="descripcion-pelicula"><img src="../img/director.png" alt="director"
+                            width="23px"><b>Director:</b> George Lucas</p>
+                </div>
+                <!-- Horarios de funciones -->
+                <div class="horarios">
+                    <h2 class="titulo-horarios">Horarios de funciones</h2>
+                    <div class="cine">
+                        <h3>METACINE V.E.S</h3>
+                        <p>Seleccione el horario:</p>
+                        <div class="horarios-funcion">
+                            <button>4:30 pm</button>
+                            <button>6:25 pm</button>
+                            <button>8:25 pm</button>
+                            <button>10:25 pm</button>
+                        </div>
+                    </div>
+                    <div class="cine">
+                        <h3>METACINE UTP</h3>
+                        <p>Seleccione el horario:</p>
+                        <div class="horarios-funcion">
+                            <button>2:40 pm</button>
+                            <button>5:20 pm</button>
+                            <button>7:50 pm</button>
+                            <button>9:10 pm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div class="botones_footer">
+            <a href="../html/libro-reclamaciones.html"><button class="btn-normal">Libro de Reclamaciones</button></a>
+            <a href="../html/index.html"><button class="btn-normal">Quiénes somos</button></a>
+            <a href="../html/trabaja-con-nosotros.html"><button class="btn-normal">Trabaja con nosotros</button></a>
+            <a href="../Términos y Condiciones de Uso.pdf"><button class="btn-normal">Términos y condiciones</button></a>
+            <a href="../html/contacto.html"><button class="btn-contacto">Contáctanos</button></a>
+        </div>
+    </footer>
+</body>
+</html>

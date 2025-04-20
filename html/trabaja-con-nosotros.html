@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/estilos_contacto.css">
     <link rel="stylesheet" href="../css/estilos_trabaja.css">
+    <link rel="stylesheet" href="../css/estilo_login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -25,7 +26,7 @@
         <!--Parte centro del cuadro-->
         <nav class="menu">
             <a href="index.html">HOME</a>
-            <a href="index.html/#cartelera">PELÍCULAS</a>
+            <a href="../html/index.html#cartelera">PELÍCULAS</a>
             <a href="#">CINES</a>
             <a href="#">CHOCOLATERÍA</a>
             <a href="#">VENTA CORPORATIVA</a>
@@ -34,7 +35,8 @@
 
         <!--Parte derecha del cuadro-->
         <div class="acciones">
-            <button class="btn-socio">¿Eres socio?</button>
+          <label for="modal-toggle-login" class="btn-socio">¿Eres
+            socio?</label><!--el label actua como boton y activa el modal-->
             <div class="redes">
                 <a href="https://www.linkedin.com/in/metacines-multicines-509143361/"><i class="fab fa-linkedin-in"></i></a> <!--añadiendo redes sociales-->
                 <a href="https://www.instagram.com/metacines_mult/"><i class="fab fa-instagram"></i></a><!--añadiendo redes sociales-->
@@ -43,61 +45,113 @@
             <img src="../img/icone-utilisateur-gris.png" alt="Perfil" class="perfil-icon">
         </div>
     </header>
+    <!--MODAL LOGIN-->
+    <!-- Botón en el header -->
+    <label for="modal-toggle-login" class="btn-open-modal"></label>
+
+    <!-- Checkbox oculto para alternar -->
+    <!-- Radios ocultos -->
+    <input type="radio" name="form-toggle" id="show-login" hidden checked>
+    <input type="radio" name="form-toggle" id="show-register" hidden>
+
+    <!-- Toggle del modal -->
+    <input type="checkbox" id="modal-toggle-login" class="modal-checkbox-login" hidden>
+
+
+    <!-- Modal -->
+    <section class="modal-login">
+        <div class="modal-contenedor-login">
+
+            <!-- Imagen -->
+            <div class="modal-img-container">
+                <img src="../img/img-login.jpg" class="modal-img-login" alt="Imagen decorativa">
+            </div>
+
+            <!-- Área del formulario -->
+            <div class="modal-formulario-container">
+
+                <!-- Formulario de LOGIN -->
+                <div class="formulario-login formulario-toggle">
+                    <h2 class="modal-titulo-login">Iniciar Sesión</h2>
+                    <form action="index.html" method="get">
+                        <input type="text" placeholder="Usuario" required>
+                        <input type="password" placeholder="Contraseña" required>
+                        <button type="submit">Ingresar</button>
+                    </form>
+                    <label for="show-register" class="switch-form"><h5 class="modal-parrafo-login">¿No tienes cuenta? <u>Regístrate</u></h6></label>
+                </div>
+
+                <!-- Formulario de REGISTRO -->
+                <div class="formulario-register formulario-toggle">
+                    <h2 class="modal-titulo-login">Crear Cuenta</h2>
+                    <form action="index.html" method="get">
+                        <input type="text" placeholder="Nombre completo" required>
+                        <input type="email" placeholder="Correo electrónico" required>
+                        <input type="password" placeholder="Contraseña" required>
+                        <button type="submit">Registrarse</button>
+                    </form>
+                    <label for="show-login" class="switch-form"><h5 class="modal-parrafo-login">¿Ya tienes cuenta? <u>Inicia sesión</u></h5></label>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <main>
-        <section class="display_contacto">
-            <div class="caja_contacto">                
-                <h1 class="subtitulo_contacto">TRABAJA CON NOSOTROS</h1>
-                <div class="texto_contacto">
-                    <p>Nos complace que quieras ser parte de nuestro equipo completa los datos solicitados y nos pondremos en contacto contigo</p>
-                    <p><i class="fa-solid fa-phone"></i> +51 953 283 238</p>
-                    <p><i class="fa-solid fa-envelope"></i> metacinesmulticines@gmail.com</p>
-                    <p><i class="fa-solid fa-location-dot"></i> Mall del Sur</p>
-                </div>
+        <section class="seccion_contacto">
+            <div class="caja_contacto">
+              <h1 class="subtitulo_contacto">TRABAJA CON NOSOTROS</h1>
+              <div class="texto_contacto">
+                <p>Nos complace que quieras ser parte de nuestro equipo completa los datos solicitados y nos pondremos en contacto
+                  contigo</p>
+                <p><i class="fa-solid fa-phone"></i> +51 953 283 238</p>
+                <p><i class="fa-solid fa-envelope"></i> metacinesmulticines@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Mall del Sur - Centro de Contacto</p>
+              </div>
             </div>
             
             <div class="form-container-trbj">
-                <h2>Ingresa tus datos personales</h2>
-                <form action="#" method="post" enctype="multipart/form-data">
-                  <div class="form-group-trbj">
-                    <input type="text" name="nombres" placeholder="Nombres" required>
-                    <input type="email" name="email" placeholder="Email" required>
+              <h2>Ingresa tus datos personales</h2>
+              <form action="#" method="post" enctype="multipart/form-data">
+                <div class="form-group-trbj">
+                  <input type="text" name="nombres" placeholder="Nombres" required>
+                  <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group-trbj">
+                  <input type="text" name="apellidos" placeholder="Apellidos" required>
+                  <input type="text" name="direccion" placeholder="Dirección" required>
+                </div>
+                <div class="form-group-trbj">
+                  <input type="text" name="dni" placeholder="DNI" required>
+                  <input type="text" name="distrito" placeholder="Distrito" required>
+                </div>
+                <div class="form-group-trbj">
+                  <input type="date" name="fecha_nacimiento" required>
+                  <input type="text" name="educacion" placeholder="Nivel de educación" required>
+                </div>
+                <div class="form-file-captcha-trbj">
+                  <label class="file-label-trbj">
+                    📄 Adjuntar Curriculum Vitae <br><span>(Word o PDF)</span>
+                    <input type="file" name="cv" accept=".pdf,.doc,.docx" required>
+                  </label>
+                  <div class="captcha-trbj">
+                    <input type="checkbox" required> No soy un robot
                   </div>
-                  <div class="form-group-trbj">
-                    <input type="text" name="apellidos" placeholder="Apellidos" required>
-                    <input type="text" name="direccion" placeholder="Dirección" required>
-                  </div>
-                  <div class="form-group-trbj">
-                    <input type="text" name="dni" placeholder="DNI" required>
-                    <input type="text" name="distrito" placeholder="Distrito" required>
-                  </div>
-                  <div class="form-group-trbj">
-                    <input type="date" name="fecha_nacimiento" required>
-                    <input type="text" name="educacion" placeholder="Nivel de educación" required>
-                  </div>
-                  <div class="form-file-captcha-trbj">
-                    <label class="file-label-trbj">
-                      📄 Adjuntar Curriculum Vitae <br><span>(Word o PDF)</span>
-                      <input type="file" name="cv" accept=".pdf,.doc,.docx" required>
-                    </label>
-                    <div class="captcha-trbj">
-                      <input type="checkbox" required> No soy un robot
-                    </div>
-                  </div>
-                  <button type="submit" class="btn-enviar-trbj">Enviar</button>
-                </form>
-              </div>
+                </div>
+                <button type="submit" class="btn-enviar-trbj">Enviar</button>
+              </form>
+            </div>
         </section>
     </main>
 
     <!-- footer provisional -->
     <footer class="footer">
         <div class="botones_footer">
-            <a href="#"><button class="btn-normal">Libro de Reclamaciones</button></a>
-            <a href="/cine-web/html/#sobre-nosotros"><button class="btn-normal">Quiénes somos</button></a>
-            <a href="#"><button class="btn-normal">Trabaja con nosotros</button></a>
-            <a href="#"><button class="btn-normal">Términos y condiciones</button></a>
-            <a href="contacto.html"><button class="btn-contacto">Contactanos</button></a>
+          <a href="../html/libro-reclamaciones.html"><button class="btn-normal">Libro de Reclamaciones</button></a>
+          <a href="../html/#sobre-nosotros"><button class="btn-normal">Quiénes somos</button></a>
+          <a href="../html/trabaja-con-nosotros.html"><button class="btn-normal">Trabaja con nosotros</button></a>
+          <a href="../Términos y Condiciones de Uso.pdf"><button class="btn-normal">Términos y condiciones</button></a>
+          <a href="../html/contacto.html"><button class="btn-contacto">Contáctanos</button></a>
         </div>
     </footer>
 </body>

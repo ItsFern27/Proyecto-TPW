@@ -38,7 +38,7 @@ body {
 }
 
 
-.display_contacto {
+.seccion_contacto {
     background-size: cover;
     background-position: center;
     display: flex;
@@ -75,7 +75,7 @@ body {
 }
 
 .inputtext:hover {
-    background: rgba(255, 255, 255, 0.171);
+    background: rgba(255, 255, 255, 0.301);
 }
 
 .messagetext {

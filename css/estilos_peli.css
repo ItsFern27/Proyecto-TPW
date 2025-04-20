@@ -1,0 +1,209 @@
+/* ====== ESTILO GENERAL PARA LOS VIDEOS DE LAS PÁGINAS====== */
+
+   /* Fondo para la descripción de la película */
+   .fondo-pag-peli {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Estilo y color para el Título de la película */
+.nombre-pelicula {
+    font-family: "Helvetica", cursive;
+    font-size: 75px;
+    color: rgb(0, 0, 0);
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.993);
+    padding: 0px;
+}
+
+/* Estilo y color para la sinopsis de la película */
+.descripcion-pelicula {
+    font-family: "arial", cursive;
+    font-size: 18px;
+    color: rgb(25, 25, 25);
+}
+
+/*ESTILO PARA EL FONDO DE CADA TRAILER ( LA IMAGEN LARGA) CADA PELI TENDRA UN ESTILO PARA ESO */
+/* Estilo y Fondo para la película FLOW */
+.fondo-trailer-flow {
+    background-image: url('../img/flow.png');
+    /* Cambia la ruta a la imagen que desees usar */
+    background-size: cover;
+    /* Cubre toda la parte de extremo a extremo */
+    background-position: center;
+    /* Centra la imagen */
+    height: 470px;
+    /* Altura de la imagen */
+    display: flex;
+    /* Activa lo de abajo para centrar los objetos */
+    justify-content: center;
+    /* Centra el contenido horizontalmente (Osea el boton del play para el trailer) */
+    align-items: center;
+    /* Centra el contenido verticalmente (Osea el boton del play para el trailer) */
+}
+
+/* Estilo y Fondo para la película TIPOS MALOS 2 */
+.fondo-trailer-tiposmalos2 {
+    background-image: url('../img/tiposmalos2.png');
+    /* Cambia la ruta a la imagen que desees usar */
+    background-size: cover;
+    /* Cubre toda la parte de extremo a extremo */
+    background-position: center;
+    /* Centra la imagen */
+    height: 470px;
+    /* Altura de la imagen */
+    display: flex;
+    /* Activa lo de abajo para centrar los objetos */
+    justify-content: center;
+    /* Centra el contenido horizontalmente (Osea el boton del play para el trailer) */
+    align-items: center;
+    /* Centra el contenido verticalmente (Osea el boton del play para el trailer) */
+}
+
+
+/*==== Estilo para la imagen del botón======== */
+.btn-trailer-img {
+    width: 101px;
+    /* Ajusta el tamaño de la imagen */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre la imagen */
+    transition: transform 0.3s ease;
+    /* Efecto de animación */
+}
+
+.btn-trailer-img:hover {
+    transform: scale(1.1);
+    /* Aumenta un poco el tamaño al pasar el mouse */
+}
+
+/* Ocultar el checkbox */
+.modal-checkbox-peli {
+    display: none;
+}
+
+/* Estilo para el fondo grande del video (el transparente) cuando damos click al play */
+.modal-peli {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    /* Fijo para que cubra toda la pantalla */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+    left: 0;
+    /* Alineado a la izquierda */
+    top: 0;
+    /* Alineado a la parte superior */
+    width: 100%;
+    /* Ancho de toda de la pantalla */
+    height: 100%;
+    /* Alto de toda de la pantalla */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fondo transparente */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mostrar el modal cuando el checkbox está marcado */
+.modal-checkbox-peli:checked+.modal-peli {
+    display: flex;
+}
+
+/* Estilo para el fondo pequeño del video al darle play*/
+.modal-contenido-peli {
+    position: relative;
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Botón para cerrar el modal */
+.cerrar-modal-peli {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Contenedor principal para la descripción y los horarios */
+.contenido-pelicula {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los elementos bajen si no caben */
+    gap: 20px;
+    /* El espaciado con el texto de la sinopsis */
+    justify-content: space-between;
+    /* Espacio entre columnas */
+    align-items: flex-start;
+    /* Alinea los elementos al inicio verticalmente */
+    margin-top: 20px;
+}
+
+/* Estilo para la columna de horarios */
+.horarios {
+    flex: 1;
+    /* Para la cantidad de objetos en el fondo */
+    background-color: #f9f9f9;
+    /* Color del fondo de los horarios */
+    padding: 50px;
+    /* Para la proporción del fondo*/
+}
+
+/* Estilo para el título de los horarios */
+.titulo-horarios {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Espaciado entre cada cine */
+.cine {
+    margin-bottom: 20px;
+}
+
+/* Color para cada sede de cine */
+.cine h3 {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+/* Color para un <p></p> */
+.cine p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Estilo y color de los botones de horarios */
+.horarios-funcion button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* color cuando pones el cursor encima del boton de horario */
+.horarios-funcion button:hover {
+    background-color: #7e7d7d;
+}
+
+/* Estilo para la columna de la imagen */
+.imagen-pelicula img {
+    height: 400px;
+    /* Mantiene la proporción de la imagen */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra para la imagen */
+}

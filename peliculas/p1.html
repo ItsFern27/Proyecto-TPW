@@ -5,11 +5,12 @@
     <meta charset='utf-8'>
     <link rel="icon" href="../img/logito.png" type="image/png"> <!-- Icono de la pestaña -->
     <meta http-equiv='X-UA-Compatible' content='IE=edge'> <!-- Compatibilidad con navegadores antiguos -->
-    <title>METACINE</title>
+    <title>METACINES</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'> <!-- Escala de la página -->
     <link rel='stylesheet' type='text/css' media='screen' href='../css/estilos.css'>
     <script src='main.js'></script>
     <link rel="stylesheet" href="../css/estilos_contacto.css">
+    <link rel="stylesheet" href="../css/estilos_peli.css">
 </head>
 
 <body class="fondo"> <!-- El background ahora se encuentra en el css -->
@@ -52,12 +53,12 @@
                     <img src="../img/trailer-icon.png" alt="Mirar tráiler" class="btn-trailer-img">
                 </label>
                 <input type="checkbox" id="trailer-checkbox"
-                    class="modal-checkbox"><!-- Checkbox oculto para controlar el modal -->
+                    class="modal-checkbox-peli"><!-- Checkbox oculto para controlar el modal -->
 
                 <!-- Modal para el tráiler -->
-                <div class="modal">
-                    <div class="modal-contenido">
-                        <label for="trailer-checkbox" class="cerrar">&times;</label>
+                <div class="modal-peli">
+                    <div class="modal-contenido-peli">
+                        <label for="trailer-checkbox" class="cerrar-modal-peli">&times;</label>
                         <iframe src="https://www.youtube.com/embed/jYC6kazBD9A" width="912" height="459" frameborder="0"
                             allow="autoplay; clipboard-write; picture-in-picture" allowfullscreen></iframe>
                     </div>

@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="../css/estilos_contacto.css">
         <link rel="stylesheet" href="../css/estilo_login.css">
         <link rel="stylesheet" href="../css/estilos_trabaja.css">
+        <link rel="stylesheet" href="../css/estilos_chocolateria.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
 
@@ -28,8 +29,8 @@
             <nav class="menu">
                 <a href="../html/index.html" >HOME</a>
                 <a href="../html/index.html">PELÍCULAS</a>
-                <a href="../html/cines.html" class="activo">CINES</a>
-                <a href="../html/chocolateria.html">CHOCOLATERÍA</a>
+                <a href="../html/cines.html" >CINES</a>
+                <a href="../html/chocolateria.html" class="activo">CHOCOLATERÍA</a>
                 <a href="#">VENTA CORPORATIVA</a>
                 <a href="#">PROMOCIONES</a>
             </nav>
@@ -103,24 +104,23 @@
     <br>
 
     <main> 
-        <h1 class="subtitulo" style="font-size: 60px;"> Cines: </h1>
+        
         <section>
+            <div class="contenedor_chocolateria">
+                <h1 class="subtitulo" style="font-size: 60px;"> Chocolatería </h1>
+                <p style="font-size: 20px;">Productos disponibles en todos nuestros cines</p>
+            </div>
+            
             <div style="text-align: center;">
                 <table style="margin: auto; border: 1px solid black;" class="cinestbl">
                     <tr>
-                        <td> <img src="../img/cine1.jpg" alt="cine1" class="img-cines"></a> </td>
+                        <td> <img src="../img/canchita_chocolateria.png" alt="cine1" class="img-cines"></a> </td>
                         <td class="cines-tbltext"> 
                             <div class="horario-configposicion-textbtn">
-                                <h2> Cine Mall del Sur </h2>
-                                 <!-- Modal -->
+                                <h2> Canchita Popcorn </h2>
+                                <!-- boton para que se abra los horarios -->
                                 <input type="checkbox" id="modal-cine1" class="modal-checkbox" style="display:none;">
-                                <div class="modal">
-                                    <div class="modal-contenido">
-                                        <label for="modal-cine1" class="cerrar">&times;</label>
-                                        <iframe src="../horarios/horariocine1.html" width="912" height="459" frameborder="0"></iframe>
-                                    </div>
-                                </div>
-                                <label for="modal-cine1" class="btn-horario"> HORARIO </label>
+                                <label class="btn-horario"> S/. 8.00 </label>
                             </div> <br>
                         </td>
                     </tr>
@@ -128,19 +128,13 @@
 
                 <table style="margin: auto; border: 1px solid black;" class="cinestbl">
                     <tr>
-                        <td> <img src="../img/cine2.jpg" alt="cine1" class="img-cines"></a> </td>
+                        <td> <img src="../img/bebidas_chocolateria.png" alt="cine1" class="img-cines"></a> </td>
                         <td class="cines-tbltext"> 
                             <div class="horario-configposicion-textbtn">
-                                <h2> Cine V.E.S </h2>
-                                <!-- Modal -->
+                                <h2> Gaseosas </h2>
+                                <!-- boton para que se abra los horarios -->
                                 <input type="checkbox" id="modal-cine1" class="modal-checkbox" style="display:none;">
-                                <div class="modal">
-                                    <div class="modal-contenido">
-                                        <label for="modal-cine1" class="cerrar">&times;</label>
-                                        <iframe src="../horarios/horariocine1.html" width="912" height="459" frameborder="0"></iframe>
-                                    </div>
-                                </div>
-                                <label for="modal-cine1" class="btn-horario"> HORARIO </label>
+                                <label class="btn-horario"> S/. 6.00 </label>
                             </div> <br>
                         </td>
                     </tr>
@@ -148,19 +142,13 @@
 
                 <table style="margin: auto; border: 1px solid black;" class="cinestbl">
                     <tr>
-                        <td> <img src="../img/cine3.jpg" alt="cine1" class="img-cines"></a> </td>
+                        <td> <img src="../img/hotdog_chocolateria.png" alt="cine1" class="img-cines"></a> </td>
                         <td class="cines-tbltext"> 
                             <div class="horario-configposicion-textbtn">
-                                <h2> Cine UTP </h2>
-                                <!-- Modal -->
+                                <h2> Hotdog </h2>
+                                <!-- boton para que se abra los horarios -->
                                 <input type="checkbox" id="modal-cine1" class="modal-checkbox" style="display:none;">
-                                <div class="modal">
-                                    <div class="modal-contenido">
-                                        <label for="modal-cine1" class="cerrar">&times;</label>
-                                        <iframe src="../horarios/horariocine1.html" width="912" height="459" frameborder="0"></iframe>
-                                    </div>
-                                </div>
-                                <label for="modal-cine1" class="btn-horario"> HORARIO </label>
+                                <label  class="btn-horario"> S/. 5.00 </label>
                             </div> <br>
                         </td>
                     </tr>

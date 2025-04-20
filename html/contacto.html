@@ -14,8 +14,9 @@
     
 </head>
 
-<body class="fondo_contacto"> <!-- El background ahora se encuentra en el css -->
-    <!--ENCABEZADO-->
+<body class="fondo_contacto"> <!-- background ahora se encuentra en el css -->
+    
+    <!-- =============== HEADER =============== -->
     <header class="encabezado">
         <!--Parte izquierda del cuadro-->
         <div class="logo-titulo">
@@ -28,7 +29,7 @@
             <a href="index.html">HOME</a>
             <a href="../html/index.html#cartelera">PELÍCULAS</a>
             <a href="cines.html">CINES</a>
-            <a href="#">CHOCOLATERÍA</a>
+            <a href="../html/chocolateria.html">CHOCOLATERÍA</a>
             <a href="#">VENTA CORPORATIVA</a>
             <a href="#">PROMOCIONES</a>
         </nav>
@@ -99,7 +100,9 @@
         </div>
     </section>
 
+    <!-- =============== MAIN =============== -->
     <main>
+        <!-- Sección Contacto -->
         <section class="seccion_contacto">
             <div class="caja_contacto">                
                 <h1 class="subtitulo_contacto">CONTÁCTATE CON NOSOTROS</h1>
@@ -112,16 +115,19 @@
             </div>
             
             <form class="form_contacto" action="mailto:metacinesmulticines@gmail.com?subject=Mensaje" method="post" enctype="text/plain">
+                <!-- mailto: intenta abrir el programa de correo predeterminado del usuario para mandar un email con los datos del formulario-->
+                <!-- enctype: define el formato en que se enviaran los datos (por defecto usa pares "clave=valor", pero ahora se define como "texto plano")-->
                 <input class="inputtext" type="text" required placeholder="Nombres">
                 <input class="inputtext" type="text" required placeholder="Apellidos">
                 <input class="inputtext" type="email" required placeholder="Correo electrónico">
                 <input class="inputtext" type="text" required placeholder="Asunto">
-                <textarea class="messagetext" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                <textarea class="messagetext" cols="30" rows="10" placeholder="Mensaje" required></textarea>
                 <button class="buttontext" type="submit">Enviar</button>
             </form>
         </section>
     </main>
 
+    <!-- =============== FOOTER =============== -->
     <footer>
         <div class="botones_footer">
             <a href="../html/libro-reclamaciones.html"><button class="btn-normal">Libro de Reclamaciones</button></a>

@@ -66,3 +66,15 @@ Acomodé detalles visuales del login con estilos_login.css(.modal-login, .modal-
 +20/04/25 - 0:35 - Jair
 
 Agregué todas las descripciones de las películas con las nuevas funciones.
+
+
+
+
++ 20/04/25 - 12:05 - Fernando
+
+Añadí la página de chocolatería
+
+minor fixes:
+- Corregí el header de todas las páginas para que muestren correctamente su sección de la pagina (class activo)
+- Corregí el header de todas las páginas para que funcione la pagina de chocolatería
+- cines.html: le puse una transición a los botones al pasar sobre ellos

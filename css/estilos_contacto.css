@@ -1,11 +1,21 @@
 /* GENERAL */
+/* Para posicionar correctamente el cuerpo (header, main y footer)*/
+/* Oderna el header, main y footer en forma de filas,
+luego se modifica para que lo haga como columnas, y
+finalmente que ocupe el espacio de toda la ventana del
+navegador */
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+
+
+
 /* BODY DE LA PAGINA DE CONTACTO*/
+
 .fondo_contacto {
     background: linear-gradient(rgba(0, 0, 0, 0.473)), url(../img/preview.jpg);
     background-size: cover;
@@ -21,8 +31,6 @@ body {
     font-size: 50px;
     font-weight: 600;
     color: rgb(255, 255, 255);
-    text-align: left;
-    margin-bottom: 10px;
     padding-left: 10px;
     letter-spacing: 5px;
 }
@@ -38,22 +46,30 @@ body {
 }
 
 
+
+/*<!-- Sección Contacto -->*/
+
 .seccion_contacto {
-    background-size: cover;
-    background-position: center;
+    /* Centrados */
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* Modifica el ancho y altura de la sección de contacto */
     width: auto;
-    min-height: 83vh;
+    min-height: 83vh;               /*83% de la altura total de la ventana del navegador*/
 }
 
+
+/*+ CONTENEDOR DEL TEXTO DE CONTACTO +*/
 .caja_contacto {
+    /* Da el tamaño al div */
     width: 550px;
     padding: 50px;
 }
 
 .form_contacto {
+    border: 1px solid blue;
     background-color: rgba(255, 0, 0, 0);
     padding: 50px;
     text-align: center;
@@ -63,6 +79,7 @@ body {
     position: relative;
 }
 
+/*+ CONTENEDOR DEL FORMULARIO DE CONTACTO +*/
 .inputtext {
     width: 100%;
     height: 40px;
@@ -112,6 +129,3 @@ body {
 .buttontext:hover {
     background: rgb(255, 255, 255);
 }
-
-/* FOOTER */
-/*traslado a estilos.css*/

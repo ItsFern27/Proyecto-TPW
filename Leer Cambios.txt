@@ -49,4 +49,16 @@ Se corrigió y mejoró la estructura del footer en todas las páginas afectadas.
 - En la línea 47 de contacto, y 48 de trabajo, cambié el class a seccion_contacto para un mejor orden (basicamente le cambie el nombre a la clase que habia ahí desde estilos_contacto.css)
 /// Like si no viste la S en el logo de Metacines, todo este tiempo creí que se llamaba Metacine sin más - F ///
 
-+
++ 19/04/25 - 22:37 - Rafael
+
+Implementé el modal de login con HTML y CSS utilizando input(type="checkbox") para abrir/cerrar el modal.
+
+Agregué estilos CSS para el modal de login y de registro, incluyendo imagen, formulario, botones e inputs.
+
+Hice que los botones “¿Eres socio?” en todas las páginas abran el modal de login al presionar.
+
+Corregí rutas mal implementadas.
+
+Corregí que el botón de “Ingresar” y “Registrarse” funcionen aunque todavía no tengan backend.
+
+Acomodé detalles visuales del login con estilos_login.css(.modal-login, .modal-contenedor-login, .formulario-login, .formulario-register).

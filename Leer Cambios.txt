@@ -78,3 +78,9 @@ minor fixes:
 - Corregí el header de todas las páginas para que muestren correctamente su sección de la pagina (class activo)
 - Corregí el header de todas las páginas para que funcione la pagina de chocolatería
 - cines.html: le puse una transición a los botones al pasar sobre ellos
+
++20/04 - 17:21 - Rafael
+
+-Cambie el target a -blank en todas las paginas para el terminos y condiciones para que abra en otra pag
+-arregle el link que va hacia "quienes somos" en libro-reclamaciones.html y en contacto.html
+-agrege comentarios en index.html

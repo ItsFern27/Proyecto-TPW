@@ -3,17 +3,18 @@
    footer, formularios, p1.html, etc.
    Usen estas clases para mantener un estilo unificado. */
 
+
    .titulo {
        font-family: 'Courier New', Courier, monospace;
        color: white;
        letter-spacing: 10px;
-       font-size: small;
+       font-size: 1.2em;
    }
 
    .subtitulo {
        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-       font-size: 20px;
-       font-weight: 600;
+       font-size: 25px;
+       font-weight: 600px;
        color: black;
        text-align: left;
        margin-bottom: 10px;
@@ -29,18 +30,9 @@
        text-align: justify;
    }
 
-   .caja {
-       background-color: #1a1a1a;
-       padding: 20px;
-       border-radius: 10px;
-       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-       margin: 15px 0;
-   }
 
 
    /* ====== ESTILO GENERAL PARA EL HEADER====== */
-
-
    .logo-titulo {
        display: flex;
        align-items: center;
@@ -48,22 +40,65 @@
    }
 
    .logo-mini {
-       width: 100px;
+       width: 150px;
        height: auto;
+       padding-left: 50px;
    }
-
-
 
    .encabezado {
        background-color: black;
-       height: 60px;
-       /* Función: Expande el cuadro */
-       width: auto;
+       height: 100px;
+       width: 100%;
        display: flex;
        justify-content: space-between;
        align-items: center;
-       padding: 10px 20px;
-       /* Función: Expande el cuadro a partir del contenido (rellena más cuadro cuando no tiene espacio) [Y px] [X px] */
+       position: fixed;
+       z-index: 1000;
+       /* Asegura que el encabezado esté por encima de otros elementos */
+   }
+
+   /*estilo para la hamburguesa*/
+   .icono-hamburguesa {
+       display: none;
+       font-size: 2em;
+       color: white;
+       cursor: pointer;
+       margin-left: 10px;
+   }
+
+   @media (max-width: 1600px) {
+
+       /*que tanto puedes achicarlo para que muestre la hamburguesita*/
+       .menu {
+           display: none;
+           flex-direction: column;
+           background: #111;
+           position: absolute;
+           top: 60px;
+           left: 0;
+           width: 100%;
+           padding: 10px 0;
+       }
+
+       #hamburguesa:checked~.menu {
+           display: flex;
+       }
+
+       .icono-hamburguesa {
+           display: block;
+       }
+
+       .menu a {
+           padding: 10px;
+           border-bottom: 1px solid #333;
+
+       }
+
+       .btn-socio,
+       .redes {
+           /*oculta cuando lo achicamos*/
+           display: none;
+       }
    }
 
    .menu a {
@@ -71,6 +106,8 @@
        margin: 0 10px;
        text-decoration: none;
        font-weight: bold;
+       font-family: 'Courier New', Courier, monospace;
+       letter-spacing: 5px;
    }
 
    .menu a:hover {
@@ -94,6 +131,8 @@
        border-radius: 20px;
        padding: 5px 15px;
        margin-right: 15px;
+       font-weight: 20px;
+       font-family: 'Courier New', Courier, monospace;
        font-weight: bold;
        cursor: pointer;
    }
@@ -106,62 +145,86 @@
    .redes a {
        color: white;
        margin: 0 5px;
-       font-size: 1.2em;
+       font-size: 2.4em;
    }
 
    .perfil-icon {
-       width: 32px;
-       height: 32px;
+       width: 40px;
+       height: 40px;
+       margin: 0 20px;
        border-radius: 50%;
-       background-color: grey;
-       margin-left: 10px;
+       background-color: rgba(255, 255, 255, 0);
+
    }
 
    /* ====== ESTILO GENERAL PARA EL MAIN====== */
 
-   .anticipio {
+   /* carrusel */
+
+   #conteItemsCarrusel {
+       height: 800px;
+       margin-top: 100px;
+       overflow: hidden;
        position: relative;
-       background-color: rgba(0, 0, 0, 0.66);
-       /* Fondo casi negro */
-       padding: 40px;
-       max-width: 1000px;
-       /*ancho del bloque*/
-       clip-path: polygon(0 0, 43% 0, 75% 100%, 0% 100%);
-       color: wheat;
-       flex: 1 1 500px;
-       /* Ocupa espacio flexible mínimo 500px */
    }
 
-   .contenido-anticipio {
+   .carrusel-inner {
        display: flex;
-       flex-wrap: wrap;
-       /*los elementos bajan si no caben(responsive)*/
-
-       align-items: flex-start;
-       /*coloca los items a la izq*/
-       justify-content: center;
-       gap: 30px;
-       /*espacio entre texto y img*/
-
+       height: 100%;
+       overflow-x: scroll;
+       scroll-snap-type: x mandatory;
+       scroll-behavior: smooth;
+       -webkit-overflow-scrolling: touch;
+       
    }
 
-   .texto-anticipio {
-       text-align: left;
-       font-family: 'Courier New', Courier, monospace;
-       max-width: 50%;
-       font-size: 20px;
-
-   }
-
-   .imagen-anticipio img {
-       max-width: 700px;
-       height: auto;
-       border-radius: 10px;
+   .item-carrusel {
+       flex: 0 0 100%;
+       scroll-snap-align: start;
        position: relative;
-       top: 130px;
-       right: 100px;
-
    }
+
+   .item-carrusel img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+   }
+
+   .flecha-carrusel {
+       position: absolute;
+       top: 0;
+       height: 100%;
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 50px;
+       z-index: 5;
+       pointer-events: none;
+       /* para que el click pase a los botones */
+   }
+
+   .flecha-carrusel button {
+       background: none;
+       border: none;
+       cursor: pointer;
+       pointer-events: all;
+   }
+
+   .flecha-carrusel i {
+       font-size: 2em;
+       color: white;
+       transition: transform 1.3s ease;
+   }
+
+   .flecha-carrusel i:hover {
+       transform: scale(1.2);
+       background-color: #111;
+       border-radius: 50px;
+       padding: 10px;
+   }
+
+   /*carrusel*/
 
    .fondo {
        /* Esta clase estaba sin usar para la imagen */
@@ -179,10 +242,10 @@
 
 
    .fondo-peliculas {
+
        background-color: white;
-       height: auto;
-       padding: 10px;
-       border-radius: 10px;
+       box-shadow: inset 0px 0px 22px -3px #000000;
+       padding: 100px;
    }
 
    .pelicula {
@@ -204,178 +267,180 @@
 
 
    /* ====== ESTILO GENERAL PARA EL FOUTER====== */
-   footer {
-       background-color: black;
-       color: white;
-       height: 80px;
-       width: auto;
-       margin-top: auto;
+   * {
+       list-style: none;
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+
+   }
+
+   .footer {
+       background-color: rgb(0, 0, 0);
+       padding: 80px 0px;
+       color: rgb(255, 255, 255);
+
+   }
+
+   .footer-content {
+       max-width: 1200px;
+       margin: 0 auto;
+
+   }
+
+   .footer-row {
        display: flex;
-       align-items: center;
-       font-weight: bold;
+       flex-wrap: wrap;
+   }
+
+   .footer-links {
+       width: 25%;
+       padding: 0 15px;
+   }
+
+   .footer-links h4 {
+       font-size: 20px;
+       color: white;
+       margin-bottom: 25px;
+       font-weight: 500;
+       border-bottom: 2px solid #ffffff;
+       padding-bottom: 10px;
+       display: inline-block;
+   }
+
+   .footer-links ul li a {
        font-size: 18px;
-       font-family: Arial, Helvetica, sans-serif;
        text-decoration: none;
-       justify-content: center;
-       padding: 10px;
+       color: #BBBBBB;
+       display: block;
+       margin-bottom: 15px;
+       transition: all .3s ease;
    }
 
-   .botones_footer {
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       width: 100%;
+   .footer-links ul li a:hover {
+       color: #ffffff;
+       padding-left: 6px;
    }
 
-   .botones_footer a {
-       margin: 0px 70px;
-   }
-
-   .btn-normal {
-       background: transparent;
-       border: transparent;
-       color: white;
-       margin: auto;
-       font-size: 16px;
-       cursor: pointer;
-       border-radius: 10px;
-       background: transparent;
-       transition: background-color 0.3s, transform 0.2s;
-   }
-
-   /*animacion light al boton normal*/
-   .btn-normal:hover {
-       transform: scale(1.1);
-   }
-
-
-.botones_footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.botones_footer a {
-    margin: 0px 70px;
-}
-
-   .btn-contacto {
-       background: transparent;
-       color: white;
-       border: 2px solid gray;
-       border-radius: 20px;
-       padding: 5px 15px;
-       margin: auto;
-       font-weight: bold;
-       font-size: 18px;
-       cursor: pointer;
-
-       justify-content: center;
-       align-items: center;
-       transition: background-color 0.3s, transform 0.2s;
-       /*animacion*/
-       background: transparent;
+   .social-link a {
+       display: inline-block;
+       min-height: 40px;
+       width: 40px;
+       background-color: rgba(255, 255, 255, 0.2);
+       margin: 0 10px 10px 0;
+       text-align: center;
+       line-height: 40px;
+       border-radius: 50%;
+       color: #ffffff;
+       transition: all .5s ease;
 
    }
 
-   /*animacion light al boton contaxto*/
-   .btn-contacto:hover {
-       background-color: lightgray;
-       transform: scale(1.1);
+   .social-link a:hover {
+       background-color: #ffffff;
+       color: #000000;
+   }
+
+   @media (max-width:991px) {
+       .footer-row {
+           text-align: center;
+       }
+
+       .footer-links {
+           width: 100%;
+           margin-bottom: 30px;
+       }
    }
 
    .cinestbl {
-    background-color: azure;
-    border-radius: 10px;
-    margin: 30px;
-    /*espaciado mejor*/
-    object-fit: cover;
-    border: 1px solid #444;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+       background-color: azure;
+       border-radius: 10px;
+       margin: 30px;
+       /*espaciado mejor*/
+       object-fit: cover;
+       border: 1px solid #444;
+       transition: transform 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
    }
 
    /* clase de las tablas de los cines */
    .img-cines {
-    width: 500px;
-    height: 300px;
-    border-radius: 10px;
-    margin: 30px;
-    /*espaciado mejor*/
-    object-fit: cover;
-    border: 1px solid #444;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
+       width: 500px;
+       height: 300px;
+       border-radius: 10px;
+       margin: 30px;
+       /*espaciado mejor*/
+       object-fit: cover;
+       border: 1px solid #444;
+       transition: transform 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   }
 
-    /* clase de text de las tablas de cine.html */
-    .cines-tbltext {
-        text-align: center;
-        vertical-align: middle;
-        width: 500px;
-        height: 300px;
-        font-size: 30px;
-        padding: 0 20px;
-        color: rgb(29, 28, 28);
-        display: flex;
-        justify-content: center;
-        padding-top: 60px;
-    }
+   /* clase de text de las tablas de cine.html */
+   .cines-tbltext {
+       text-align: center;
+       vertical-align: middle;
+       width: 500px;
+       height: 300px;
+       font-size: 30px;
+       padding: 0 20px;
+       color: rgb(29, 28, 28);
+       display: flex;
+       justify-content: center;
+       padding-top: 60px;
+   }
 
-    /* clase de configuración de los elementos de las tablas de cines.html */
-    .horario-configposicion-textbtn {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 20px;
-    }
+   /* clase de configuración de los elementos de las tablas de cines.html */
+   .horario-configposicion-textbtn {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: flex-start;
+       gap: 20px;
+   }
 
-    /* clase de text de las tablas de cines.html */
-    .btn-horario {
-        margin-top: 20px;
-        font-size: 20px;
-        padding: 10px 20px;
-        background-color: #333;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: .3s;
-    }
+   /* clase de text de las tablas de cines.html */
+   .btn-horario {
+       margin-top: 20px;
+       font-size: 20px;
+       padding: 10px 20px;
+       background-color: #333;
+       color: white;
+       border: none;
+       border-radius: 8px;
+       cursor: pointer;
+       transition: .3s;
+   }
 
-    /* clase de boton de la tabla en cines.html */
-    .btn-horario:hover {
-        background-color: #bf6e6e;
-        transform: scale(1.1);
-    }
+   /* clase de boton de la tabla en cines.html */
+   .btn-horario:hover {
+       background-color: #bf6e6e;
+       transform: scale(1.1);
+   }
 
-    /* clase de tabla horarios del modal cine1 en cines.html */
-    .cines-horarios {
-        background-color: azure;
-        width: 90%;
-        padding: 8px;
-        text-align: center;
-        border-collapse: collapse;
-        border-radius: 10px;
-        margin: 30px;
-        /*espaciado mejor*/
-        border: 1px solid #444;
-        transition: transform 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
+   /* clase de tabla horarios del modal cine1 en cines.html */
+   .cines-horarios {
+       background-color: azure;
+       width: 90%;
+       padding: 8px;
+       text-align: center;
+       border-collapse: collapse;
+       border-radius: 10px;
+       margin: 30px;
+       /*espaciado mejor*/
+       border: 1px solid #444;
+       transition: transform 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   }
 
-    /* Opcional: Estilos para celdas */
-    .cines-horarios th, 
-    .cines-horarios td {
-        padding: 12px;
-        border: 1px solid #bf6e6e;
-    }
+   /* Opcional: Estilos para celdas */
+   .cines-horarios th,
+   .cines-horarios td {
+       padding: 12px;
+       border: 1px solid #bf6e6e;
+   }
 
-     /* clase de color de las tablas del horario de cines.html */
-    .cines-horarios th {
-        background-color: #68a5ef;
-    }
-
-
+   /* clase de color de las tablas del horario de cines.html */
+   .cines-horarios th {
+       background-color: #68a5ef;
+   }

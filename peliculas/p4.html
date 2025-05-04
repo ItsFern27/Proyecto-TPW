@@ -22,10 +22,12 @@
         <!--ENCABEZADO-->
         <header class="encabezado">
             <!--Parte izquierda del cuadro-->
-            <div class="logo-titulo">
-                <img src="../img/logoMETACINES.jpg" alt="Logo MetaCine" class="logo-mini">
-                <h1 class="titulo">Multicines</h1>
-            </div>
+        <input type="checkbox" id="hamburguesa" hidden>
+        <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
+        <div class="logo-titulo">
+            <a href="../html/index.html"><img src="../img/logoMETACINES.jpg" alt="Logo MetaCine" class="logo-mini"></a>
+            <h1 class="titulo">Multicines</h1>
+        </div>
     
             <!--Parte centro del cuadro-->
             <nav class="menu">
@@ -171,13 +173,41 @@
         </div>
         </div>
     </main>
-    <footer>
-        <div class="botones_footer">
-            <a href="../html/libro-reclamaciones.html"><button class="btn-normal">Libro de Reclamaciones</button></a>
-            <a href="../html/index.html"><button class="btn-normal">Quiénes somos</button></a>
-            <a href="../html/trabaja-con-nosotros.html"><button class="btn-normal">Trabaja con nosotros</button></a>
-            <a href="../Términos y Condiciones de Uso.pdf"><button class="btn-normal">Términos y condiciones</button></a>
-            <a href="../html/contacto.html"><button class="btn-contacto">Contáctanos</button></a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Contáctanos</h4>
+                    <ul>
+                        <li><a href="../html/contacto.html">Contacto</a></li>
+                        <li><a href="../html/trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Atención al cliente</h4>
+                    <ul>
+                        <li><a href="../html/libro-reclamaciones.html">Libro de Reclamaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Terminos y condiciónes</h4>
+                    <ul>
+                        <li><a href="../Términos y Condiciones de Uso.pdf" target="_blank">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Siguenos</h4>
+                    <div class="social-link">
+                        <a href="https://www.linkedin.com/in/metacines-multicines-509143361/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a> <!--añadiendo redes sociales-->
+                        <a href="https://www.instagram.com/metacines_mult/" target="_blank"><i
+                                class="fab fa-instagram"></i></a><!--añadiendo redes sociales-->
+                        <a href="https://www.facebook.com/profile.php?id=61575268895729" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a><!--añadiendo redes sociales-->
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 </body>

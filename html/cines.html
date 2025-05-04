@@ -1,54 +1,55 @@
-
 <html lang="es">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Informacion de los cines disponibles">
-        <link rel="icon" href="../img/logito.png" type="image/png">
-        <title> CINES </title>
-        <link rel="stylesheet" href="../css/estilos.css">
-        <link rel="stylesheet" href="../css/estilos_peli.css">
-        <link rel="stylesheet" href="../css/estilos_contacto.css">
-        <link rel="stylesheet" href="../css/estilo_login.css">
-        <link rel="stylesheet" href="../css/estilos_trabaja.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informacion de los cines disponibles">
+    <link rel="icon" href="../img/logito.png" type="image/png">
+    <title> CINES </title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos_peli.css">
+    <link rel="stylesheet" href="../css/estilos_contacto.css">
+    <link rel="stylesheet" href="../css/estilo_login.css">
+    <link rel="stylesheet" href="../css/estilos_trabaja.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
 
-    <body class="fondo">
-        <!--ENCABEZADO-->
-        <header class="encabezado">
-            <!--Parte izquierda del cuadro-->
-            <div class="logo-titulo">
-                <img src="../img/logoMETACINES.jpg" alt="Logo MetaCine" class="logo-mini">
-                <h1 class="titulo">Multicines</h1>
+<body class="fondo">
+    <!--ENCABEZADO-->
+    <header class="encabezado">
+        <!--Parte izquierda del cuadro-->
+        <input type="checkbox" id="hamburguesa" hidden>
+        <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
+        <div class="logo-titulo">
+            <a href="../html/index.html"><img src="../img/logoMETACINES.jpg" alt="Logo MetaCine" class="logo-mini"></a>
+            <h1 class="titulo">Multicines</h1>
+        </div>
+
+        <!--Parte centro del cuadro-->
+        <nav class="menu">
+            <a href="../html/index.html">HOME</a>
+            <a href="../html/index.html">PELÍCULAS</a>
+            <a href="../html/cines.html" class="activo">CINES</a>
+            <a href="../html/chocolateria.html">CHOCOLATERÍA</a>
+            <a href="#">VENTA CORPORATIVA</a>
+            <a href="#">PROMOCIONES</a>
+        </nav>
+
+        <!--Parte derecha del cuadro-->
+        <div class="acciones">
+            <label for="modal-toggle-login" class="btn-socio">¿Eres
+                socio?</label><!--el label actua como boton y activa el modal-->
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/metacines-multicines-509143361/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a> <!--añadiendo redes sociales-->
+                <a href="https://www.instagram.com/metacines_mult/" target="_blank"><i
+                        class="fab fa-instagram"></i></a><!--añadiendo redes sociales-->
+                <a href="https://www.facebook.com/profile.php?id=61575268895729" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a><!--añadiendo redes sociales-->
             </div>
-    
-            <!--Parte centro del cuadro-->
-            <nav class="menu">
-                <a href="../html/index.html" >HOME</a>
-                <a href="../html/index.html">PELÍCULAS</a>
-                <a href="../html/cines.html" class="activo">CINES</a>
-                <a href="../html/chocolateria.html">CHOCOLATERÍA</a>
-                <a href="#">VENTA CORPORATIVA</a>
-                <a href="#">PROMOCIONES</a>
-            </nav>
-    
-            <!--Parte derecha del cuadro-->
-            <div class="acciones">
-                <label for="modal-toggle-login" class="btn-socio">¿Eres
-                    socio?</label><!--el label actua como boton y activa el modal-->
-                <div class="redes">
-                    <a href="https://www.linkedin.com/in/metacines-multicines-509143361/" target="_blank"><i
-                            class="fab fa-linkedin-in"></i></a> <!--añadiendo redes sociales-->
-                    <a href="https://www.instagram.com/metacines_mult/" target="_blank"><i
-                            class="fab fa-instagram"></i></a><!--añadiendo redes sociales-->
-                    <a href="https://www.facebook.com/profile.php?id=61575268895729" target="_blank"><i
-                            class="fab fa-facebook-f"></i></a><!--añadiendo redes sociales-->
-                </div>
-                <img src="../img/icone-utilisateur-gris.png" alt="Perfil" class="perfil-icon">
-            </div>
-        </header>
+            <img src="../img/icone-utilisateur-gris.png" alt="Perfil" class="perfil-icon">
+        </div>
+    </header>
     <!--MODAL LOGIN-->
     <!-- Botón en el header -->
     <label for="modal-toggle-login" class="btn-open-modal"></label>
@@ -82,7 +83,9 @@
                         <input type="password" placeholder="Contraseña" required>
                         <button type="submit">Ingresar</button>
                     </form>
-                    <label for="show-register" class="switch-form"><h5 class="modal-parrafo-login">¿No tienes cuenta? <u>Regístrate</u></h6></label>
+                    <label for="show-register" class="switch-form">
+                        <h5 class="modal-parrafo-login">¿No tienes cuenta? <u>Regístrate</u></h6>
+                    </label>
                 </div>
 
                 <!-- Formulario de REGISTRO -->
@@ -94,7 +97,9 @@
                         <input type="password" placeholder="Contraseña" required>
                         <button type="submit">Registrarse</button>
                     </form>
-                    <label for="show-login" class="switch-form"><h5 class="modal-parrafo-login">¿Ya tienes cuenta? <u>Inicia sesión</u></h5></label>
+                    <label for="show-login" class="switch-form">
+                        <h5 class="modal-parrafo-login">¿Ya tienes cuenta? <u>Inicia sesión</u></h5>
+                    </label>
                 </div>
 
             </div>
@@ -102,22 +107,23 @@
     </section>
     <br>
 
-    <main> 
+    <main>
         <h1 class="subtitulo" style="font-size: 60px;"> Cines: </h1>
         <section>
             <div style="text-align: center;">
                 <table style="margin: auto; border: 1px solid black;" class="cinestbl">
                     <tr>
                         <td> <img src="../img/cine1.jpg" alt="cine1" class="img-cines"></a> </td>
-                        <td class="cines-tbltext"> 
+                        <td class="cines-tbltext">
                             <div class="horario-configposicion-textbtn">
                                 <h2> Cine Mall del Sur </h2>
-                                 <!-- Modal -->
+                                <!-- Modal -->
                                 <input type="checkbox" id="modal-cine1" class="modal-checkbox" style="display:none;">
                                 <div class="modal">
                                     <div class="modal-contenido">
                                         <label for="modal-cine1" class="cerrar">&times;</label>
-                                        <iframe src="../horarios/horariocine1.html" width="912" height="459" frameborder="0"></iframe>
+                                        <iframe src="../horarios/horariocine1.html" width="912" height="459"
+                                            frameborder="0"></iframe>
                                     </div>
                                 </div>
                                 <label for="modal-cine1" class="btn-horario"> HORARIO </label>
@@ -129,7 +135,7 @@
                 <table style="margin: auto; border: 1px solid black;" class="cinestbl">
                     <tr>
                         <td> <img src="../img/cine2.jpg" alt="cine1" class="img-cines"></a> </td>
-                        <td class="cines-tbltext"> 
+                        <td class="cines-tbltext">
                             <div class="horario-configposicion-textbtn">
                                 <h2> Cine V.E.S </h2>
                                 <!-- Modal -->
@@ -137,7 +143,8 @@
                                 <div class="modal">
                                     <div class="modal-contenido">
                                         <label for="modal-cine1" class="cerrar">&times;</label>
-                                        <iframe src="../horarios/horariocine1.html" width="912" height="459" frameborder="0"></iframe>
+                                        <iframe src="../horarios/horariocine1.html" width="912" height="459"
+                                            frameborder="0"></iframe>
                                     </div>
                                 </div>
                                 <label for="modal-cine1" class="btn-horario"> HORARIO </label>
@@ -149,7 +156,7 @@
                 <table style="margin: auto; border: 1px solid black;" class="cinestbl">
                     <tr>
                         <td> <img src="../img/cine3.jpg" alt="cine1" class="img-cines"></a> </td>
-                        <td class="cines-tbltext"> 
+                        <td class="cines-tbltext">
                             <div class="horario-configposicion-textbtn">
                                 <h2> Cine UTP </h2>
                                 <!-- Modal -->
@@ -157,7 +164,8 @@
                                 <div class="modal">
                                     <div class="modal-contenido">
                                         <label for="modal-cine1" class="cerrar">&times;</label>
-                                        <iframe src="../horarios/horariocine1.html" width="912" height="459" frameborder="0"></iframe>
+                                        <iframe src="../horarios/horariocine1.html" width="912" height="459"
+                                            frameborder="0"></iframe>
                                     </div>
                                 </div>
                                 <label for="modal-cine1" class="btn-horario"> HORARIO </label>
@@ -169,16 +177,44 @@
         </section>
     </main>
 
-    <footer>
-        <div class="botones_footer">
-            <a href="../html/libro-reclamaciones.html"><button class="btn-normal">Libro de Reclamaciones</button></a>
-            <a href="../html#sobre-nosotros"><button class="btn-normal">Quiénes somos</button></a>
-            <a href="../html/trabaja-con-nosotros.html"><button class="btn-normal">Trabaja con nosotros</button></a>
-            <a href="../Términos y Condiciones de Uso.pdf" target="_blank"><button class="btn-normal">Términos y condiciones</button></a>
-            <a href="../html/contacto.html"><button class="btn-contacto">Contáctanos</button></a>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Contáctanos</h4>
+                    <ul>
+                        <li><a href="../html/contacto.html">Contacto</a></li>
+                        <li><a href="../html/trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Atención al cliente</h4>
+                    <ul>
+                        <li><a href="../html/libro-reclamaciones.html">Libro de Reclamaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Terminos y condiciónes</h4>
+                    <ul>
+                        <li><a href="../Términos y Condiciones de Uso.pdf" target="_blank">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Siguenos</h4>
+                    <div class="social-link">
+                        <a href="https://www.linkedin.com/in/metacines-multicines-509143361/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a> <!--añadiendo redes sociales-->
+                        <a href="https://www.instagram.com/metacines_mult/" target="_blank"><i
+                                class="fab fa-instagram"></i></a><!--añadiendo redes sociales-->
+                        <a href="https://www.facebook.com/profile.php?id=61575268895729" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a><!--añadiendo redes sociales-->
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
-    </body>
+</body>
 
 </html>

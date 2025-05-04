@@ -79,3 +79,18 @@ minor fixes:
 - Corregí el header de todas las páginas para que funcione la pagina de chocolatería
 - cines.html: le puse una transición a los botones al pasar sobre ellos
 
++ 3/05 - 21:24 - Rafael
+
+este es un guardado para empezar con el carrusel el cual estara en el lugar donde estaba el anticipio
+
+-Añadi un menu tipo hamburguesa el cual se activara cuando el tamaño del header se achique
+
+-Mejore el footer colocandolo como una lista desordenada con su diseño responsive el cual se apila uno tras otro y ce centra el texto
+
+-Traslade el anticipio a otro archivo html el cual tendra un sobre nosotros mas detallado
+
+-Aplique todos los cambios a todas las paginas
+
+-el click en el logo ahora lleva a la pag principo
+
+

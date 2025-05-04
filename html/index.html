@@ -22,7 +22,7 @@
 
 </head>
 
-<body class="fondo">
+<body>
 
     <!--ENCABEZADO-->
     <header class="encabezado">
@@ -119,10 +119,46 @@
     </section>
 
     <main>
+        <section>
+            <!-- Carrusel de imágenes -->
+            <div id="conteItemsCarrusel">
+                <div class="carrusel-inner">
+                    <div class="item-carrusel" id="item-carrusel1">
+                        <img src="../img-carrusel/flowfondo.webp" alt="item1">
+                    </div>
+                    <div class="item-carrusel" id="item-carrusel2">
+                        <img src="../img-carrusel/gatoconbotasfondo.webp" alt="item2">
+                    </div>
+                    <div class="item-carrusel" id="item-carrusel3">
+                        <img src="../img-carrusel/wall-efondo.webp" alt="item3">
+                    </div>
+                </div>
 
+                <!-- Flechas -->
+                <div class="flecha-carrusel">
+                    <button
+                        onclick="document.querySelector('.carrusel-inner').scrollBy({ left: -window.innerWidth, behavior: 'smooth' })">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button
+                        onclick="document.querySelector('.carrusel-inner').scrollBy({ left: window.innerWidth, behavior: 'smooth' })">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
 
+                <!-- Puntos -->
+                <div id="contePuntos">
+                    <a href="#item-carrusel1">•</a>
+                    <a href="#item-carrusel2">•</a>
+                    <a href="#item-carrusel3">•</a>
+                </div>
+            </div>
+
+        </section>
         <!--SOLO SEGUIR LA SINTAXIS, NO AGREGAR ESTILOS-->
         <section class="fondo-peliculas">
+
+
             <a name="cartelera"></a>
             <h2 class="subtitulo">Cartelera:</h2>
             <table>
@@ -146,7 +182,8 @@
                             <tr>
                                 <td> <a href="../peliculas/p4.html" target="_self"><img src="../img/p4.jpg" alt="p4"
                                             class="pelicula"></a> <br>
-                                    <div class="subtitulo">Colorful Stage La Película: <br> Miku no Puede cantar </div>
+                                    <div class="subtitulo">Colorful Stage La Película: <br> Miku no Puede cantar
+                                    </div>
                                 </td>
                                 <td> <a href="../peliculas/p5.html" target="_self"><img src="../img/p5.jpg" alt="p5"
                                             class="pelicula"></a> <br>
@@ -220,7 +257,8 @@
                 <div class="footer-links">
                     <h4>Terminos y condiciónes</h4>
                     <ul>
-                        <li><a href="../Términos y Condiciones de Uso.pdf" target="_blank">Términos y condiciones</a></li>
+                        <li><a href="../Términos y Condiciones de Uso.pdf" target="_blank">Términos y condiciones</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-links">

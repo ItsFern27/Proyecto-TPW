@@ -13,11 +13,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
 </head>
-
 <body class="fondo_contacto"> <!-- background ahora se encuentra en el css -->
     
     <!-- =============== HEADER =============== -->
-    <header class="encabezado">
+    <header class="encabezado" style="border: 1px solid blue;">
         <!--Parte izquierda del cuadro-->
         <input type="checkbox" id="hamburguesa" hidden>
         <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
@@ -103,19 +102,21 @@
     </section>
 
     <!-- =============== MAIN =============== -->
-    <main>
+    <main class="main_contacto">
         <!-- Sección Contacto -->
-        <section class="seccion_contacto">
-            <div class="caja_contacto">                
-                <h1 class="subtitulo_contacto">CONTÁCTATE CON NOSOTROS</h1>
-                <div class="texto_contacto">
-                    <p>Para asegurar la calidad y optimización de nuestro servicio, por favor llenar todos los campos que solicitamos.¡Gracias!</p>
-                    <p><i class="fa-solid fa-phone"></i> +51 953 283 238</p>
-                    <p><i class="fa-solid fa-envelope"></i>metacinesmulticines@gmail.com</p>
-                    <p><i class="fa-solid fa-location-dot"></i> Mall del Sur - Centro de Contacto</p>
+        <section class="seccion_contacto"> 
+            <article class="caja_contacto">
+                <div>
+                    <h1 class="titulo_contacto">CONTÁCTATE CON NOSOTROS</h1>
+                    <div class="texto_contacto">
+                        <p>Para asegurar la calidad y optimización de nuestro servicio, por favor llenar todos los campos que solicitamos. ¡Gracias!</p>
+                        <p><i class="fa-solid fa-phone"></i> +51 953 283 238</p>
+                        <p><i class="fa-solid fa-envelope"></i> metacinesmulticines@gmail.com</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Mall del Sur - Centro de Contacto</p>
+                    </div>
                 </div>
-            </div>
-            
+            </article>
+                
             <form class="form_contacto" action="mailto:metacinesmulticines@gmail.com?subject=Mensaje" method="post" enctype="text/plain">
                 <!-- mailto: intenta abrir el programa de correo predeterminado del usuario para mandar un email con los datos del formulario-->
                 <!-- enctype: define el formato en que se enviaran los datos (por defecto usa pares "clave=valor", pero ahora se define como "texto plano")-->
@@ -126,6 +127,7 @@
                 <textarea class="messagetext" cols="30" rows="10" placeholder="Mensaje" required></textarea>
                 <button class="buttontext" type="submit">Enviar</button>
             </form>
+            
         </section>
     </main>
 

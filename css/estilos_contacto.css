@@ -23,16 +23,19 @@ body {
     background-attachment: fixed;
     /* Hace que la img quede estática */
     margin: 0;
+    
     /* Corta los bordes de los lados que tenía el cuadro de navegación */
 }
 
-.subtitulo_contacto {
+.titulo_contacto {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 50px;
     font-weight: 600;
     color: rgb(255, 255, 255);
-    padding-left: 10px;
     letter-spacing: 5px;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 .texto_contacto {
@@ -40,11 +43,19 @@ body {
     font-size: 22px;
     color: #e0e0e0;
     line-height: 1.5;
-    margin-bottom: 10px;
-    padding-left: 10px;
     text-align: justify;
 }
 
+
+
+.main_contacto {
+    margin-top: 100px;
+    min-height: 83vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 
 /*<!-- Sección Contacto -->*/
@@ -52,31 +63,27 @@ body {
 .seccion_contacto {
     /* Centrados */
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-
-    /* Modifica el ancho y altura de la sección de contacto */
-    width: auto;
-    min-height: 83vh;               /*83% de la altura total de la ventana del navegador*/
+    gap: 100px;
+    padding: 100px;
+    /*background-color: rgba(0, 0, 0, 0.068);
+    border-radius: 50px;*/
 }
 
 
 /*+ CONTENEDOR DEL TEXTO DE CONTACTO +*/
 .caja_contacto {
-    /* Da el tamaño al div */
-    width: 550px;
-    padding: 50px;
+    width: 460px; /* Da el tamaño al div */
+    align-content: center;
 }
 
 .form_contacto {
-    border: 1px solid rgb(82, 82, 82);
     background-color: rgba(255, 0, 0, 0);
-    padding: 50px;
-    text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 15px;
-    position: relative;
 }
 
 /*+ CONTENEDOR DEL FORMULARIO DE CONTACTO +*/

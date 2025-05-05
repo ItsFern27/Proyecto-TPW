@@ -1,3 +1,9 @@
+/*GENERAL*/
+main {
+    margin: 100px;
+}
+
+
 .contenedor_chocolateria {
     display: flex;
     flex-direction: column;

@@ -14,6 +14,10 @@ body {
 main {
     font-family: Arial;
     margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* BODY DE LA PAGINA DE LIBRO RECLAMACIONES*/
@@ -35,11 +39,18 @@ main {
 .section_libro-reclamaciones {
     display: flex;
     flex-direction: column;
-    margin: 3vw 40vh;
+    margin: 3vw;
     background-color: white;
     border-radius: 20px;
     padding-inline: 3%;
     padding-block: 2.5%;
+    width: 100vh;
+}
+
+@media (max-width: 1000px) {
+    .section_libro-reclamaciones {
+        width: 78vh;
+    }
 }
 
 .titulo_libro-reclamaciones {

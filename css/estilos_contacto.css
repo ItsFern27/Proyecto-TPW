@@ -71,6 +71,25 @@ body {
     border-radius: 50px;*/
 }
 
+@media (max-width: 1000px) {
+    .seccion_contacto{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .titulo_contacto {
+        text-align: center;
+    }
+
+    .texto_contacto{
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .texto_contacto div {
+        margin-top: 30px;
+    }
+}
+
 
 /*+ CONTENEDOR DEL TEXTO DE CONTACTO +*/
 .caja_contacto {

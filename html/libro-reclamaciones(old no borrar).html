@@ -2,29 +2,21 @@
 <html lang="es">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a pantallas móviles -->
-    <meta charset='utf-8'> <!-- Codificación UTF-8 -->
-    <meta name="description"
-        content="Disfruta las mejores películas, estrenos, contenido exclusivo, alquiler de salas, audio de alta calidad, promociones y la experiencia del cine en Perú.">
-    <!-- Descripción para buscadores -->
-    <meta name="keywords" content="cine, películas, cartelera, estrenos, cine Perú, cine cercano, metacine">
-    <!-- Palabras clave SEO -->
-    <link rel="icon" href="../img/logito.png" type="image/png"> <!-- Ícono en la pestaña -->
-    <title>MetaCine</title> <!-- Título del sitio -->
-
-    <link rel="stylesheet" href="../css/estilos.css"> <!-- Estilos generales -->
-    <link rel="stylesheet" href="../css/estilos_librorec2.css"> <!-- Estilos para contacto -->
-    <link rel="stylesheet" href="../css/estilo_login.css"> <!-- Estilos para login -->
+    <meta charset='utf-8'>
+    <link rel="icon" href="../img/logito.png" type="image/png">
+    <title>MetaCine I Contacto</title>
+    <meta name="description" content="Disfruta las mejores películas, estrenos, contenido exclusivo, alquiler de salas, audio de alta calidad, promociones y la experiencia del cine en Perú.">
+    <meta name="keywords" content="cine, películas, cartelera, estrenos, cine Perú, cine cercano, metacine, contacto">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos_libro-reclamaciones.css">
+    <link rel="stylesheet" href="../css/estilo_login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Íconos Font Awesome -->
-
 </head>
 
-<body class="fondo_libro-reclamaciones">
+<body class="fondo_libro-reclamaciones"> <!-- background ahora se encuentra en el css -->
 
     <!-- =============== HEADER =============== -->
     <header class="encabezado">
-
         <!--Parte izquierda del cuadro-->
         <input type="checkbox" id="hamburguesa" hidden>
         <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
@@ -33,12 +25,11 @@
             <h1 class="titulo">Multicines</h1>
         </div>
 
-
         <!--Parte centro del cuadro-->
         <nav class="menu">
             <a href="index.html">HOME</a>
-            <a href="#cartelera">PELÍCULAS</a>
-            <a href="cines.html">CINES</a>
+            <a href="../html/index.html#cartelera">PELÍCULAS</a>
+            <a href="../html/cines.html">CINES</a>
             <a href="../html/chocolateria.html">CHOCOLATERÍA</a>
             <a href="#">VENTA CORPORATIVA</a>
             <a href="#">PROMOCIONES</a>
@@ -49,18 +40,16 @@
             <label for="modal-toggle-login" class="btn-socio">¿Eres
                 socio?</label><!--el label actua como boton y activa el modal-->
             <div class="redes">
-                <a href="https://www.linkedin.com/in/metacines-multicines-509143361/" target="_blank"><i
-                        class="fab fa-linkedin-in"></i></a> <!--añadiendo redes sociales-->
-                <a href="https://www.instagram.com/metacines_mult/" target="_blank"><i
-                        class="fab fa-instagram"></i></a><!--añadiendo redes sociales-->
-                <a href="https://www.facebook.com/profile.php?id=61575268895729" target="_blank"><i
-                        class="fab fa-facebook-f"></i></a><!--añadiendo redes sociales-->
+                <a href="https://www.linkedin.com/in/metacines-multicines-509143361/"><i class="fab fa-linkedin-in"></i></a> <!--añadiendo redes sociales-->
+                <a href="https://www.instagram.com/metacines_mult/"><i class="fab fa-instagram"></i></a><!--añadiendo redes sociales-->
+                <a href="https://www.facebook.com/profile.php?id=61575268895729"><i class="fab fa-facebook-f"></i></a><!--añadiendo redes sociales-->
             </div>
             <img src="../img/icone-utilisateur-gris.png" alt="Perfil" class="perfil-icon">
         </div>
     </header>
 
-    <!--MODAL LOGIN-->
+
+    <!-- =============== MODAL LOGIN =============== -->
     <!-- Botón en el header -->
     <label for="modal-toggle-login" class="btn-open-modal"></label>
 
@@ -93,9 +82,7 @@
                         <input type="password" placeholder="Contraseña" required>
                         <button type="submit">Ingresar</button>
                     </form>
-                    <label for="show-register" class="switch-form">
-                        <h5 class="modal-parrafo-login">¿No tienes cuenta? <u>Regístrate</u></h6>
-                    </label>
+                    <label for="show-register" class="switch-form"><h5 class="modal-parrafo-login">¿No tienes cuenta? <u>Regístrate</u></h6></label>
                 </div>
 
                 <!-- Formulario de REGISTRO -->
@@ -107,23 +94,20 @@
                         <input type="password" placeholder="Contraseña" required>
                         <button type="submit">Registrarse</button>
                     </form>
-                    <label for="show-login" class="switch-form">
-                        <h5 class="modal-parrafo-login">¿Ya tienes cuenta? <u>Inicia sesión</u></h5>
-                    </label>
+                    <label for="show-login" class="switch-form"><h5 class="modal-parrafo-login">¿Ya tienes cuenta? <u>Inicia sesión</u></h5></label>
                 </div>
 
             </div>
         </div>
     </section>
 
-
     <!-- =============== MAIN =============== -->
     <main>
-        <!-- Sección Contacto -->
+        <!-- Sección Libro Reclamaciones -->
         <section class="section_libro-reclamaciones">
 
             <!-- Se crea un formulario para guardar los datos -->
-            <form method="post" action="mailto:metacinesmulticines@gmail.com?subject=Mensaje" class="form-contenedor_libro-reclamaciones">
+            <form method="post" action="mailto:metacinesmulticines@gmail.com?subject=Mensaje">
                 <h1 class="titulo_libro-reclamaciones">Libro de Reclamaciones</h1>
 
                 <!--DATOS DEL CONSUMIDOR RECLAMANTE-->
@@ -223,7 +207,7 @@
                 <article class="bordeseparador_libro-reclamaciones">
                 
                     <h2 class="subtitulo_libro-reclamaciones">Detalle del reclamo</h2>
-                    <textarea class="textarea-dtr_libro-reclamaciones" name="detalle_reclamo" required></textarea>
+                    <textarea class="textarea-dtr_libro-reclamaciones" name="detalle_reclamo" cols="60" rows="10" required></textarea>
                 
                 </article>
 
@@ -243,9 +227,7 @@
             </form>
         </section>
     </main>
-
-
-    <!-- =============== FOOTER =============== -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-row">
@@ -265,8 +247,7 @@
                 <div class="footer-links">
                     <h4>Terminos y condiciónes</h4>
                     <ul>
-                        <li><a href="../Términos y Condiciones de Uso.pdf" target="_blank">Términos y condiciones</a>
-                        </li>
+                        <li><a href="../Términos y Condiciones de Uso.pdf" target="_blank">Términos y condiciones</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -283,7 +264,5 @@
             </div>
         </div>
     </footer>
-
-</body>
 
 </html>

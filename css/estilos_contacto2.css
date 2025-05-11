@@ -43,7 +43,6 @@ main {
     min-height: fit-content;
     margin-block: 10%;
     margin-inline: 30px;
-    height: fit-content;
     display: flex;
     flex-direction: row;
     gap: 100px;

@@ -1,0 +1,35 @@
+/* GENERAL */
+/* Para posicionar correctamente el cuerpo (header, main y footer)*/
+/* Oderna el header, main y footer en forma de filas,
+luego se modifica para que lo haga como columnas, y
+finalmente que ocupe el espacio de toda la ventana del
+navegador */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    min-height: 83vh;
+    font-family: Arial;
+}
+
+
+
+
+/* BODY DE LA PAGINA DE CONTACTO*/
+
+.fondo_contacto {
+    background: linear-gradient(rgba(0, 0, 0, 0)), url(../img/preview.jpg);
+    background-size: cover;
+    /* Cubre toda la pagina con la imagen (creo q también la estira) */
+    background-attachment: fixed;
+    background-position: center;
+    /* Hace que la img quede estática */
+    margin: 0;
+    /* Corta los bordes de los lados que tenía el cuadro de navegación */
+}

@@ -171,6 +171,22 @@ main {
     }
 }
 
+@media (orientation: portrait) and (max-width: 360px) {
+    .titulo_contacto {
+        font-size: 40px;
+    }
+
+    .texto_contacto{
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .texto_contacto div {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+}
+
 @media (orientation: landscape) and (max-width: 900px) {
     .section_contacto {
         gap: 50px

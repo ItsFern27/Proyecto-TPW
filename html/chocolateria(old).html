@@ -1,30 +1,23 @@
-<!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a pantallas móviles -->
-    <meta charset='utf-8'> <!-- Codificación UTF-8 -->
-    <meta name="description"
-        content="Disfruta las mejores películas, estrenos, contenido exclusivo, alquiler de salas, audio de alta calidad, promociones y la experiencia del cine en Perú.">
-    <!-- Descripción para buscadores -->
-    <meta name="keywords" content="cine, películas, cartelera, estrenos, cine Perú, cine cercano, metacine">
-    <!-- Palabras clave SEO -->
-    <link rel="icon" href="../img/logito.png" type="image/png"> <!-- Ícono en la pestaña -->
-    <title>MetaCine</title> <!-- Título del sitio -->
-
-    <link rel="stylesheet" href="../css/estilos.css"> <!-- Estilos generales -->
-    <link rel="stylesheet" href="../css/estilos_chocolateria2.css"> <!-- Estilos para contacto -->
-    <link rel="stylesheet" href="../css/estilo_login.css"> <!-- Estilos para login -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informacion de los cines disponibles">
+    <link rel="icon" href="../img/logito.png" type="image/png">
+    <title> CINES </title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos_peli.css">
+    <link rel="stylesheet" href="../css/estilos_contacto.css">
+    <link rel="stylesheet" href="../css/estilo_login.css">
+    <link rel="stylesheet" href="../css/estilos_trabaja.css">
+    <link rel="stylesheet" href="../css/estilos_chocolateria.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Íconos Font Awesome -->
-
 </head>
 
-<body class="fondo_contacto">
-
-    <!-- =============== HEADER =============== -->
+<body class="fondo">
+    <!--ENCABEZADO-->
     <header class="encabezado">
-
         <!--Parte izquierda del cuadro-->
         <input type="checkbox" id="hamburguesa" hidden>
         <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
@@ -33,13 +26,12 @@
             <h1 class="titulo">Multicines</h1>
         </div>
 
-
         <!--Parte centro del cuadro-->
         <nav class="menu">
-            <a href="index.html">HOME</a>
-            <a href="#cartelera">PELÍCULAS</a>
-            <a href="cines.html">CINES</a>
-            <a href="../html/chocolateria.html">CHOCOLATERÍA</a>
+            <a href="../html/index.html">HOME</a>
+            <a href="../html/index.html">PELÍCULAS</a>
+            <a href="../html/cines.html">CINES</a>
+            <a href="../html/chocolateria.html" class="activo">CHOCOLATERÍA</a>
             <a href="#">VENTA CORPORATIVA</a>
             <a href="#">PROMOCIONES</a>
         </nav>
@@ -59,7 +51,6 @@
             <img src="../img/icone-utilisateur-gris.png" alt="Perfil" class="perfil-icon">
         </div>
     </header>
-
     <!--MODAL LOGIN-->
     <!-- Botón en el header -->
     <label for="modal-toggle-login" class="btn-open-modal"></label>
@@ -88,7 +79,7 @@
                 <!-- Formulario de LOGIN -->
                 <div class="formulario-login formulario-toggle">
                     <h2 class="modal-titulo-login">Iniciar Sesión</h2>
-                    <form action="index.html" method="get">
+                    <form action="../html/index.html" method="get">
                         <input type="text" placeholder="Usuario" required>
                         <input type="password" placeholder="Contraseña" required>
                         <button type="submit">Ingresar</button>
@@ -101,7 +92,7 @@
                 <!-- Formulario de REGISTRO -->
                 <div class="formulario-register formulario-toggle">
                     <h2 class="modal-titulo-login">Crear Cuenta</h2>
-                    <form action="index.html" method="get">
+                    <form action="../html/index.html" method="get">
                         <input type="text" placeholder="Nombre completo" required>
                         <input type="email" placeholder="Correo electrónico" required>
                         <input type="password" placeholder="Contraseña" required>
@@ -115,32 +106,63 @@
             </div>
         </div>
     </section>
+    <br>
 
-
-    <!-- =============== MAIN =============== -->
     <main>
-        <!-- Sección chocolatería -->
-        <section style="margin-inline: 100px; margin-block: 30px; background-color: white; border-radius: 30px; padding-block: 30px; padding-inline: 50px;">
-            <article style="border-bottom: 5px solid rgb(164, 99, 66); margin-bottom: 25px; padding-bottom: 25px;">
-                <h1 style="font-size: 50px;">Chocolatería</h1> <br>
-                <p style="font-size: 20px;">Saborea la experiencia completa del cine con nuestros exquísitos productos y los mejores combos. (disponible en todos nuestros cines)</p>
-            </article>
 
-            <article style="min-height: 750px;">
-                En proceso...
-                <ul style="border: 1px solid green; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 75px;">
-                    <li style="border: 2px solid red; width: 150px;">A</li>
-                    <li style="border: 2px solid red; width: 150px;">A</li>
-                    <li style="border: 2px solid red; width: 150px;">A</li>
-                    <li style="border: 2px solid red; width: 150px;">A</li>
-                    <li style="border: 2px solid red; width: 150px;">A</li>
-                </ul>
-            </article>
+        <section>
+            <div class="contenedor_chocolateria">
+                <h1 class="subtitulo" style="font-size: 60px;"> Chocolatería </h1>
+                <p style="font-size: 20px;">Productos disponibles en todos nuestros cines</p>
+            </div>
+
+            <div style="text-align: center;">
+                <table style="margin: auto; border: 1px solid black;" class="cinestbl">
+                    <tr>
+                        <td> <img src="../img/canchita_chocolateria.png" alt="cine1" class="img-cines"></a> </td>
+                        <td class="cines-tbltext">
+                            <div class="horario-configposicion-textbtn">
+                                <h2> Canchita Popcorn </h2>
+                                <!-- boton para que se abra los horarios -->
+                                <input type="checkbox" id="modal-cine1" class="modal-checkbox" style="display:none;">
+                                <label class="btn-horario"> S/. 8.00 </label>
+                            </div> <br>
+                        </td>
+                    </tr>
+                </table><br><br>
+
+                <table style="margin: auto; border: 1px solid black;" class="cinestbl">
+                    <tr>
+                        <td> <img src="../img/bebidas_chocolateria.png" alt="cine1" class="img-cines"></a> </td>
+                        <td class="cines-tbltext">
+                            <div class="horario-configposicion-textbtn">
+                                <h2> Gaseosas </h2>
+                                <!-- boton para que se abra los horarios -->
+                                <input type="checkbox" id="modal-cine1" class="modal-checkbox" style="display:none;">
+                                <label class="btn-horario"> S/. 6.00 </label>
+                            </div> <br>
+                        </td>
+                    </tr>
+                </table><br><br>
+
+                <table style="margin: auto; border: 1px solid black;" class="cinestbl">
+                    <tr>
+                        <td> <img src="../img/hotdog_chocolateria.png" alt="cine1" class="img-cines"></a> </td>
+                        <td class="cines-tbltext">
+                            <div class="horario-configposicion-textbtn">
+                                <h2> Hotdog </h2>
+                                <!-- boton para que se abra los horarios -->
+                                <input type="checkbox" id="modal-cine1" class="modal-checkbox" style="display:none;">
+                                <label class="btn-horario"> S/. 5.00 </label>
+                            </div> <br>
+                        </td>
+                    </tr>
+                </table><br><br>
+            </div>
         </section>
     </main>
 
-
-    <!-- =============== FOOTER =============== -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-row">
@@ -161,8 +183,7 @@
                 <div class="footer-links">
                     <h4>Terminos y condiciónes</h4>
                     <ul>
-                        <li><a href="../Términos y Condiciones de Uso.pdf" target="_blank">Términos y condiciones</a>
-                        </li>
+                        <li><a href="../Términos y Condiciones de Uso.pdf" target="_blank">Términos y condiciones</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">

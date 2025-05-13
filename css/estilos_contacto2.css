@@ -32,7 +32,7 @@ main {
     background-attachment: fixed;
     background-position: center;
     /* Hace que la img quede estática */
-    margin: 0;
+    /*margin: 0;/*
     /* Corta los bordes de los lados que tenía el cuadro de navegación */
 }
 

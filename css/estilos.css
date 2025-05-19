@@ -5,10 +5,15 @@
 
 
    .titulo {
-       font-family: 'Courier New', Courier, monospace;
-       color: white;
        letter-spacing: 10px;
        font-size: 1.2em;
+
+   }
+
+   .titulo a {
+       text-decoration: none;
+       color: white;
+       font-family: 'Courier New', Courier, monospace;
    }
 
    .subtitulo {
@@ -25,7 +30,7 @@
        font-family: Verdana, Geneva, Tahoma, sans-serif;
        font-size: 56px;
        color: #a8a8a8;
-       
+
    }
 
 
@@ -34,25 +39,36 @@
    .logo-titulo {
        display: flex;
        align-items: center;
-
+    
    }
 
    .logo-mini {
+
        width: 150px;
-       height: auto;
-       padding-left: 50px;
+       margin: 0px 20px;
+
    }
 
    .encabezado {
-       background-color: black;
-       height: 100px;
+       background-color: #00000024;
+       height: 70px;
        width: 100%;
        display: flex;
        justify-content: space-between;
        align-items: center;
        position: fixed;
        z-index: 1000;
+       transition:
+           background-color 0.5s ease,
+           box-shadow 0.5s ease;
        /* Asegura que el encabezado esté por encima de otros elementos */
+   }
+
+   /*encabezado transparente hasta cierto punto del scroleo*/
+   .encabezado.scrolled {
+       background-color: black;
+       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
    }
 
    /*estilo para la hamburguesa*/
@@ -61,51 +77,75 @@
        font-size: 2em;
        color: white;
        cursor: pointer;
-       margin-left: 10px;
+       margin-left: 20px;
    }
 
+   /*responsive para el header*/
    @media (max-width: 1300px) {
 
-       /*que tanto puedes achicarlo para que muestre la hamburguesita*/
        .menu {
            display: none;
-           flex-direction: column;
-           background: #111;
-           position: absolute;
-           top: 60px;
-           left: 0;
-           width: 100%;
-           padding: 10px 0;
+           
        }
-
+       .encabezado{
+        height: 56px;
+       }
        #hamburguesa:checked~.menu {
            display: flex;
+           margin-top: 100px;
+           padding: 20px 10px;
+       }
+
+       #hamburguesa:checked~.menu a{
+            padding: 5px;
        }
 
        .icono-hamburguesa {
            display: block;
        }
 
-       .menu a {
-           padding: 10px;
-           border-bottom: 1px solid #333;
-
+       .logo-mini{
+            margin: 0px -18px 0px 0px;
        }
 
-       .btn-socio,
-       .redes {
-           /*oculta cuando lo achicamos*/
+       .titulo {
+           display: none;
+       }
+
+       .btn-socio {
            display: none;
        }
    }
+
+
 
    .menu a {
        color: white;
        margin: 0 10px;
        text-decoration: none;
-       font-weight: bold;
-       font-family: 'Courier New', Courier, monospace;
+       font-family: 'Verdana';
        letter-spacing: 0px;
+   }
+
+   .perfil-icon {
+        
+       width: 40px;
+       height: 40px;
+       margin-right: 20px;
+       border-radius: 100px;
+       transition:
+           transform 1s ease-in-out,
+           background-color 0.5s ease-in-out;
+       display: inline-block;
+       vertical-align: middle;
+       cursor: pointer;
+   }
+
+   
+
+   .perfil-icon:hover {
+       transform: scale(1.1);
+       background-color: rgba(0, 0, 0, 0.1);
    }
 
    .menu a:hover {
@@ -126,19 +166,21 @@
    .btn-socio {
        background: transparent;
        color: white;
-       border: 2px solid gray;
        border-radius: 20px;
-       padding: 5px 15px;
+       padding: 10px 20px;
        margin-right: 15px;
-       font-weight: 20px;
-       font-family: 'Courier New', Courier, monospace;
-       font-weight: bold;
+       font-size: 15px;
+       font-family: 'Verdana';
        cursor: pointer;
+       transition:
+           transform 0.5s ease-in-out,
+           background-color 0.5s ease-in-out;
+
    }
 
    .btn-socio:hover {
-       background-color: lightgray;
        transform: scale(1.1);
+       background-color: rgba(0, 0, 0, 0.1);
    }
 
    .redes a {
@@ -147,28 +189,18 @@
        font-size: 2.4em;
    }
 
-   .perfil-icon {
-       width: 40px;
-       height: 40px;
-       margin: 0 20px;
-       border-radius: 50%;
-       background-color: rgba(255, 255, 255, 0);
-
-   }
-
    /* ====== ESTILO GENERAL PARA EL MAIN====== */
 
    /* carrusel */
 
    #conteItemsCarrusel {
-       height: 820px;
-       margin-top: 100px;
        position: relative;
+
    }
 
    .carrusel-inner {
        display: flex;
-       height: 100%;
+       height: 720px;
        overflow-x: hidden;
        overflow-y: hidden;
        scroll-snap-type: x mandatory;
@@ -248,6 +280,10 @@
 
    /*responsive*/
    @media (max-width: 1070px) {
+       .carrusel-inner {
+        height: 660px;
+       }
+
        .item-carrusel-contenido {
            top: 10%;
            left: 5%;
@@ -257,7 +293,7 @@
        }
 
        .item-carrusel-contenido-titulo {
-           font-size: 5rem;
+           font-size: 3rem;
        }
 
        .item-carrusel-contenido-titulo::before {
@@ -413,7 +449,6 @@
    }
 
    .footer-content {
-       max-width: 1200px;
        margin: 0 auto;
        padding: 0px 50px;
    }
@@ -422,11 +457,12 @@
        display: flex;
        flex-wrap: wrap;
        flex-grow: 1;
+       justify-content: center;
    }
 
    .footer-links {
-       width: 25%;
-       padding: 0 15px;
+       width: 250px;
+       padding: 10px;
    }
 
    .footer-links h4 {
@@ -454,10 +490,9 @@
    }
 
    .footer-links img {
-       width: 200px;
-       height: 200px;
+       width: 230px;
+       height: 230px;
        clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%);
-       margin-top: 100px;
    }
 
    .social-link a {

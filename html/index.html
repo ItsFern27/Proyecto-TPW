@@ -30,10 +30,9 @@
         <input type="checkbox" id="hamburguesa" hidden>
         <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
         <div class="logo-titulo">
-            <a href="../html/index.html"><img src="../img/logoMETACINES.jpg" alt="Logo MetaCine" class="logo-mini"></a>
-            <h1 class="titulo">Multicines</h1>
+            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine" class="logo-mini"></a>
+            <h1 class="titulo"><a href="../html/index.html">Multicines</a></h1>
         </div>
-
 
         <!--Parte centro del cuadro-->
         <nav class="menu">
@@ -49,8 +48,9 @@
         <div class="acciones">
             <label for="modal-toggle-login" class="btn-socio">¿Eres
                 socio?</label><!--el label actua como boton y activa el modal-->
-            
-            <label for="modal-toggle-login"><img src="../img/icone-utilisateur-gris.png" alt="Perfil" class="perfil-icon"></label>
+
+            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png" alt="Perfil"
+                    class="perfil-icon"></label>
         </div>
     </header>
 
@@ -122,7 +122,8 @@
                         </picture>
                         <div class="item-carrusel-contenido">
                             <h2 class="item-carrusel-contenido-titulo">Flow</h2>
-                            <p class="item-carrusel-descripcion">Un gato despierta y ve que toda su casa esta inundada y sin rastros de vida humana...</p>
+                            <p class="item-carrusel-descripcion">Un gato despierta y ve que toda su casa esta inundada y
+                                sin rastros de vida humana...</p>
                             <a href="../peliculas/p1.html" target="_self">Ver más</a>
                         </div>
                     </div>
@@ -133,7 +134,8 @@
                         </picture>
                         <div class="item-carrusel-contenido">
                             <h2 class="item-carrusel-contenido-titulo">El Gato con Botas: El Último Deseo</h2>
-                            <p class="item-carrusel-descripcion">El felino más audaz gasta su novena vida enfrentando su destino… y quizás encontrando algo más valioso que un deseo.</p>
+                            <p class="item-carrusel-descripcion">El felino más audaz gasta su novena vida enfrentando su
+                                destino… y quizás encontrando algo más valioso que un deseo.</p>
                             <a href="../peliculas/p3.html" target="_self">Ver más</a>
                         </div>
                     </div>
@@ -144,7 +146,8 @@
                         </picture>
                         <div class="item-carrusel-contenido">
                             <h2 class="item-carrusel-contenido-titulo">WALL·E</h2>
-                            <p class="item-carrusel-descripcion">En un planeta olvidado, un pequeño robot con gran corazón encuentra el amor… y una chispa de esperanza para la humanidad.</p>
+                            <p class="item-carrusel-descripcion">En un planeta olvidado, un pequeño robot con gran
+                                corazón encuentra el amor… y una chispa de esperanza para la humanidad.</p>
                             <a href="../peliculas/p11.html" target="_self">Ver más</a>
                         </div>
                     </div>
@@ -165,15 +168,21 @@
                         const carrusel = document.querySelector('.carrusel-inner');
                         const items = document.querySelectorAll('.item-carrusel');
                         const itemWidth = items[0].offsetWidth;
-                        const scrollPosition = carrusel.scrollLeft;
-                        const maxScroll = (items.length - 1) * itemWidth;
+                        const scrollPosition = Math.round(carrusel.scrollLeft);
+                        const maxScroll = Math.round((items.length - 1) * itemWidth);
 
-                        if (direction === 1 && scrollPosition >= maxScroll) {
-                            carrusel.scrollTo({ left: 0, behavior: 'smooth' });
-                        } else if (direction === -1 && scrollPosition <= 0) {
-                            carrusel.scrollTo({ left: maxScroll, behavior: 'smooth' });
-                        } else {
-                            carrusel.scrollBy({ left: direction * itemWidth, behavior: 'smooth' });
+                        if (direction === 1) {
+                            if (scrollPosition >= maxScroll - 5) {
+                                carrusel.scrollTo({ left: 0, behavior: 'smooth' });
+                            } else {
+                                carrusel.scrollBy({ left: itemWidth, behavior: 'smooth' });
+                            }
+                        } else if (direction === -1) {
+                            if (scrollPosition <= 5) {
+                                carrusel.scrollTo({ left: maxScroll, behavior: 'smooth' });
+                            } else {
+                                carrusel.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+                            }
                         }
                     }
                 </script>
@@ -189,6 +198,15 @@
 
         <!--SOLO SEGUIR LA SINTAXIS, NO AGREGAR ESTILOS-->
         <section class="fondo-peliculas">
+            <!--filtro verpeliculas-->
+            <div class="filtro-peliculas">
+                <div class="contefiltro">
+                    <div class="">
+                        
+                    </div>
+                </div>
+            </div>
+
             <a name="cartelera"></a>
             <h1 class="cartelera"><b>Cartelera:</b></h1>
             <section class="tabla-peliculas-desplazamiento">
@@ -305,7 +323,18 @@
             </div>
         </div>
     </footer>
+    <!--script de encabezado-->
+    <script>
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector(".encabezado");
+            if (window.scrollY > 620) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
 
+    </script>
 </body>
 
 </html>

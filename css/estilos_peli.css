@@ -1,13 +1,6 @@
 /* ====== ESTILO GENERAL PARA LOS VIDEOS DE LAS PÁGINAS====== */
-
-   /* Fondo para la descripción de la película */
-   .fondo-pag-peli {
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
-
 /* Estilo y color para el Título de la película */
+
 .nombre-pelicula {
     font-family: "Helvetica", cursive;
     font-size: 75px;
@@ -24,6 +17,7 @@
  font-size: 18px;
  color: rgb(25, 25, 25);
 }
+
 /*ESTILO PARA EL FONDO DE CADA TRAILER ( LA IMAGEN LARGA) CADA PELI TENDRA UN ESTILO PARA ESO */
  /*FLOW */
 .fondo-trailer-flow {
@@ -41,6 +35,7 @@
     /* Centra el contenido horizontalmente (Osea el boton del play para el trailer) */
     align-items: center;
     /* Centra el contenido verticalmente (Osea el boton del play para el trailer) */
+    
 }
 
 
@@ -93,7 +88,7 @@
  background-image: url('../img/star.png');
  background-size: cover; 
  background-position: center;       
- height: 470px;
+ height: 390px;
  display: flex; 
  justify-content: center; 
  align-items: center;

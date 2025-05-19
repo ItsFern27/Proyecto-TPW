@@ -14,43 +14,98 @@
     <link rel="stylesheet" href="../css/estilos_contacto.css">
     <link rel="stylesheet" href="../css/estilos_peli.css">
     <link rel="stylesheet" href="../css/estilo_login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
-<body class="fondo"> <!-- El background ahora se encuentra en el css -->
+<body>
     <!--ENCABEZADO-->
     <header class="encabezado">
         <!--Parte izquierda del cuadro-->
+        <input type="checkbox" id="hamburguesa" hidden>
+        <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
         <div class="logo-titulo">
-            <img src="../img/logoMETACINES.jpg" alt="Logo MetaCine" class="logo-mini">
-            <h1 class="titulo">Metacine</h1>
+            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine"
+                    class="logo-mini"></a>
+            <h1 class="titulo"><a href="../html/index.html">Multicines</a></h1>
         </div>
 
         <!--Parte centro del cuadro-->
         <nav class="menu">
             <a href="../html/index.html">HOME</a>
-            <a class="activo" href="../html/index.html">PELÍCULAS</a>
+            <a href="../html/index.html" class="activo">PELÍCULAS</a>
             <a href="../html/cines.html">CINES</a>
             <a href="../html/chocolateria.html">CHOCOLATERÍA</a>
             <a href="#">VENTA CORPORATIVA</a>
-            <a href="../html/contacto.html">PROMOCIONES</a>
+            <a href="#">PROMOCIONES</a>
         </nav>
 
         <!--Parte derecha del cuadro-->
         <div class="acciones">
-            <a href="../html/contacto.html"><button class="btn-socio">¿Eres socio?</button></a>
-            <div class="redes">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-            </div>
-            <img src="../img/icone-utilisateur-gris.png" alt="Perfil" class="perfil-icon">
+            <label for="modal-toggle-login" class="btn-socio">¿Eres
+                socio?</label><!--el label actua como boton y activa el modal-->
+
+            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png"
+                    alt="Perfil" class="perfil-icon"></label>
         </div>
     </header>
-    <br>
+    <!--MODAL LOGIN-->
+    <!-- Botón en el header -->
+    <label for="modal-toggle-login" class="btn-open-modal"></label>
 
+    <!-- Checkbox oculto para alternar -->
+    <!-- Radios ocultos -->
+    <input type="radio" name="form-toggle" id="show-login" hidden checked>
+    <input type="radio" name="form-toggle" id="show-register" hidden>
+
+    <!-- Toggle del modal -->
+    <input type="checkbox" id="modal-toggle-login" class="modal-checkbox-login" hidden>
+
+
+    <!-- Modal -->
+    <section class="modal-login">
+        <div class="modal-contenedor-login">
+
+            <!-- Imagen -->
+            <div class="modal-img-container">
+                <img src="../img/img-login.jpg" class="modal-img-login" alt="Imagen decorativa">
+            </div>
+
+            <!-- Área del formulario -->
+            <div class="modal-formulario-container">
+
+                <!-- Formulario de LOGIN -->
+                <div class="formulario-login formulario-toggle">
+                    <h2 class="modal-titulo-login">Iniciar Sesión</h2>
+                    <form action="../html/index.html" method="get">
+                        <input type="text" placeholder="Usuario" required>
+                        <input type="password" placeholder="Contraseña" required>
+                        <button type="submit">Ingresar</button>
+                    </form>
+                    <label for="show-register" class="switch-form">
+                        <h5 class="modal-parrafo-login">¿No tienes cuenta? <u>Regístrate</u></h6>
+                    </label>
+                </div>
+
+                <!-- Formulario de REGISTRO -->
+                <div class="formulario-register formulario-toggle">
+                    <h2 class="modal-titulo-login">Crear Cuenta</h2>
+                    <form action="../html/index.html" method="get">
+                        <input type="text" placeholder="Nombre completo" required>
+                        <input type="email" placeholder="Correo electrónico" required>
+                        <input type="password" placeholder="Contraseña" required>
+                        <button type="submit">Registrarse</button>
+                    </form>
+                    <label for="show-login" class="switch-form">
+                        <h5 class="modal-parrafo-login">¿Ya tienes cuenta? <u>Inicia sesión</u></h5>
+                    </label>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <main>
         <div class="fondo-pag-peli">
-
             <div class="fondo-trailer-star">
                 <label for="trailer-checkbox" class="btn-trailer"> <!-- Botón para abrir el tráiler -->
                     <img src="../img/trailer-icon.png" alt="Mirar tráiler" class="btn-trailer-img">
@@ -75,9 +130,10 @@
                 <div> <!-- Información de la película -->
                     <h1 class="nombre-pelicula">Star Wars III:<br></h1>
                     <p class="nombre-pelicula">20 Aniversario</p>
-                    <p class="descripcion-pelicula"><b>Sinopsis</b>: Las Guerras de clones empezaron hace 3 años, en donde los Jedi<br>
-                                                        rescatan a Palpatine del conde Dooku,y Obi-wan le sigue la pista a una nueva <br>
-                                                        amenaza, mientras Anakin actúa como agente doble</p>
+                    <p class="descripcion-pelicula"><b>Sinopsis</b>: Las Guerras de clones empezaron hace 3 años, en
+                        donde los Jedi<br>
+                        rescatan a Palpatine del conde Dooku,y Obi-wan le sigue la pista a una nueva <br>
+                        amenaza, mientras Anakin actúa como agente doble</p>
                     <p class="descripcion-pelicula"><img src="../img/duracion.png" alt="duracion"
                             width="23px"><b>Duración:</b> 140 min</p>
                     <p class="descripcion-pelicula"><img src="../img/clasificación.png" alt="clasificacion"
@@ -136,7 +192,8 @@
                 <div class="footer-links">
                     <h4>Terminos y condiciónes</h4>
                     <ul>
-                        <li><a href="../Términos y Condiciones de Uso.pdf" target="_blank">Términos y condiciones</a></li>
+                        <li><a href="../Términos y Condiciones de Uso.pdf" target="_blank">Términos y condiciones</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -159,4 +216,5 @@
         </div>
     </footer>
 </body>
+
 </html>

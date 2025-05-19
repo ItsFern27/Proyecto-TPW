@@ -8,11 +8,10 @@
 }
 
 .anticipio-nosotros img {
-    height: 820px;
+    height: 650px;
     width: 100%;
     object-fit: cover;
     object-position: center;
-    margin-top: 100px;
     position: relative;
 }
 

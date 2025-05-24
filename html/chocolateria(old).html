@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html>
-
 <html lang="es">
 
 <head>
-    <meta charset='utf-8'>
-    <link rel="icon" href="../img/logito.png" type="image/png"> <!-- Icono de la pestaña -->
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'> <!-- Compatibilidad con navegadores antiguos -->
-    <title>METACINE</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'> <!-- Escala de la página -->
-    <link rel='stylesheet' type='text/css' media='screen' href='../css/estilos.css'>
-    <script src='main.js'></script>
-    <link rel="stylesheet" href="../css/estilos_contacto.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informacion de los cines disponibles">
+    <link rel="icon" href="../img/logito.png" type="image/png">
+    <title> CINES </title>
+    <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/estilos_peli.css">
+    <link rel="stylesheet" href="../css/estilos_contacto.css">
     <link rel="stylesheet" href="../css/estilo_login.css">
+    <link rel="stylesheet" href="../css/estilos_trabaja.css">
+    <link rel="stylesheet" href="../css/estilos_chocolateria.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
-<body>
+<body class="fondo">
     <!--ENCABEZADO-->
     <header class="encabezado">
         <!--Parte izquierda del cuadro-->
@@ -33,9 +30,9 @@
         <!--Parte centro del cuadro-->
         <nav class="menu">
             <a href="../html/index.html">HOME</a>
-            <a href="../html/index.html" class="activo">PELÍCULAS</a>
+            <a href="../html/index.html">PELÍCULAS</a>
             <a href="../html/cines.html">CINES</a>
-            <a href="../html/chocolateria.html">CHOCOLATERÍA</a>
+            <a href="../html/chocolateria.html" class="activo">CHOCOLATERÍA</a>
             <a href="#">VENTA CORPORATIVA</a>
             <a href="#">PROMOCIONES</a>
         </nav>
@@ -104,73 +101,62 @@
             </div>
         </div>
     </section>
-    <main>
-        <div class="fondo-pag-peli">
-            <div class="fondo-trailer-star">
-                <label for="trailer-checkbox" class="btn-trailer"> <!-- Botón para abrir el tráiler -->
-                    <img src="../img/trailer-icon.png" alt="Mirar tráiler" class="btn-trailer-img">
-                </label>
-                <input type="checkbox" id="trailer-checkbox"
-                    class="modal-checkbox"><!-- Checkbox oculto para controlar el modal -->
+    <br>
 
-                <!-- Modal para el tráiler -->
-                <div class="modal">
-                    <div class="modal-contenido">
-                        <label for="trailer-checkbox" class="cerrar">&times;</label>
-                        <iframe src="https://www.youtube.com/embed/d3XN49jmmGM" width="912" height="459" frameborder="0"
-                            allow="autoplay; clipboard-write; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
+    <main>
+
+        <section>
+            <div class="contenedor_chocolateria">
+                <h1 class="subtitulo" style="font-size: 60px;"> Chocolatería </h1>
+                <p style="font-size: 20px;">Productos disponibles en todos nuestros cines</p>
             </div>
-            <!--Imagen de la película-->
-            <div class="contenido-pelicula">
-                <div class="imagen-pelicula">
-                    <img src="../img/p6.jpg">
-                </div>
-                <div> <!-- Información de la película -->
-                    <h1 class="nombre-pelicula">Star Wars III:<br></h1>
-                    <p class="nombre-pelicula">20 Aniversario</p>
-                    <p class="descripcion-pelicula"><b>Sinopsis</b>: Las Guerras de clones empezaron hace 3 años, en
-                        donde los Jedi<br>
-                        rescatan a Palpatine del conde Dooku,y Obi-wan le sigue la pista a una nueva <br>
-                        amenaza, mientras Anakin actúa como agente doble</p>
-                    <p class="descripcion-pelicula"><img src="../img/duracion.png" alt="duracion"
-                            width="23px"><b>Duración:</b> 140 min</p>
-                    <p class="descripcion-pelicula"><img src="../img/clasificación.png" alt="clasificacion"
-                            width="23px"><b>Clasificación:</b> PG-13</p>
-                    <p class="descripcion-pelicula"><img src="../img/genero.png" alt="genero"
-                            width="23px"><b>Género:</b> Ciencia Ficción, Acción</p>
-                    <p class="descripcion-pelicula"><img src="../img/director.png" alt="director"
-                            width="23px"><b>Director:</b> George Lucas</p>
-                </div>
-                <!-- Horarios de funciones -->
-                <div class="horarios">
-                    <h2 class="titulo-horarios">Horarios de funciones</h2>
-                    <div class="cine">
-                        <h3>METACINE V.E.S</h3>
-                        <p>Seleccione el horario:</p>
-                        <div class="horarios-funcion">
-                            <button>4:30 pm</button>
-                            <button>6:25 pm</button>
-                            <button>8:25 pm</button>
-                            <button>10:25 pm</button>
-                        </div>
-                    </div>
-                    <div class="cine">
-                        <h3>METACINE UTP</h3>
-                        <p>Seleccione el horario:</p>
-                        <div class="horarios-funcion">
-                            <button>2:40 pm</button>
-                            <button>5:20 pm</button>
-                            <button>7:50 pm</button>
-                            <button>9:10 pm</button>
-                        </div>
-                    </div>
-                </div>
+
+            <div style="text-align: center;">
+                <table style="margin: auto; border: 1px solid black;" class="cinestbl">
+                    <tr>
+                        <td> <img src="../img/canchita_chocolateria.png" alt="cine1" class="img-cines"></a> </td>
+                        <td class="cines-tbltext">
+                            <div class="horario-configposicion-textbtn">
+                                <h2> Canchita Popcorn </h2>
+                                <!-- boton para que se abra los horarios -->
+                                <input type="checkbox" id="modal-cine1" class="modal-checkbox" style="display:none;">
+                                <label class="btn-horario"> S/. 8.00 </label>
+                            </div> <br>
+                        </td>
+                    </tr>
+                </table><br><br>
+
+                <table style="margin: auto; border: 1px solid black;" class="cinestbl">
+                    <tr>
+                        <td> <img src="../img/bebidas_chocolateria.png" alt="cine1" class="img-cines"></a> </td>
+                        <td class="cines-tbltext">
+                            <div class="horario-configposicion-textbtn">
+                                <h2> Gaseosas </h2>
+                                <!-- boton para que se abra los horarios -->
+                                <input type="checkbox" id="modal-cine1" class="modal-checkbox" style="display:none;">
+                                <label class="btn-horario"> S/. 6.00 </label>
+                            </div> <br>
+                        </td>
+                    </tr>
+                </table><br><br>
+
+                <table style="margin: auto; border: 1px solid black;" class="cinestbl">
+                    <tr>
+                        <td> <img src="../img/hotdog_chocolateria.png" alt="cine1" class="img-cines"></a> </td>
+                        <td class="cines-tbltext">
+                            <div class="horario-configposicion-textbtn">
+                                <h2> Hotdog </h2>
+                                <!-- boton para que se abra los horarios -->
+                                <input type="checkbox" id="modal-cine1" class="modal-checkbox" style="display:none;">
+                                <label class="btn-horario"> S/. 5.00 </label>
+                            </div> <br>
+                        </td>
+                    </tr>
+                </table><br><br>
             </div>
-        </div>
-        </div>
+        </section>
     </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -215,6 +201,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>

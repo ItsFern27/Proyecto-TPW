@@ -1,0 +1,154 @@
+/* GENERAL */
+/* Para posicionar correctamente el cuerpo (header, main y footer)*/
+/* Oderna el header, main y footer en forma de filas,
+luego se modifica para que lo haga como columnas, y
+finalmente que ocupe el espacio de toda la ventana del
+navegador */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    min-height: 83vh;
+    font-family: Arial;
+}
+
+
+
+
+/* BODY DE LA PAGINA DE CONTACTO*/
+
+.fondo_contacto {
+    background: linear-gradient(rgba(0, 0, 0, 0)), url(../img/preview.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* Cubre toda la pagina con la imagen (creo q también la estira) */
+    /* Hace que la img quede estática */
+    /*margin: 0;*/
+    /* Corta los bordes de los lados que tenía el cuadro de navegación */
+}
+
+.section-chocolateria {
+    margin-inline: 10.4vw;
+    margin-block: 5vh;
+    background-color: white;
+    border-radius: 30px;
+    padding-block: 35px;
+    padding-inline: 55px;
+}
+
+.article-chocolateria {
+    border-bottom: 5px solid rgb(164, 99, 66);
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+}
+
+.article-chocolateria  h1{
+    font-size: 55px;
+}
+
+.article-chocolateria  p{
+    font-size: 20px;
+}
+
+.lista-chocolateria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 25px;
+}
+
+.lista-chocolateria img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.lista-chocolateria div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.lista-chocolateria_producto {
+    font-size: 17px;
+}
+
+.lista-chocolateria_precio {
+    font-weight: bold;
+}
+
+
+/*=======================  MEDIA HORIZONTAL =======================*/
+@media (orientation: landscape) and (max-width: 1100px) {
+    .lista-chocolateria {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}
+
+@media (orientation: landscape) and (max-width: 590px) {
+    .article-chocolateria  h1{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .article-chocolateria  p{
+        font-size: 18px;
+    }
+}
+
+
+/*=======================  MEDIA VERTICAL =======================*/
+@media (orientation: portrait) {
+    .section-chocolateria {
+        padding-block: 30px;
+        padding-inline: 40px;
+    }
+
+    .lista-chocolateria {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}
+
+@media (orientation: portrait) and (max-width: 620px) {
+    .article-chocolateria  h1{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .article-chocolateria  p{
+        font-size: 18px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 430px) {
+    .article-chocolateria  h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .article-chocolateria  p{
+        font-size: 16px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 360px) {
+    .section-chocolateria {
+        padding-block: 25px;
+        padding-inline: 30px;
+    }
+
+    .article-chocolateria  h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .article-chocolateria  p{
+        font-size: 14px;
+    }
+}

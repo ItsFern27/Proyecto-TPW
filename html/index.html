@@ -30,17 +30,16 @@
         <input type="checkbox" id="hamburguesa" hidden>
         <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
         <div class="logo-titulo">
-            <a href="../html/index.html"><img src="../img/logoMETACINES.jpg" alt="Logo MetaCine" class="logo-mini"></a>
-            <h1 class="titulo">Multicines</h1>
+            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine" class="logo-mini"></a>
+            <h1 class="titulo"><a href="../html/index.html">Multicines</a></h1>
         </div>
-
 
         <!--Parte centro del cuadro-->
         <nav class="menu">
             <a href="index.html" class="activo">HOME</a>
             <a href="cartelera.html">PELÍCULAS</a>
             <a href="cines.html">CINES</a>
-            <a href="../html/chocolateria.html">CHOCOLATERÍA</a>
+            <a href="chocolateria.html">CHOCOLATERÍA</a>
             <a href="#">VENTA CORPORATIVA</a>
             <a href="#">PROMOCIONES</a>
         </nav>
@@ -49,15 +48,9 @@
         <div class="acciones">
             <label for="modal-toggle-login" class="btn-socio">¿Eres
                 socio?</label><!--el label actua como boton y activa el modal-->
-            <div class="redes">
-                <a href="https://www.linkedin.com/in/metacines-multicines-509143361/" target="_blank"><i
-                        class="fab fa-linkedin-in"></i></a> <!--añadiendo redes sociales-->
-                <a href="https://www.instagram.com/metacines_mult/" target="_blank"><i
-                        class="fab fa-instagram"></i></a><!--añadiendo redes sociales-->
-                <a href="https://www.facebook.com/profile.php?id=61575268895729" target="_blank"><i
-                        class="fab fa-facebook-f"></i></a><!--añadiendo redes sociales-->
-            </div>
-            <img src="../img/icone-utilisateur-gris.png" alt="Perfil" class="perfil-icon">
+
+            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png" alt="Perfil"
+                    class="perfil-icon"></label>
         </div>
     </header>
 
@@ -88,6 +81,7 @@
 
                 <!-- Formulario de LOGIN -->
                 <div class="formulario-login formulario-toggle">
+                    <span><a href="index.html">x</a></span>
                     <h2 class="modal-titulo-login">Iniciar Sesión</h2>
                     <form action="index.html" method="get">
                         <input type="text" placeholder="Usuario" required>
@@ -123,102 +117,160 @@
             <div id="conteItemsCarrusel">
                 <div class="carrusel-inner">
                     <div class="item-carrusel" id="item-carrusel1">
-                        <img src="../img-carrusel/flowfondo.webp" alt="item1">
+                        <picture>
+                            <source media="(max-width: 690px)" srcset="../img-carrusel/flowmobile.webp">
+                            <img src="../img-carrusel/flowfondo.webp" alt="item1">
+                        </picture>
+                        <div class="item-carrusel-contenido">
+                            <h2 class="item-carrusel-contenido-titulo">Flow</h2>
+                            <p class="item-carrusel-descripcion">Un gato despierta y ve que toda su casa esta inundada y
+                                sin rastros de vida humana...</p>
+                            <a href="../peliculas/p1.html" target="_self">Ver más</a>
+                        </div>
                     </div>
                     <div class="item-carrusel" id="item-carrusel2">
-                        <img src="../img-carrusel/gatoconbotasfondo.webp" alt="item2">
+                        <picture>
+                            <source media="(max-width: 690px)" srcset="../img-carrusel/gatoconbotasmobile.webp">
+                            <img src="../img-carrusel/gatoconbotasfondo.webp" alt="item2">
+                        </picture>
+                        <div class="item-carrusel-contenido">
+                            <h2 class="item-carrusel-contenido-titulo">El Gato con Botas: El Último Deseo</h2>
+                            <p class="item-carrusel-descripcion">El felino más audaz gasta su novena vida enfrentando su
+                                destino… y quizás encontrando algo más valioso que un deseo.</p>
+                            <a href="../peliculas/p3.html" target="_self">Ver más</a>
+                        </div>
                     </div>
                     <div class="item-carrusel" id="item-carrusel3">
-                        <img src="../img-carrusel/wall-efondo.webp" alt="item3">
+                        <picture>
+                            <source media="(max-width: 690px)" srcset="../img-carrusel/wallemobile.webp">
+                            <img src="../img-carrusel/wall-efondo.webp" alt="item3">
+                        </picture>
+                        <div class="item-carrusel-contenido">
+                            <h2 class="item-carrusel-contenido-titulo">WALL·E</h2>
+                            <p class="item-carrusel-descripcion">En un planeta olvidado, un pequeño robot con gran
+                                corazón encuentra el amor… y una chispa de esperanza para la humanidad.</p>
+                            <a href="../peliculas/p11.html" target="_self">Ver más</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Flechas -->
                 <div class="flecha-carrusel">
-                    <button
-                        onclick="document.querySelector('.carrusel-inner').scrollBy({ left: -window.innerWidth, behavior: 'smooth' })">
+                    <button onclick="scrollCarrusel(-1)">
                         <i class="fas fa-chevron-left"></i>
                     </button>
-                    <button
-                        onclick="document.querySelector('.carrusel-inner').scrollBy({ left: window.innerWidth, behavior: 'smooth' })">
+                    <button onclick="scrollCarrusel(1)">
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
+                <!-- Script para el carrusel -->
+                <script>
+                    function scrollCarrusel(direction) {
+                        const carrusel = document.querySelector('.carrusel-inner');
+                        const items = document.querySelectorAll('.item-carrusel');
+                        const itemWidth = items[0].offsetWidth;
+                        const scrollPosition = Math.round(carrusel.scrollLeft);
+                        const maxScroll = Math.round((items.length - 1) * itemWidth);
+
+                        if (direction === 1) {
+                            if (scrollPosition >= maxScroll - 5) {
+                                carrusel.scrollTo({ left: 0, behavior: 'smooth' });
+                            } else {
+                                carrusel.scrollBy({ left: itemWidth, behavior: 'smooth' });
+                            }
+                        } else if (direction === -1) {
+                            if (scrollPosition <= 5) {
+                                carrusel.scrollTo({ left: maxScroll, behavior: 'smooth' });
+                            } else {
+                                carrusel.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+                            }
+                        }
+                    }
+                </script>
 
                 <!-- Puntos -->
                 <div id="contePuntos">
-                    <a href="#item-carrusel1">•</a>
-                    <a href="#item-carrusel2">•</a>
-                    <a href="#item-carrusel3">•</a>
+                    <a href="#item-carrusel1"><i class="fa-solid fa-minus"></i></a>
+                    <a href="#item-carrusel2"><i class="fa-solid fa-minus"></i></a>
+                    <a href="#item-carrusel3"><i class="fa-solid fa-minus"></i></a>
                 </div>
             </div>
         </section>
 
         <!--SOLO SEGUIR LA SINTAXIS, NO AGREGAR ESTILOS-->
         <section class="fondo-peliculas">
+            <!--filtro verpeliculas-->
+            <div class="filtro-peliculas">
+                <div class="contefiltro">
+                    <div class="">
+                        
+                    </div>
+                </div>
+            </div>
+
             <a name="cartelera"></a>
-            <h2 class="subtitulo">Cartelera:</h2>
+            <h1 class="cartelera"><b>Cartelera:</b></h1>
             <section class="tabla-peliculas-desplazamiento">
                 <table>
                     <tr>
                         <td>
                             <a href="../peliculas/p1.html" target="_self"><img src="../img/p1.jpg" alt="p1"
-                                class="pelicula"></a>
+                                    class="pelicula"></a>
                             <div class="subtitulo"> Flow </div>
                         </td>
                         <td>
                             <a href="../peliculas/p2.html" target="_self"><img src="../img/p2.jpg" alt="p2"
-                                class="pelicula"></a>
+                                    class="pelicula"></a>
                             <div class="subtitulo"> Los Tipos Malos </div>
                         </td>
-                        <td> 
+                        <td>
                             <a href="../peliculas/p3.html" target="_self"><img src="../img/p3.jpg" alt="p3"
-                                class="pelicula"></a>
+                                    class="pelicula"></a>
                             <div class="subtitulo"> El gato con botas: El último deseo </div>
                         </td>
                         <td>
                             <a href="../peliculas/p4.html" target="_self"><img src="../img/p4.jpg" alt="p4"
-                                class="pelicula"></a> <br>
+                                    class="pelicula"></a> <br>
                             <div class="subtitulo">Colorful Stage La Película: Miku no Puede cantar</div>
                         </td>
                         <td>
                             <a href="../peliculas/p5.html" target="_self"><img src="../img/p5.jpg" alt="p5"
-                                class="pelicula"></a> <br>
+                                    class="pelicula"></a> <br>
                             <div class="subtitulo">Terremoto Magnitud 9.0</div>
                         </td>
                         <td>
                             <a href="../peliculas/p6.html" target="_self"><img src="../img/p6.jpg" alt="p6"
-                                class="pelicula"></a> <br>
+                                    class="pelicula"></a> <br>
                             <div class="subtitulo">Star Wars III La Venganza de los Sith (20 Aniv)</div>
                         </td>
                         <td>
                             <a href="../peliculas/p7.html" target="_self"><img src="../img/p7.jpg" alt="p7"
-                                class="pelicula"></a> <br>
+                                    class="pelicula"></a> <br>
                             <div class="subtitulo"> Jurassic Park </div>
                         </td>
                         <td>
                             <a href="../peliculas/p8.html" target="_self"><img src="../img/p8.jpg" alt="p8"
-                                class="pelicula"></a> <br>
+                                    class="pelicula"></a> <br>
                             <div class="subtitulo"> Soy leyenda </div>
                         </td>
                         <td>
                             <a href="../peliculas/p9.html" target="_self"><img src="../img/p9.jpg" alt="p9"
-                                class="pelicula"></a> <br>
+                                    class="pelicula"></a> <br>
                             <div class="subtitulo"> Avengers End Game </div>
                         </td>
                         <td>
                             <a href="../peliculas/p10.html" target="_self"><img src="../img/p10.jpg" alt="p10"
-                                class="pelicula"></a> <br>
-                            <div class="subtitulo"> Volver al Futuro </div> 
+                                    class="pelicula"></a> <br>
+                            <div class="subtitulo"> Volver al Futuro </div>
                         </td>
                         <td>
                             <a href="../peliculas/p11.html" target="_self"><img src="../img/p11.jpg" alt="p11"
-                                class="pelicula"></a> <br>
+                                    class="pelicula"></a> <br>
                             <div class="subtitulo"> WALL - E </div>
                         </td>
                         <td>
                             <a href="../peliculas/p12.html" target="_self"><img src="../img/p12.jpg" alt="p12"
-                                class="pelicula"></a> <br>
+                                    class="pelicula"></a> <br>
                             <div class="subtitulo"> Ready Player One </div>
                         </td>
                     </tr>
@@ -227,14 +279,15 @@
         </section>
     </main>
 
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-row">
                 <div class="footer-links">
-                    <h4>Contáctanos</h4>
+                    <h4>Nosotros</h4>
                     <ul>
+                        <li><a href="../html/sobre-nosotros.html">Conócenos</a></li>
                         <li><a href="../html/contacto.html">Contacto</a></li>
                         <li><a href="../html/trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
                     </ul>
@@ -263,10 +316,26 @@
                                 class="fab fa-facebook-f"></i></a><!--añadiendo redes sociales-->
                     </div>
                 </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><img src="../img/qrcode-generado.png" alt="qrcode-generado"></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
+    <!--script de encabezado-->
+    <script>
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector(".encabezado");
+            if (window.scrollY > 620) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
 
+    </script>
 </body>
 
 </html>

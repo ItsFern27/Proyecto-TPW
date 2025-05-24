@@ -1,44 +1,41 @@
-.anticipio {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.66);
-    /* Fondo casi negro */
-    padding: 40px;
-    max-width: 10000px;
-    /*ancho del bloque*/
-    clip-path: polygon(0 0, 43% 0, 75% 100%, 0% 100%);
-    color: wheat;
-    flex: 1 1 500px;
-    /* Ocupa espacio flexible mínimo 500px */
-    border-left: 0px;
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
-.contenido-anticipio {
+.anticipio-nosotros img {
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+}
+
+.contenedor-nosotros {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    /*los elementos bajan si no caben(responsive)*/
-
-    align-items: flex-start;
-    /*coloca los items a la izq*/
     justify-content: center;
-    gap: 30px;
-    /*espacio entre texto y img*/
-
-}
-
-.texto-anticipio {
-    text-align: left;
-    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
     max-width: 50%;
-    font-size: 20px;
-
 }
 
-.imagen-anticipio img {
-    max-width: 700px;
-    height: auto;
-    border-radius: 10px;
-    position: relative;
-    top: 130px;
-    right: 100px;
+.texto-nosotros {
+    padding: 100px 300px;
 
+}
+.texto-nosotros h1 {
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 4px rgba(55, 52, 52, 0.777);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.texto-nosotros p {
+    font-size: 20px;
+    margin-bottom: 20px;
 }

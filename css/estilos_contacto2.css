@@ -11,6 +11,15 @@ body {
     height: 100%;
 }
 
+main {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 83vh;
+}
+
 
 
 
@@ -23,8 +32,27 @@ body {
     background-attachment: fixed;
     background-position: center;
     /* Hace que la img quede estática */
-    margin: 0;
+    /*margin: 0;/*
     /* Corta los bordes de los lados que tenía el cuadro de navegación */
+}
+
+
+/*<+-- Sección Contacto --+>*/
+.section_contacto {
+    width: fit-content;
+    min-height: fit-content;
+    margin-block: 10%;
+    margin-inline: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    color: aliceblue;
+}
+
+/*-- CONTENEDOR DEL TEXTO DE CONTACTO --*/
+.contenedor_contacto {
+    align-content: center;
+    max-width: 460px;
 }
 
 .titulo_contacto {
@@ -36,7 +64,6 @@ body {
     margin: 0;
     margin-bottom: 10px;
     text-align: left;
-    border: 1px solid red;
 }
 
 .texto_contacto {
@@ -47,61 +74,7 @@ body {
     text-align: justify;
 }
 
-
-
-.main_contacto {
-    margin-top: 100px;
-    width: 100%;
-    height: 83vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid blueviolet;
-}
-
-
-/*<!-- Sección Contacto -->*/
-
-.seccion_contacto {
-    /* Centrados */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    border: 1px solid blue;
-    /*margin: 500px;*/
-    /*background-color: rgba(0, 0, 0, 0.068);
-    border-radius: 50px;*/
-}
-
-@media (max-width: 1000px) {
-    .seccion_contacto{
-        flex-direction: column;
-        gap: 50px;
-    }
-    .titulo_contacto {
-        text-align: center;
-    }
-
-    .texto_contacto{
-        margin-top: 10px;
-        text-align: center;
-    }
-
-    .texto_contacto div {
-        margin-top: 30px;
-    }
-}
-
-
-/*+ CONTENEDOR DEL TEXTO DE CONTACTO +*/
-.caja_contacto {
-    width: 460px; /* Da el tamaño al div */ /*cambiar en vista movil*/
-    align-content: center;
-}
-
+/*+ CONTENEDOR DEL FORMULARIO DE CONTACTO +*/
 .form_contacto {
     background-color: rgba(255, 0, 0, 0);
     display: flex;
@@ -161,4 +134,84 @@ body {
 
 .buttontext:hover {
     background: rgb(255, 255, 255);
+}
+
+@media (orientation: portrait) {
+    .section_contacto {
+        flex-direction: column;
+        gap: 50px
+    }
+
+    .titulo_contacto {
+        text-align: center;
+    }
+
+    .texto_contacto{
+        text-align: center;
+    }
+
+    .texto_contacto div {
+        margin-top: 20px;
+    }
+
+    .form_contacto {
+        margin-inline: 20px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 375px) {
+    .texto_contacto{
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .texto_contacto div {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 360px) {
+    .titulo_contacto {
+        font-size: 40px;
+    }
+
+    .texto_contacto{
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .texto_contacto div {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+    .section_contacto {
+        gap: 50px
+    }
+}
+
+@media (orientation: landscape) and (max-width: 850px) {
+    .section_contacto {
+        flex-direction: column;
+        gap: 50px
+    }
+
+    .titulo_contacto {
+        text-align: center;
+    }
+
+    .texto_contacto{
+        text-align: center;
+    }
+
+    .texto_contacto div {
+        margin-top: 20px;
+    }
+
+    .form_contacto {
+        margin-inline: 20px;
+    }
 }

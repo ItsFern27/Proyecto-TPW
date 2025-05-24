@@ -18,42 +18,37 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body class="fondo"> <!-- El background ahora se encuentra en el css -->
-        <!--ENCABEZADO-->
-        <header class="encabezado">
-            <!--Parte izquierda del cuadro-->
+<body>
+    <!--ENCABEZADO-->
+    <header class="encabezado">
+        <!--Parte izquierda del cuadro-->
         <input type="checkbox" id="hamburguesa" hidden>
         <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
         <div class="logo-titulo">
-            <a href="../html/index.html"><img src="../img/logoMETACINES.jpg" alt="Logo MetaCine" class="logo-mini"></a>
-            <h1 class="titulo">Multicines</h1>
+            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine"
+                    class="logo-mini"></a>
+            <h1 class="titulo"><a href="../html/index.html">Multicines</a></h1>
         </div>
-    
-            <!--Parte centro del cuadro-->
-            <nav class="menu">
-                <a href="../html/index.html" >HOME</a>
-                <a href="../html/index.html" class="activo">PELÍCULAS</a>
-                <a href="../html/cines.html">CINES</a>
-                <a href="../html/chocolateria.html">CHOCOLATERÍA</a>
-                <a href="#">VENTA CORPORATIVA</a>
-                <a href="#">PROMOCIONES</a>
-            </nav>
-    
-            <!--Parte derecha del cuadro-->
-            <div class="acciones">
-                <label for="modal-toggle-login" class="btn-socio">¿Eres
-                    socio?</label><!--el label actua como boton y activa el modal-->
-                <div class="redes">
-                    <a href="https://www.linkedin.com/in/metacines-multicines-509143361/" target="_blank"><i
-                            class="fab fa-linkedin-in"></i></a> <!--añadiendo redes sociales-->
-                    <a href="https://www.instagram.com/metacines_mult/" target="_blank"><i
-                            class="fab fa-instagram"></i></a><!--añadiendo redes sociales-->
-                    <a href="https://www.facebook.com/profile.php?id=61575268895729" target="_blank"><i
-                            class="fab fa-facebook-f"></i></a><!--añadiendo redes sociales-->
-                </div>
-                <img src="../img/icone-utilisateur-gris.png" alt="Perfil" class="perfil-icon">
-            </div>
-        </header>
+
+        <!--Parte centro del cuadro-->
+        <nav class="menu">
+            <a href="../html/index.html">HOME</a>
+            <a href="../html/index.html" class="activo">PELÍCULAS</a>
+            <a href="../html/cines.html">CINES</a>
+            <a href="../html/chocolateria.html">CHOCOLATERÍA</a>
+            <a href="#">VENTA CORPORATIVA</a>
+            <a href="#">PROMOCIONES</a>
+        </nav>
+
+        <!--Parte derecha del cuadro-->
+        <div class="acciones">
+            <label for="modal-toggle-login" class="btn-socio">¿Eres
+                socio?</label><!--el label actua como boton y activa el modal-->
+
+            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png" alt="Perfil"
+                    class="perfil-icon"></label>
+        </div>
+    </header>
     <!--MODAL LOGIN-->
     <!-- Botón en el header -->
     <label for="modal-toggle-login" class="btn-open-modal"></label>
@@ -87,7 +82,9 @@
                         <input type="password" placeholder="Contraseña" required>
                         <button type="submit">Ingresar</button>
                     </form>
-                    <label for="show-register" class="switch-form"><h5 class="modal-parrafo-login">¿No tienes cuenta? <u>Regístrate</u></h6></label>
+                    <label for="show-register" class="switch-form">
+                        <h5 class="modal-parrafo-login">¿No tienes cuenta? <u>Regístrate</u></h6>
+                    </label>
                 </div>
 
                 <!-- Formulario de REGISTRO -->
@@ -99,14 +96,14 @@
                         <input type="password" placeholder="Contraseña" required>
                         <button type="submit">Registrarse</button>
                     </form>
-                    <label for="show-login" class="switch-form"><h5 class="modal-parrafo-login">¿Ya tienes cuenta? <u>Inicia sesión</u></h5></label>
+                    <label for="show-login" class="switch-form">
+                        <h5 class="modal-parrafo-login">¿Ya tienes cuenta? <u>Inicia sesión</u></h5>
+                    </label>
                 </div>
 
             </div>
         </div>
     </section>
-    <br>
-
     <main>
         <div class="fondo-pag-peli">
 
@@ -133,16 +130,18 @@
                 </div>
                 <div> <!-- Información de la película -->
                     <h1 class="nombre-pelicula">Avengers: Endgame<br></h1>
-                    <p class="descripcion-pelicula"><b>Sinopsis</b>:Tras los devastadores sucesos de Avengers: Infinity War,<br> 
-                                                     el universo está en ruinas pero de los que quedan, los Avengers se unirán<br>
-                                                      una vez más para deshacer la destrucción de Thanos y restaurar el orden<br>
-                                                       del mundo.</p>
+                    <p class="descripcion-pelicula"><b>Sinopsis</b>:Tras los devastadores sucesos de Avengers: Infinity
+                        War,<br>
+                        el universo está en ruinas pero de los que quedan, los Avengers se unirán<br>
+                        una vez más para deshacer la destrucción de Thanos y restaurar el orden<br>
+                        del mundo.</p>
                     <p class="descripcion-pelicula"><img src="../img/duracion.png" alt="duracion"
                             width="23px"><b>Duración:</b> 3h 1min</p>
                     <p class="descripcion-pelicula"><img src="../img/clasificación.png" alt="clasificacion"
                             width="23px"><b>Clasificación:</b> PG-13</p>
                     <p class="descripcion-pelicula"><img src="../img/genero.png" alt="genero"
-                            width="23px"><b>Género:</b> SuperHeroes, Son los Avengers bro, Vengadores Unidos, Team Iron Man</p>
+                            width="23px"><b>Género:</b> SuperHeroes, Son los Avengers bro, Vengadores Unidos, Team Iron
+                        Man</p>
                     <p class="descripcion-pelicula"><img src="../img/director.png" alt="director"
                             width="23px"><b>Director:</b> Anthony Russo Joe Russo</p>
                 </div>
@@ -179,8 +178,9 @@
         <div class="footer-content">
             <div class="footer-row">
                 <div class="footer-links">
-                    <h4>Contáctanos</h4>
+                    <h4>Nosotros</h4>
                     <ul>
+                        <li><a href="../html/sobre-nosotros.html">Conócenos</a></li>
                         <li><a href="../html/contacto.html">Contacto</a></li>
                         <li><a href="../html/trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
                     </ul>
@@ -194,7 +194,8 @@
                 <div class="footer-links">
                     <h4>Terminos y condiciónes</h4>
                     <ul>
-                        <li><a href="../Términos y Condiciones de Uso.pdf" target="_blank">Términos y condiciones</a></li>
+                        <li><a href="../Términos y Condiciones de Uso.pdf" target="_blank">Términos y condiciones</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -208,8 +209,14 @@
                                 class="fab fa-facebook-f"></i></a><!--añadiendo redes sociales-->
                     </div>
                 </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><img src="../img/qrcode-generado.png" alt="qrcode-generado"></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
 </body>
+
 </html>

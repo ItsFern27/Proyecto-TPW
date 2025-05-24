@@ -1,40 +1,37 @@
 <!DOCTYPE html>
-<html>
-
 <html lang="es">
 
 <head>
     <meta charset='utf-8'>
-    <link rel="icon" href="../img/logito.png" type="image/png"> <!-- Icono de la pestaña -->
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'> <!-- Compatibilidad con navegadores antiguos -->
-    <title>METACINE</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'> <!-- Escala de la página -->
-    <link rel='stylesheet' type='text/css' media='screen' href='../css/estilos.css'>
-    <script src='main.js'></script>
+    <link rel="icon" href="../img/logito.png" type="image/png">
+    <title>MetaCine I Contacto</title>
+    <meta name="description" content="Disfruta las mejores películas, estrenos, contenido exclusivo, alquiler de salas, audio de alta calidad, promociones y la experiencia del cine en Perú.">
+    <meta name="keywords" content="cine, películas, cartelera, estrenos, cine Perú, cine cercano, metacine, contacto">
+    <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/estilos_contacto.css">
-    <link rel="stylesheet" href="../css/estilos_peli.css">
     <link rel="stylesheet" href="../css/estilo_login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    
 </head>
-
-<body>
-    <!--ENCABEZADO-->
+<body class="fondo_contacto"> <!-- background ahora se encuentra en el css -->
+    
+    <!-- =============== HEADER =============== -->
     <header class="encabezado">
+
         <!--Parte izquierda del cuadro-->
         <input type="checkbox" id="hamburguesa" hidden>
         <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
         <div class="logo-titulo">
-            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine"
-                    class="logo-mini"></a>
+            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine" class="logo-mini"></a>
             <h1 class="titulo"><a href="../html/index.html">Multicines</a></h1>
         </div>
 
+
         <!--Parte centro del cuadro-->
         <nav class="menu">
-            <a href="../html/index.html">HOME</a>
-            <a href="../html/index.html" class="activo">PELÍCULAS</a>
-            <a href="../html/cines.html">CINES</a>
+            <a href="index.html" class="activo">HOME</a>
+            <a href="#cartelera">PELÍCULAS</a>
+            <a href="cines.html">CINES</a>
             <a href="../html/chocolateria.html">CHOCOLATERÍA</a>
             <a href="#">VENTA CORPORATIVA</a>
             <a href="#">PROMOCIONES</a>
@@ -45,10 +42,12 @@
             <label for="modal-toggle-login" class="btn-socio">¿Eres
                 socio?</label><!--el label actua como boton y activa el modal-->
 
-            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png"
-                    alt="Perfil" class="perfil-icon"></label>
+            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png" alt="Perfil"
+                    class="perfil-icon"></label>
         </div>
     </header>
+
+    
     <!--MODAL LOGIN-->
     <!-- Botón en el header -->
     <label for="modal-toggle-login" class="btn-open-modal"></label>
@@ -77,100 +76,62 @@
                 <!-- Formulario de LOGIN -->
                 <div class="formulario-login formulario-toggle">
                     <h2 class="modal-titulo-login">Iniciar Sesión</h2>
-                    <form action="../html/index.html" method="get">
+                    <form action="index.html" method="get">
                         <input type="text" placeholder="Usuario" required>
                         <input type="password" placeholder="Contraseña" required>
                         <button type="submit">Ingresar</button>
                     </form>
-                    <label for="show-register" class="switch-form">
-                        <h5 class="modal-parrafo-login">¿No tienes cuenta? <u>Regístrate</u></h6>
-                    </label>
+                    <label for="show-register" class="switch-form"><h5 class="modal-parrafo-login">¿No tienes cuenta? <u>Regístrate</u></h5></label>
                 </div>
 
                 <!-- Formulario de REGISTRO -->
                 <div class="formulario-register formulario-toggle">
                     <h2 class="modal-titulo-login">Crear Cuenta</h2>
-                    <form action="../html/index.html" method="get">
+                    <form action="index.html" method="get">
                         <input type="text" placeholder="Nombre completo" required>
                         <input type="email" placeholder="Correo electrónico" required>
                         <input type="password" placeholder="Contraseña" required>
                         <button type="submit">Registrarse</button>
                     </form>
-                    <label for="show-login" class="switch-form">
-                        <h5 class="modal-parrafo-login">¿Ya tienes cuenta? <u>Inicia sesión</u></h5>
-                    </label>
+                    <label for="show-login" class="switch-form"><h5 class="modal-parrafo-login">¿Ya tienes cuenta? <u>Inicia sesión</u></h5></label>
                 </div>
 
             </div>
         </div>
     </section>
-    <main>
-        <div class="fondo-pag-peli">
-            <div class="fondo-trailer-star">
-                <label for="trailer-checkbox" class="btn-trailer"> <!-- Botón para abrir el tráiler -->
-                    <img src="../img/trailer-icon.png" alt="Mirar tráiler" class="btn-trailer-img">
-                </label>
-                <input type="checkbox" id="trailer-checkbox"
-                    class="modal-checkbox"><!-- Checkbox oculto para controlar el modal -->
 
-                <!-- Modal para el tráiler -->
-                <div class="modal">
-                    <div class="modal-contenido">
-                        <label for="trailer-checkbox" class="cerrar">&times;</label>
-                        <iframe src="https://www.youtube.com/embed/d3XN49jmmGM" width="912" height="459" frameborder="0"
-                            allow="autoplay; clipboard-write; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-            <!--Imagen de la película-->
-            <div class="contenido-pelicula">
-                <div class="imagen-pelicula">
-                    <img src="../img/p6.jpg">
-                </div>
-                <div> <!-- Información de la película -->
-                    <h1 class="nombre-pelicula">Star Wars III:<br></h1>
-                    <p class="nombre-pelicula">20 Aniversario</p>
-                    <p class="descripcion-pelicula"><b>Sinopsis</b>: Las Guerras de clones empezaron hace 3 años, en
-                        donde los Jedi<br>
-                        rescatan a Palpatine del conde Dooku,y Obi-wan le sigue la pista a una nueva <br>
-                        amenaza, mientras Anakin actúa como agente doble</p>
-                    <p class="descripcion-pelicula"><img src="../img/duracion.png" alt="duracion"
-                            width="23px"><b>Duración:</b> 140 min</p>
-                    <p class="descripcion-pelicula"><img src="../img/clasificación.png" alt="clasificacion"
-                            width="23px"><b>Clasificación:</b> PG-13</p>
-                    <p class="descripcion-pelicula"><img src="../img/genero.png" alt="genero"
-                            width="23px"><b>Género:</b> Ciencia Ficción, Acción</p>
-                    <p class="descripcion-pelicula"><img src="../img/director.png" alt="director"
-                            width="23px"><b>Director:</b> George Lucas</p>
-                </div>
-                <!-- Horarios de funciones -->
-                <div class="horarios">
-                    <h2 class="titulo-horarios">Horarios de funciones</h2>
-                    <div class="cine">
-                        <h3>METACINE V.E.S</h3>
-                        <p>Seleccione el horario:</p>
-                        <div class="horarios-funcion">
-                            <button>4:30 pm</button>
-                            <button>6:25 pm</button>
-                            <button>8:25 pm</button>
-                            <button>10:25 pm</button>
-                        </div>
-                    </div>
-                    <div class="cine">
-                        <h3>METACINE UTP</h3>
-                        <p>Seleccione el horario:</p>
-                        <div class="horarios-funcion">
-                            <button>2:40 pm</button>
-                            <button>5:20 pm</button>
-                            <button>7:50 pm</button>
-                            <button>9:10 pm</button>
+    <!-- =============== MAIN =============== -->
+    <main class="main_contacto">
+        <!-- Sección Contacto -->
+        <section class="seccion_contacto"> 
+            <article class="caja_contacto">
+                <div>
+                    <h1 class="titulo_contacto">CONTÁCTATE CON NOSOTROS</h1>
+                    <div class="texto_contacto">
+                        <p>Para asegurar la calidad y optimización de nuestro servicio, por favor llenar todos los campos que solicitamos. ¡Gracias!</p>
+                        <div>
+                        <p><i class="fa-solid fa-phone"></i> +51 953 283 238</p>
+                        <p><i class="fa-solid fa-envelope"></i> metacinesmulticines@gmail.com</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Mall del Sur - Centro de Contacto</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        </div>
+            </article>
+                
+            <form class="form_contacto" action="mailto:metacinesmulticines@gmail.com?subject=Mensaje" method="post" enctype="text/plain">
+                <!-- mailto: intenta abrir el programa de correo predeterminado del usuario para mandar un email con los datos del formulario-->
+                <!-- enctype: define el formato en que se enviaran los datos (por defecto usa pares "clave=valor", pero ahora se define como "texto plano")-->
+                <input class="inputtext" type="text" required placeholder="Nombres">
+                <input class="inputtext" type="text" required placeholder="Apellidos">
+                <input class="inputtext" type="email" required placeholder="Correo electrónico">
+                <input class="inputtext" type="text" required placeholder="Asunto">
+                <textarea class="messagetext" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                <button class="buttontext" type="submit">Enviar</button>
+            </form>
+            
+        </section>
     </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">

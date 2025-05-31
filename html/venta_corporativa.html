@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a pantallas móviles -->
+    <meta charset='utf-8'> <!-- Codificación UTF-8 -->
+    <meta name="description"
+        content="Disfruta las mejores películas, estrenos, contenido exclusivo, alquiler de salas, audio de alta calidad, promociones y la experiencia del cine en Perú.">
+    <!-- Descripción para buscadores -->
+    <meta name="keywords" content="cine, películas, cartelera, estrenos, cine Perú, cine cercano, metacine">
+    <!-- Palabras clave SEO -->
+    <link rel="icon" href="../img/logito.png" type="image/png"> <!-- Ícono en la pestaña -->
+    <title>MetaCine</title> <!-- Título del sitio -->
+
+    <link rel="stylesheet" href="../css/estilos_venta.css"> <!-- Estilos generales -->
+    <link rel="stylesheet" href="../css/estilo_login.css"> <!-- Estilos para login -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">    <!-- Íconos Font Awesome -->
+</head>
+
+<body>
+
+    <!--ENCABEZADO-->
+    <header class="encabezado">
+
+        <!--Parte izquierda del cuadro-->
+        <input type="checkbox" id="hamburguesa" hidden>
+        <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
+        <div class="logo-titulo">
+            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine" class="logo-mini"></a>
+            <h1 class="titulo"><a href="../html/index.html">Multicines</a></h1>
+        </div>
+
+        <!--Parte centro del cuadro-->
+        <nav class="menu">
+            <a href="index.html" class="activo">HOME</a>
+            <a href="cartelera.html">PELÍCULAS</a>
+            <a href="cines.html">CINES</a>
+            <a href="chocolateria.html">CHOCOLATERÍA</a>
+            <a href="#">VENTA CORPORATIVA</a>
+            <a href="#">PROMOCIONES</a>
+        </nav>
+
+        <!--Parte derecha del cuadro-->
+        <div class="acciones">
+            <label for="modal-toggle-login" class="btn-socio">¿Eres
+                socio?</label><!--el label actua como boton y activa el modal-->
+
+            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png" alt="Perfil"
+                    class="perfil-icon"></label>
+        </div>
+    </header>
+
+    <!--MODAL LOGIN-->
+    <!-- Botón en el header -->
+    <label for="modal-toggle-login" class="btn-open-modal"></label>
+
+    <!-- Checkbox oculto para alternar -->
+    <!-- Radios ocultos -->
+    <input type="radio" name="form-toggle" id="show-login" hidden checked>
+    <input type="radio" name="form-toggle" id="show-register" hidden>
+
+    <!-- Toggle del modal -->
+    <input type="checkbox" id="modal-toggle-login" class="modal-checkbox-login" hidden>
+
+
+    <!-- Modal -->
+    <section class="modal-login">
+        <div class="modal-contenedor-login">
+
+            <!-- Imagen -->
+            <div class="modal-img-container">
+                <img src="../img/img-login.jpg" class="modal-img-login" alt="Imagen decorativa">
+            </div>
+
+            <!-- Área del formulario -->
+            <div class="modal-formulario-container">
+
+                <!-- Formulario de LOGIN -->
+                <div class="formulario-login formulario-toggle">
+                    <span><a href="index.html">x</a></span>
+                    <h2 class="modal-titulo-login">Iniciar Sesión</h2>
+                    <form action="index.html" method="get">
+                        <input type="text" placeholder="Usuario" required>
+                        <input type="password" placeholder="Contraseña" required>
+                        <button type="submit">Ingresar</button>
+                    </form>
+                    <label for="show-register" class="switch-form">
+                        <h5 class="modal-parrafo-login">¿No tienes cuenta? <u>Regístrate</u></h6>
+                    </label>
+                </div>
+
+                <!-- Formulario de REGISTRO -->
+                <div class="formulario-register formulario-toggle">
+                    <h2 class="modal-titulo-login">Crear Cuenta</h2>
+                    <form action="index.html" method="get">
+                        <input type="text" placeholder="Nombre completo" required>
+                        <input type="email" placeholder="Correo electrónico" required>
+                        <input type="password" placeholder="Contraseña" required>
+                        <button type="submit">Registrarse</button>
+                    </form>
+                    <label for="show-login" class="switch-form">
+                        <h5 class="modal-parrafo-login">¿Ya tienes cuenta? <u>Inicia sesión</u></h5>
+                    </label>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- =============== MAIN =============== -->
+    <main style="display: flex; flex-direction: column; align-items: center; font-family: Arial;">
+        <img src="../img-carrusel/flowfondo.webp" alt="item1" style="width: 100%; height: 100%; display: block;">
+        
+        <section style="border: 5px solid rgb(0, 102, 255); display: flex; flex-direction: column; align-items: center; margin-top: 70px; margin-bottom: 150px; gap: 40px; width: 100%; max-width: 1400px; padding-inline: 6.2vw;">
+            <article style="border: 3px solid rgb(199, 0, 0); width: fit-content; display: flex; flex-direction: row; width: 100%; justify-content: space-between">
+                <div style="border: 5px solid rgb(0, 214, 0); display: flex; flex-direction: column; justify-content: center; width: 100%; max-width: 550px; gap: 40px;">
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        <h1 style="font-size: 2.5rem;">Ventas Corporativas</h1>
+                        <p style="font-size: 1.25rem; letter-spacing: 1px;">Te ofrecemos excelentes alternativas para anunciar y hacer crecer tu marca.</p>
+                    </div>
+                    
+                    <div>
+                        <h2 style="font-size: 1.25rem; color: rgb(160, 91, 0);">Contáctanos:</h2>
+                        <p style="font-size: 1.25rem; letter-spacing: 1px;">metacinesmulticines@gmail.com</p>
+                    </div>
+                </div>
+        
+                <div style="border: 5px solid blue; width: 100%; max-width: 428px; height: 470px;">
+                    <img src="../img/img-login.jpg" alt="" style="display: block; border: 2px solid greenyellow; width: 100%; height: 100%; object-fit: cover; object-position: 40%; border-radius: 35px;">
+                </div>
+            </article>
+        
+            <article style="border: 3px solid rgb(148, 0, 0); width: fit-content; display: flex; flex-direction: column; width: 100%;">
+                <div style="border: 5px solid rgb(0, 211, 46);">
+                    <h2 style="font-size: 2.5rem;">Servicios</h2>
+                </div>
+        
+                <div style="border: 5px solid rgb(0, 68, 255); display: grid; grid-template-columns: repeat(2, 1fr);">
+                    <p>asdasd</p>
+                    <p>asdasd</p>
+                    <p>asdasd</p>
+                    <p>asdasd</p>
+                </div>
+            </article>
+        </section>
+        
+        
+    </main>
+
+
+
+
+    <!-- =============== FOOTER =============== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Nosotros</h4>
+                    <ul>
+                        <li><a href="../html/sobre-nosotros.html">Conócenos</a></li>
+                        <li><a href="../html/contacto.html">Contacto</a></li>
+                        <li><a href="../html/trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Atención al cliente</h4>
+                    <ul>
+                        <li><a href="../html/libro-reclamaciones.html">Libro de Reclamaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Terminos y condiciónes</h4>
+                    <ul>
+                        <li><a href="../Términos y Condiciones de Uso.pdf" target="_blank">Términos y condiciones</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Siguenos</h4>
+                    <div class="social-link">
+                        <a href="https://www.linkedin.com/in/metacines-multicines-509143361/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a> <!--añadiendo redes sociales-->
+                        <a href="https://www.instagram.com/metacines_mult/" target="_blank"><i
+                                class="fab fa-instagram"></i></a><!--añadiendo redes sociales-->
+                        <a href="https://www.facebook.com/profile.php?id=61575268895729" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a><!--añadiendo redes sociales-->
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><img src="../img/qrcode-generado.png" alt="qrcode-generado"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--script de encabezado-->
+    <script>
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector(".encabezado");
+            if (window.scrollY > 620) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,627 @@
+   /*======== ESTILO GENERAL GENERAL (ESTANDAR) ==========
+   Estas clases se usan en TODO el sitio: header, main,
+   footer, formularios, p1.html, etc.
+   Usen estas clases para mantener un estilo unificado. */
+
+
+   .titulo {
+       letter-spacing: 10px;
+       font-size: 1.2em;
+
+   }
+
+   .titulo a {
+       text-decoration: none;
+       color: white;
+       font-family: 'Courier New', Courier, monospace;
+   }
+
+   .subtitulo {
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       font-size: 25px;
+       font-weight: 600px;
+       color: black;
+       text-align: left;
+       margin-bottom: 10px;
+       padding-left: 10px;
+   }
+
+   .cartelera {
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-size: 56px;
+       color: #a8a8a8;
+
+   }
+
+
+
+   /* ====== ESTILO GENERAL PARA EL HEADER====== */
+   .logo-titulo {
+       display: flex;
+       align-items: center;
+    
+   }
+
+   .logo-mini {
+
+       width: 150px;
+       margin: 0px 20px;
+
+   }
+
+   .encabezado {
+       background-color: #00000024;
+       height: 70px;
+       width: 100%;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       position: fixed;
+       z-index: 1000;
+       transition:
+           background-color 0.5s ease,
+           box-shadow 0.5s ease;
+       /* Asegura que el encabezado esté por encima de otros elementos */
+   }
+
+   /*encabezado transparente hasta cierto punto del scroleo*/
+   .encabezado.scrolled {
+       background-color: black;
+       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+   }
+
+   /*estilo para la hamburguesa*/
+   .icono-hamburguesa {
+       display: none;
+       font-size: 2em;
+       color: white;
+       cursor: pointer;
+       margin-left: 20px;
+   }
+
+   /*responsive para el header*/
+   @media (max-width: 1300px) {
+
+       .menu {
+           display: none;
+           flex-direction: column;
+           background: #111;
+           position: absolute;
+           top: 0px;
+           left: 0;
+           width: 40%;
+           height: 1200px;
+           background-color: #000000;
+       }
+       .encabezado{
+        height: 56px;
+       }
+       #hamburguesa:checked~.menu {
+           display: flex;
+           padding: 10px;
+       }
+
+       #hamburguesa:checked~.menu a{
+            padding: 5px;
+            margin-bottom: 100px;
+            font-size: 2rem;
+       }
+
+       .icono-hamburguesa {
+           display: block;
+       }
+
+       .logo-mini{
+            margin: 0px -18px 0px 0px;
+       }
+
+       .titulo {
+           display: none;
+       }
+
+       .btn-socio {
+           display: none;
+       }
+   }
+
+
+
+   .menu a {
+       color: white;
+       margin: 0 10px;
+       text-decoration: none;
+       font-family: 'Verdana';
+       letter-spacing: 0px;
+   }
+
+   .perfil-icon {
+        
+       width: 40px;
+       height: 40px;
+       margin-right: 20px;
+       border-radius: 100px;
+       transition:
+           transform 1s ease-in-out,
+           background-color 0.5s ease-in-out;
+       display: inline-block;
+       vertical-align: middle;
+       cursor: pointer;
+   }
+
+   
+
+   .perfil-icon:hover {
+       transform: scale(1.1);
+       background-color: rgba(0, 0, 0, 0.1);
+   }
+
+   .menu a:hover {
+       transition: 0.3s;
+       color: grey;
+   }
+
+   .acciones {
+       display: flex;
+       align-items: center;
+   }
+
+   .menu a.activo {
+       color: rgb(135, 135, 135);
+       border-bottom: 3px solid grey;
+   }
+
+   .btn-socio {
+       background: transparent;
+       color: white;
+       border-radius: 20px;
+       padding: 10px 20px;
+       margin-right: 15px;
+       font-size: 15px;
+       font-family: 'Verdana';
+       cursor: pointer;
+       transition:
+           transform 0.5s ease-in-out,
+           background-color 0.5s ease-in-out;
+
+   }
+
+   .btn-socio:hover {
+       transform: scale(1.1);
+       background-color: rgba(0, 0, 0, 0.1);
+   }
+
+   .redes a {
+       color: white;
+       margin: 0 5px;
+       font-size: 2.4em;
+   }
+
+   /* ====== ESTILO GENERAL PARA EL MAIN====== */
+
+   /* carrusel */
+
+   #conteItemsCarrusel {
+       position: relative;
+
+   }
+
+   .carrusel-inner {
+       display: flex;
+       height: 720px;
+       overflow-x: hidden;
+       overflow-y: hidden;
+       scroll-snap-type: x mandatory;
+       scroll-behavior: smooth;
+       -webkit-overflow-scrolling: touch;
+
+   }
+
+   .item-carrusel {
+       flex: 0 0 100%;
+       scroll-snap-align: start;
+       position: relative;
+   }
+
+   .item-carrusel img,
+   picture {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+   }
+
+
+   .item-carrusel-contenido {
+       position: absolute;
+       color: white;
+       z-index: 2;
+       top: 50%;
+       left: 10%;
+
+   }
+
+   .item-carrusel-contenido-titulo {
+       font-size: 5rem;
+       margin-bottom: 0.5em;
+       position: relative;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+   }
+
+   .item-carrusel-contenido-titulo::before {
+       content: "";
+       position: absolute;
+       top: -22px;
+       left: -50px;
+       width: 10%;
+       height: 140%;
+       background-color: rgba(164, 99, 66, 0.614);
+       z-index: -1;
+   }
+
+   .item-carrusel-descripcion {
+
+       font-size: 2.5em;
+       font-family: Arial, Helvetica, sans-serif;
+       max-width: 90%;
+   }
+
+
+   .item-carrusel-contenido a {
+       color: white;
+       text-decoration: none;
+       font-size: 1.5em;
+       font-weight: bold;
+       font-family: Arial, Helvetica, sans-serif;
+       padding: 1em 2.5em;
+       margin-top: 2.5em;
+       display: inline-block;
+       background-color: rgba(0, 0, 0, 0.708);
+   }
+
+   .item-carrusel-contenido a:hover {
+       background-color: rgba(255, 255, 255, 0.5);
+       color: #574848;
+       transition: all 0.3s ease;
+
+   }
+
+   /*responsive*/
+   @media (max-width: 1070px) {
+       .carrusel-inner {
+        height: 660px;
+       }
+
+       .item-carrusel-contenido {
+           top: 10%;
+           left: 5%;
+           max-width: 90%;
+           margin-top: 350px;
+           text-align: left;
+       }
+
+       .item-carrusel-contenido-titulo {
+           font-size: 3rem;
+       }
+
+       .item-carrusel-contenido-titulo::before {
+           width: 20%;
+           height: 100%;
+           left: -10px;
+           top: -10px;
+
+       }
+
+       .item-carrusel-descripcion {
+           display: none;
+       }
+
+       .item-carrusel-contenido a {
+           font-size: 1.5rem;
+           font-size: 1.5em;
+           margin-top: 2.5em;
+       }
+   }
+
+   /*responsive*/
+   .flecha-carrusel {
+       position: absolute;
+       top: 0;
+       height: 100%;
+       width: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 50px;
+       z-index: 5;
+       pointer-events: none;
+       /* para que el click pase a los botones */
+   }
+
+   .flecha-carrusel button {
+       background: none;
+       border: none;
+       cursor: pointer;
+       pointer-events: all;
+   }
+
+   .flecha-carrusel i {
+       font-size: 2em;
+       color: white;
+       transition: transform 1.3s ease;
+
+   }
+
+   .flecha-carrusel i:hover {
+       transform: scale(2.4);
+       color: #574848;
+   }
+
+   #contePuntos {
+       position: absolute;
+       bottom: 10px;
+       left: 50%;
+       transform: translateX(-50%);
+       display: flex;
+       gap: 30px;
+   }
+
+   #contePuntos i {
+       color: white;
+       font-size: 4em;
+       cursor: pointer;
+       width: 20px;
+       transition: color 0.3s ease;
+
+   }
+
+   #contePuntos i:hover {
+       color: #574848;
+       transform: scale(1.2);
+   }
+
+
+   /*carrusel*/
+
+   .fondo {
+       /* Esta clase estaba sin usar para la imagen */
+       background-image: url(../img/preview.jpg);
+       background-size: cover;
+       /* Cubre toda la pagina con la imagen (creo q también la estira) */
+       background-attachment: fixed;
+       /* Hace que la img quede estática */
+       margin: 0%;
+       /* Corta los bordes de los lados que tenía el cuadro de navegación */
+       display: flex;
+       flex-direction: column;
+       min-height: 100vh;
+   }
+
+
+   .fondo-peliculas {
+       background-color: white;
+       box-shadow: inset -10px 0px 22px -10px #000000;
+       padding: 100px;
+       display: block;
+       max-width: 100%;
+       white-space: nowrap;
+       width: 100%;
+   }
+
+   .pelicula {
+       width: 180px;
+       height: 550px;
+       border-radius: 10px;
+       margin: 0 auto;
+       /*espaciado mejor*/
+       object-fit: cover;
+       border: 1px solid #444;
+       transition: transform 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+       display: inline-block;
+   }
+
+   /* Hover para efecto visual al pasar el mouse */
+   .pelicula:hover {
+       transform: scale(1.05);
+   }
+
+   .tabla-peliculas-desplazamiento {
+       overflow-x: auto;
+   }
+
+   td {
+       vertical-align: top;
+       text-align: center;
+       width: 180px;
+       /* Igual al ancho de la imagen */
+       padding: 10px;
+       white-space: normal;
+       word-wrap: break-word;
+   }
+
+   /* ====== ESTILO GENERAL PARA EL FOUTER====== */
+   * {
+       list-style: none;
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+
+   }
+
+   .footer {
+       background-color: rgb(0, 0, 0);
+       padding: 80px 0px;
+       color: rgb(255, 255, 255);
+
+   }
+
+   .footer-content {
+       margin: 0 auto;
+       padding: 0px 50px;
+   }
+
+   .footer-row {
+       display: flex;
+       flex-wrap: wrap;
+       flex-grow: 1;
+       justify-content: center;
+   }
+
+   .footer-links {
+       width: 250px;
+       padding: 10px;
+   }
+
+   .footer-links h4 {
+       font-size: 20px;
+       color: white;
+       margin-bottom: 25px;
+       font-weight: 500;
+       border-bottom: 2px solid #ffffff;
+       padding-bottom: 10px;
+       display: inline-block;
+   }
+
+   .footer-links ul li a {
+       font-size: 18px;
+       text-decoration: none;
+       color: #BBBBBB;
+       display: block;
+       margin-bottom: 15px;
+       transition: all .3s ease;
+   }
+
+   .footer-links ul li a:hover {
+       color: #ffffff;
+       padding-left: 6px;
+   }
+
+   .footer-links img {
+       width: 230px;
+       height: 230px;
+       clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%);
+   }
+
+   .social-link a {
+       display: inline-block;
+       min-height: 40px;
+       width: 40px;
+       background-color: rgba(255, 255, 255, 0.2);
+       margin: 0 10px 10px 0;
+       text-align: center;
+       line-height: 40px;
+       border-radius: 50%;
+       color: #ffffff;
+       transition: all .5s ease;
+
+   }
+
+   .social-link a:hover {
+       background-color: #ffffff;
+       color: #000000;
+   }
+
+   @media (max-width:1000px) {
+       .footer-row {
+           text-align: center;
+       }
+
+       .footer-links {
+           width: 100%;
+           margin-bottom: 30px;
+       }
+   }
+
+   .cinestbl {
+       background-color: azure;
+       border-radius: 10px;
+       margin: 30px;
+       /*espaciado mejor*/
+       object-fit: cover;
+       border: 1px solid #444;
+       transition: transform 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   }
+
+   /* clase de las tablas de los cines */
+   .img-cines {
+       width: 500px;
+       height: 300px;
+       border-radius: 10px;
+       margin: 30px;
+       /*espaciado mejor*/
+       object-fit: cover;
+       border: 1px solid #444;
+       transition: transform 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   }
+
+   /* clase de text de las tablas de cine.html */
+   .cines-tbltext {
+       text-align: center;
+       vertical-align: middle;
+       width: 500px;
+       height: 300px;
+       font-size: 30px;
+       padding: 0 20px;
+       color: rgb(29, 28, 28);
+       display: flex;
+       justify-content: center;
+       padding-top: 60px;
+   }
+
+   /* clase de configuración de los elementos de las tablas de cines.html */
+   .horario-configposicion-textbtn {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: flex-start;
+       gap: 20px;
+   }
+
+   /* clase de text de las tablas de cines.html */
+   .btn-horario {
+       margin-top: 20px;
+       font-size: 20px;
+       padding: 10px 20px;
+       background-color: #333;
+       color: white;
+       border: none;
+       border-radius: 8px;
+       cursor: pointer;
+       transition: .3s;
+   }
+
+   /* clase de boton de la tabla en cines.html */
+   .btn-horario:hover {
+       background-color: #bf6e6e;
+       transform: scale(1.1);
+   }
+
+   /* clase de tabla horarios del modal cine1 en cines.html */
+   .cines-horarios {
+       background-color: azure;
+       width: 90%;
+       padding: 8px;
+       text-align: center;
+       border-collapse: collapse;
+       border-radius: 10px;
+       margin: 30px;
+       /*espaciado mejor*/
+       border: 1px solid #444;
+       transition: transform 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   }
+
+   /* Opcional: Estilos para celdas */
+   .cines-horarios th,
+   .cines-horarios td {
+       padding: 12px;
+       border: 1px solid #bf6e6e;
+   }
+
+   /* clase de color de las tablas del horario de cines.html */
+   .cines-horarios th {
+       background-color: #68a5ef;
+   }

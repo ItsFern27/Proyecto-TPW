@@ -12,6 +12,7 @@
     <link rel="icon" href="../img/logito.png" type="image/png"> <!-- Ícono en la pestaña -->
     <title>MetaCine</title> <!-- Título del sitio -->
 
+    <link rel="stylesheet" href="../css/estilos.css"> <!-- Estilos generales -->
     <link rel="stylesheet" href="../css/estilos_venta.css"> <!-- Estilos generales -->
     <link rel="stylesheet" href="../css/estilo_login.css"> <!-- Estilos para login -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">    <!-- Íconos Font Awesome -->
@@ -110,71 +111,71 @@
 
 
     <!-- =============== MAIN =============== -->
-    <main style="display: flex; flex-direction: column; align-items: center; font-family: Arial;">
-        <img src="../img-carrusel/flowfondo.webp" alt="item1" style="width: 100%; height: 100%; display: block;">
+    <main>
+        <img class="venta-imagen" src="../img/venta_corporativa/sala_privada-Wide.png" alt="item1">
         
-        <section style="display: flex; flex-direction: column; align-items: center; margin-top: 70px; margin-bottom: 150px; gap: 50px; width: 100%; max-width: 1400px; padding-inline: 6.2vw;">
-            <article style="width: fit-content; display: flex; flex-direction: row; width: 100%; justify-content: space-between; gap: 20px;">
-                <div style="display: flex; flex-direction: column; justify-content: center; width: 100%; max-width: 550px; gap: 40px;">
-                    <div style="display: flex; flex-direction: column; gap: 20px;">
-                        <h1 style="font-size: 2.5rem;">Ventas Corporativas</h1>
-                        <p style="font-size: 1.25rem; letter-spacing: 1px; color: #474747;">Te ofrecemos excelentes alternativas para anunciar y hacer crecer tu marca.</p>
+        <section class="venta-section">
+            <article class="venta-Ventas_Corporativas">
+                <div class="venta-Ventas_Corporativas-Parrafo">
+                    <div class="venta-Ventas_Corporativas-Parrafo-titulo">
+                        <h1>Ventas Corporativas</h1>
+                        <p>Te ofrecemos excelentes alternativas para anunciar y hacer crecer tu marca.</p>
                     </div>
                     
-                    <div>
-                        <h2 style="font-size: 1.25rem; color: rgb(160, 91, 0);;">Contáctanos:</h2>
-                        <p style="font-size: 1.25rem; letter-spacing: 1px; color: #474747;">metacinesmulticines@gmail.com</p>
+                    <div class="venta-Ventas_Corporativas-Parrafo-subtitulo">
+                        <h2>Contáctanos:</h2>
+                        <p>metacinesmulticines@gmail.com</p>
                     </div>
                 </div>
         
-                <div style="width: 100%; max-width: 428px; height: 470px;">
-                    <img src="../img/img-login.jpg" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: 40%; border-radius: 35px;">
+                <div class="venta-Ventas_Corporativas-Imagen">
+                    <img src="../img/img-login.jpg" alt="Comiendo canchita">
                 </div>
             </article>
         
-            <article style=" width: fit-content; display: flex; flex-direction: column; width: 100%; gap: 50px;">
-                <div>
-                    <h2 style="font-size: 2.5rem;">Servicios</h2>
+            <article class="venta-Servicios">
+                <div class="venta-Servicios-Titulo">
+                    <h2>Servicios</h2>
                 </div>
         
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); gap: 100px;"> <!--CAMBIAR LOS PX DEL GRID PARA RESPONSIVE-->
-                    <div style="display: flex; flex-direction: row; align-items: center; gap: 50px;">
-                        <div style="width: 161px; height: 157px; flex-shrink: 0; box-shadow: 0 0 14px 0 rgba(27, 52, 142, .15); border-radius: 20px;">
-                            <img src="../img-carrusel/flowmobile.webp" alt="" style="display: block; width: 100%; height: 100%; object-fit: contain; transform: rotate(-90deg);">
+                <div class="venta-Servicios-Contenido"> <!--CAMBIAR LOS PX DEL GRID PARA RESPONSIVE-->
+                    <div class="venta-Servicios-Contenido-Seccion">
+                        <div class="venta-Servicios-Contenido-Seccion-Imagen">
+                            <img src="../img-carrusel/flowmobile.webp" alt="">
                         </div>
-                        <div>
-                            <h1 style="line-height: 1.5rem; margin-bottom: 0.5rem; color: rgb(160, 91, 0);">Funciones Especiales</h1>
-                            <p style="line-height: 1.22rem; color: #474747;">Celebra tu cumpleaños con tus amigos o familiares, agasaja a tus colaboradores o ven con tu colegio para vivir la experiencia del cine con una función especial eligiendo una película de cartelera.</p>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; flex-direction: row; align-items: center; gap: 50px;">
-                        <div style="width: 161px; height: 157px; flex-shrink: 0; box-shadow: 0 0 14px 0 rgba(27, 52, 142, .15); border-radius: 20px;">
-                            <img src="../img-carrusel/flowmobile.webp" alt="" style="display: block; width: 100%; height: 100%; object-fit: contain; transform: rotate(-90deg);">
-                        </div>
-                        <div>
-                            <h1 style="line-height: 1.5rem; margin-bottom: 0.5rem; color: rgb(160, 91, 0);">Alquileres de Sala</h1>
-                            <p style="line-height: 1.22rem; color: #474747;">Celebra tu cumpleaños con tus aa de cartelera</p>
+                        <div class="venta-Servicios-Contenido-Seccion-Texto">
+                            <h1>Funciones Especiales</h1>
+                            <p>Celebra tu cumpleaños con tus amigos o familiares, agasaja a tus colaboradores o ven con tu colegio para vivir la experiencia del cine con una función especial eligiendo una película de cartelera.</p>
                         </div>
                     </div>
 
-                    <div style="display: flex; flex-direction: row; align-items: center; gap: 50px;">
-                        <div style="width: 161px; height: 157px; flex-shrink: 0; box-shadow: 0 0 14px 0 rgba(27, 52, 142, .15); border-radius: 20px;">
-                            <img src="../img-carrusel/flowmobile.webp" alt="" style="display: block; width: 100%; height: 100%; object-fit: contain; transform: rotate(-90deg);">
+                    <div class="venta-Servicios-Contenido-Seccion">
+                        <div class="venta-Servicios-Contenido-Seccion-Imagen">
+                            <img src="../img-carrusel/flowmobile.webp" alt="">
                         </div>
-                        <div>
-                            <h1 style="line-height: 1.5rem; margin-bottom: 0.5rem; color: rgb(160, 91, 0);">Publicidad</h1>
-                            <p style="line-height: 1.22rem; color: #474747;">Celebra tu cumpleaños con tus aa de cartelera</p>
+                        <div class="venta-Servicios-Contenido-Seccion-Texto">
+                            <h1>Funciones Especiales</h1>
+                            <p>Celebra tu cumpleaños con tus amigos o familiares, agasaja a tus colaboradores o ven con tu colegio para vivir la experiencia del cine con una función especial eligiendo una película de cartelera.</p>
                         </div>
                     </div>
 
-                    <div style="display: flex; flex-direction: row; align-items: center; gap: 50px;">
-                        <div style="width: 161px; height: 157px; flex-shrink: 0; box-shadow: 0 0 14px 0 rgba(27, 52, 142, .15); border-radius: 20px;">
-                            <img src="../img-carrusel/flowmobile.webp" alt="" style="display: block; width: 100%; height: 100%; object-fit: contain; transform: rotate(-90deg);">
+                    <div class="venta-Servicios-Contenido-Seccion">
+                        <div class="venta-Servicios-Contenido-Seccion-Imagen">
+                            <img src="../img-carrusel/flowmobile.webp" alt="">
                         </div>
-                        <div>
-                            <h1 style="line-height: 1.5rem; margin-bottom: 0.5rem; color: rgb(160, 91, 0);">Entradas y combos corporativos</h1>
-                            <p style="line-height: 1.22rem; color: #474747;">Celebra tu cumpleaños con tus aa de cartelera</p>
+                        <div class="venta-Servicios-Contenido-Seccion-Texto">
+                            <h1>Funciones Especiales</h1>
+                            <p>Celebra tu cumpleaños con tus amigos o familiares, agasaja a tus colaboradores o ven con tu colegio para vivir la experiencia del cine con una función especial eligiendo una película de cartelera.</p>
+                        </div>
+                    </div>
+
+                    <div class="venta-Servicios-Contenido-Seccion">
+                        <div class="venta-Servicios-Contenido-Seccion-Imagen">
+                            <img src="../img-carrusel/flowmobile.webp" alt="">
+                        </div>
+                        <div class="venta-Servicios-Contenido-Seccion-Texto">
+                            <h1>Funciones Especiales</h1>
+                            <p>Celebra tu cumpleaños con tus amigos o familiares, agasaja a tus colaboradores o ven con tu colegio para vivir la experiencia del cine con una función especial eligiendo una película de cartelera.</p>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,205 @@
+/* =============== MAIN =============== */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial;
+}
+
+
+
+
+
+
+
+/* >>>>>>>>>>>>| IMAGEN |<<<<<<<<<<<< */
+.venta-imagen {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+
+
+/* >>>>>>>>>>>>| SECCION INFO |<<<<<<<<<<<< */
+.venta-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 150px;
+    gap: 50px;
+    width: 100%;
+    max-width: 1400px;
+    padding-inline: 6.2vw;
+}
+
+
+
+/* --------- VENTAS CORPORATIVAS --------- */
+.venta-Ventas_Corporativas {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+/*+++ Parrafo de Texto +++*/
+.venta-Ventas_Corporativas-Parrafo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 550px;
+    gap: 40px;
+}
+
+
+.venta-Ventas_Corporativas-Parrafo-titulo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.venta-Ventas_Corporativas-Parrafo-titulo > h1 {
+    font-size: 2.5rem;
+}
+
+.venta-Ventas_Corporativas-Parrafo-titulo > p {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    color: #474747;
+}
+
+.venta-Ventas_Corporativas-Parrafo-subtitulo {}
+
+.venta-Ventas_Corporativas-Parrafo-subtitulo>h2 {
+    font-size: 1.25rem;
+    color: rgb(160, 91, 0);
+}
+
+.venta-Ventas_Corporativas-Parrafo-subtitulo>p {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    color: #474747;
+}
+
+
+/*+++ Imagen +++*/
+.venta-Ventas_Corporativas-Imagen {
+    width: 100%;
+    max-width: 428px;
+    height: 470px;
+}
+
+.venta-Ventas_Corporativas-Imagen>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 40%;
+    border-radius: 35px;
+}
+
+
+
+/* --------- SERVICIOS --------- */
+.venta-Servicios {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+}
+
+
+/*+++ Titulo +++*/
+.venta-Servicios-Titulo>h2 {
+    font-size: 2.5rem;
+}
+
+.venta-Ventas_Corporativas-Imagen>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 40%;
+    border-radius: 35px;
+}
+
+
+/*+++ Contenido +++*/
+.venta-Servicios-Contenido {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+    gap: 100px;
+}
+
+
+/*- Seccion -*/
+.venta-Servicios-Contenido-Seccion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+.venta-Servicios-Contenido-Seccion-Imagen {
+    width: 161px;
+    height: 157px;
+    flex-shrink: 0;
+    box-shadow: 0 0 14px 0 rgba(27, 52, 142, .15);
+    border-radius: 20px;
+}
+
+.venta-Servicios-Contenido-Seccion-Imagen>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: rotate(-90deg);
+}
+
+.venta-Servicios-Contenido-Seccion-Texto>h1 {
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: rgb(160, 91, 0);
+}
+
+.venta-Servicios-Contenido-Seccion-Texto>p {
+    line-height: 1.22rem;
+    color: #474747;
+}
+
+
+@media (orientation: portrait) and (max-width: 600px) {
+    .venta-Ventas_Corporativas {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+
+    .venta-Servicios-Contenido {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 100px;
+    }
+
+    .venta-Servicios-Contenido-Seccion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+
+}    

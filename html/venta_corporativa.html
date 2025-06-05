@@ -13,34 +13,30 @@
     <title>MetaCines</title> <!-- Título del sitio -->
 
     <link rel="stylesheet" href="../css/estilos.css"> <!-- Estilos generales -->
-    <link rel="stylesheet" href="../css/estilos_trabaja2.css"> <!-- Estilos para contacto -->
+    <link rel="stylesheet" href="../css/estilos_venta.css"> <!-- Estilos generales -->
     <link rel="stylesheet" href="../css/estilo_login.css"> <!-- Estilos para login -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Íconos Font Awesome -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">    <!-- Íconos Font Awesome -->
 </head>
 
-<body class="fondo_trabaja">
+<body>
 
-    <!-- =============== HEADER =============== -->
+    <!--ENCABEZADO-->
     <header class="encabezado">
 
         <!--Parte izquierda del cuadro-->
         <input type="checkbox" id="hamburguesa" hidden>
         <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
         <div class="logo-titulo">
-            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine"
-                    class="logo-mini"></a>
+            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine" class="logo-mini"></a>
             <h1 class="titulo"><a href="../html/index.html">Multicines</a></h1>
         </div>
 
-
         <!--Parte centro del cuadro-->
         <nav class="menu">
-            <a href="index.html">HOME</a>
-            <a href="#cartelera">PELÍCULAS</a>
+            <a href="index.html" class="activo">HOME</a>
+            <a href="cartelera.html">PELÍCULAS</a>
             <a href="cines.html">CINES</a>
-            <a href="../html/chocolateria.html">CHOCOLATERÍA</a>
+            <a href="chocolateria.html">CHOCOLATERÍA</a>
             <a href="#">VENTA CORPORATIVA</a>
             <a href="#">PROMOCIONES</a>
         </nav>
@@ -50,8 +46,8 @@
             <label for="modal-toggle-login" class="btn-socio">¿Eres
                 socio?</label><!--el label actua como boton y activa el modal-->
 
-            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png"
-                    alt="Perfil" class="perfil-icon"></label>
+            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png" alt="Perfil"
+                    class="perfil-icon"></label>
         </div>
     </header>
 
@@ -82,6 +78,7 @@
 
                 <!-- Formulario de LOGIN -->
                 <div class="formulario-login formulario-toggle">
+                    <span><a href="index.html">x</a></span>
                     <h2 class="modal-titulo-login">Iniciar Sesión</h2>
                     <form action="index.html" method="get">
                         <input type="text" placeholder="Usuario" required>
@@ -112,53 +109,83 @@
     </section>
 
 
-    <!-- =============== MAIN =============== -->
-    <main style="border: 1px solid blue;">
-        <!-- Sección Contacto -->
-        <section class="section_trabaja" style="border: 3px solid blue;">
-            <article class="contenedor_trabaja" style="border: 1px solid greenyellow;"> <!--borrar para sol bug de cel-->
 
-                <h1 class="titulo_trabaja">TRABAJA CON NOSOTROS</h1>
-                <div class="texto_trabaja">
-                    <p>Nos complace que quieras ser parte de nuestro equipo, completa los datos solicitados y nos pondremos en contacto.</p>
-                    <div>
-                        <p><i class="fa-solid fa-phone"></i> +51 953 283 238</p>
-                        <p><i class="fa-solid fa-envelope"></i> metacinesmulticines@gmail.com</p>
-                        <p><i class="fa-solid fa-location-dot"></i> Mall del Sur - Centro de Contacto</p>
+    <!-- =============== MAIN =============== -->
+    <main>
+        <img class="venta-imagen" src="../img/venta_corporativa/sala_privada-Wide.png" alt="item1">
+        
+        <section class="venta-section">
+            <article class="venta-Ventas_Corporativas">
+                <div class="venta-Ventas_Corporativas-Parrafo">
+                    <div class="venta-Ventas_Corporativas-Parrafo-titulo">
+                        <h1>Ventas Corporativas</h1>
+                        <p>Te ofrecemos excelentes alternativas para anunciar y hacer crecer tu marca.</p>
+                    </div>
+                    
+                    <div class="venta-Ventas_Corporativas-Parrafo-subtitulo">
+                        <h2>Contáctanos:</h2>
+                        <p>metacinesmulticines@gmail.com</p>
+                    </div>
+                </div>
+        
+                <div class="venta-Ventas_Corporativas-Imagen">
+                    <img src="../img/img-login.jpg" alt="Comiendo canchita">
+                </div>
+            </article>
+        
+            <article class="venta-Servicios">
+                <div class="venta-Servicios-Titulo">
+                    <h2>Servicios</h2>
+                </div>
+        
+                <div class="venta-Servicios-Contenido"> <!--CAMBIAR LOS PX DEL GRID PARA RESPONSIVE-->
+                    <div class="venta-Servicios-Contenido-Seccion">
+                        <div class="venta-Servicios-Contenido-Seccion-Imagen">
+                            <img src="../img-carrusel/flowmobile.webp" alt="">
+                        </div>
+                        <div class="venta-Servicios-Contenido-Seccion-Texto">
+                            <h1>Funciones Especiales</h1>
+                            <p>Celebra tu cumpleaños con tus amigos o familiares, agasaja a tus colaboradores o ven con tu colegio para vivir la experiencia del cine con una función especial eligiendo una película de cartelera.</p>
+                        </div>
+                    </div>
+
+                    <div class="venta-Servicios-Contenido-Seccion">
+                        <div class="venta-Servicios-Contenido-Seccion-Imagen">
+                            <img src="../img-carrusel/flowmobile.webp" alt="">
+                        </div>
+                        <div class="venta-Servicios-Contenido-Seccion-Texto">
+                            <h1>Funciones Especiales</h1>
+                            <p>Celebra tu cumpleaños con tus amigos o familiares, agasaja a tus colaboradores o ven con tu colegio para vivir la experiencia del cine con una función especial eligiendo una película de cartelera.</p>
+                        </div>
+                    </div>
+
+                    <div class="venta-Servicios-Contenido-Seccion">
+                        <div class="venta-Servicios-Contenido-Seccion-Imagen">
+                            <img src="../img-carrusel/flowmobile.webp" alt="">
+                        </div>
+                        <div class="venta-Servicios-Contenido-Seccion-Texto">
+                            <h1>Funciones Especiales</h1>
+                            <p>Celebra tu cumpleaños con tus amigos o familiares, agasaja a tus colaboradores o ven con tu colegio para vivir la experiencia del cine con una función especial eligiendo una película de cartelera.</p>
+                        </div>
+                    </div>
+
+                    <div class="venta-Servicios-Contenido-Seccion">
+                        <div class="venta-Servicios-Contenido-Seccion-Imagen">
+                            <img src="../img-carrusel/flowmobile.webp" alt="">
+                        </div>
+                        <div class="venta-Servicios-Contenido-Seccion-Texto">
+                            <h1>Funciones Especiales</h1>
+                            <p>Celebra tu cumpleaños con tus amigos o familiares, agasaja a tus colaboradores o ven con tu colegio para vivir la experiencia del cine con una función especial eligiendo una película de cartelera.</p>
+                        </div>
                     </div>
                 </div>
             </article>
-
-            <form class="form_trabaja" action="#" method="post" enctype="multipart/form-data">
-                <h2 class="form_trabaja-subtitulo">Ingresa tus datos personales</h2>
-                <div class="form_trabaja-datos">
-                    <div>
-                        <input type="text" name="nombres" placeholder="Nombres" required>
-                        <input type="text" name="apellidos" placeholder="Apellidos" required>
-                        <input type="text" name="dni" placeholder="DNI" required>
-                        <input type="date" name="fecha_nacimiento" required>
-                    </div>
-                    <div>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="text" name="direccion" placeholder="Dirección" required>
-                        <input type="text" name="distrito" placeholder="Distrito" required>
-                        <input type="text" name="educacion" placeholder="Nivel de educación" required>
-                    </div>
-                </div>
-                <div class="form_trabaja-adjunto">
-                    <label>
-                        📄 Adjuntar Curriculum Vitae <br>
-                        <span>(Word o PDF)</span>
-                        <input type="file" name="cv" accept=".pdf,.doc,.docx" required>
-                    </label>
-                    <div>
-                        <input type="checkbox" required> No soy un robot
-                    </div>
-                </div>
-                <button type="submit" class="form_trabaja-button">Enviar</button>
-            </form>
         </section>
+        
+        
     </main>
+
+
 
 
     <!-- =============== FOOTER =============== -->
@@ -205,7 +232,18 @@
             </div>
         </div>
     </footer>
+    <!--script de encabezado-->
+    <script>
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector(".encabezado");
+            if (window.scrollY > 620) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
 
+    </script>
 </body>
 
 </html>

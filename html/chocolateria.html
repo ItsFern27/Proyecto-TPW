@@ -113,6 +113,9 @@
 
     <!-- =============== MAIN =============== -->
     <main>
+        <img class="choco-imagen" src="../img/chocolateria/chocolateria-wide.png" alt="item1">
+
+
         <!-- Sección chocolatería -->
         <section class="section-chocolateria">
             <article class="article-chocolateria">
@@ -154,21 +157,21 @@
                         <img src="../img/chocolateria/canchita_grande.jpeg" alt="cancha">
                         <div>
                             <p class="lista-chocolateria_producto">Canchita Popcorn Tamaño Grande</p>
-                            <p class="lista-chocolateria_precio">S./ 99.99</p>
+                            <p class="lista-chocolateria_precio">S./ 13.00</p>
                         </div>
                     </li>
                     <li>
-                        <img src="../img/chocolateria/canchita_grande.jpeg" alt="cancha">
+                        <img src="../img/chocolateria/canchita_mediana.jpg" alt="cancha">
                         <div>
-                            <p class="lista-chocolateria_producto">Canchita Popcorn Tamaño Grande</p>
-                            <p class="lista-chocolateria_precio">S./ 99.99</p>
+                            <p class="lista-chocolateria_producto">Canchita Popcorn Tamaño Mediano</p>
+                            <p class="lista-chocolateria_precio">S./ 10.00</p>
                         </div>
                     </li>
                     <li>
-                        <img src="../img/en progreso.jpg" alt="cancha">
+                        <img src="../img/chocolateria/canchita_pequena.jpg" alt="cancha">
                         <div>
-                            <p class="lista-chocolateria_producto">Canchita Popcorn Tamaño Grande</p>
-                            <p class="lista-chocolateria_precio">S./ 99.99</p>
+                            <p class="lista-chocolateria_producto">Canchita Popcorn Tamaño Pequeño</p>
+                            <p class="lista-chocolateria_precio">S./ 6.50</p>
                         </div>
                     </li>
                     <li>
@@ -186,9 +189,9 @@
                         </div>
                     </li>
                     <li>
-                        <img src="../img/hotdog_chocolateria.png" alt="cancha">
+                        <img src="../img/chocolateria/hotdog_chocolateria.png" alt="cancha">
                         <div>
-                            <p class="lista-chocolateria_producto">Canchita Popcorn Tamaño Grande</p>
+                            <p class="lista-chocolateria_producto">Pan con Hotdog</p>
                             <p class="lista-chocolateria_precio">S./ 99.99</p>
                         </div>
                     </li>
@@ -243,6 +246,18 @@
         </div>
     </footer>
 
+    <!--script de encabezado-->
+    <script>
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector(".encabezado");
+            if (window.scrollY > 620) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+
+    </script>
 </body>
 
 </html>

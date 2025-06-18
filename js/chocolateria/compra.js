@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         boton.addEventListener("click", function () {
             const li = boton.closest("li");
             const nombre = li.querySelector(".lista-chocolateria_producto").innerText;
-            const precio = li.querySelector(".lista-chocolateria_precio").innerText;
+            const precio = li.querySelector(".lista-chocolateria_precio").dataset.precio;
             const imagen = li.querySelector("img").getAttribute("src");
 
             const producto = {
@@ -14,8 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 imagen: imagen
             };
 
-            // Guardamos en localStorage
+            // Se guarda en localStorage
             localStorage.setItem("productoSeleccionado", JSON.stringify(producto));
+            
 
             // Redirigimos a la otra página (por ejemplo: detalle.html)
             window.location.href = "detalle_prueba.html";

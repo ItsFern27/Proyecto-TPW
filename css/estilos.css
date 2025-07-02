@@ -421,6 +421,20 @@
        display: inline-block;
    }
 
+   /* clase imgs de las peliculas en el index */
+   .img-pelicula {
+       width: 400px;
+       height: 550px;
+       border-radius: 10px;
+       margin: 0 auto;
+       /*espaciado mejor*/
+       object-fit: cover;
+       border: 1px solid #444;
+       transition: transform 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+       display: inline-block;
+   }
+
    /* Hover para efecto visual al pasar el mouse */
    .pelicula:hover {
        transform: scale(1.05);

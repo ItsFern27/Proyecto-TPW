@@ -13,45 +13,41 @@
     <title>MetaCines</title> <!-- Título del sitio -->
 
     <link rel="stylesheet" href="../css/estilos.css"> <!-- Estilos generales -->
-    <link rel="stylesheet" href="../css/estilos_chocolateria2.css"> <!-- Estilos para contacto -->
+    <link rel="stylesheet" href="../css/estilos_venta.css"> <!-- Estilos generales -->
     <link rel="stylesheet" href="../css/estilo_login.css"> <!-- Estilos para login -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Íconos Font Awesome -->
-    <script src="../js/chocolateria/compra.js" defer></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">    <!-- Íconos Font Awesome -->
 </head>
 
-<body class="fondo_contacto">
+<body>
 
-    <!-- =============== HEADER =============== -->
+    <!--ENCABEZADO-->
     <header class="encabezado">
 
         <!--Parte izquierda del cuadro-->
         <input type="checkbox" id="hamburguesa" hidden>
         <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
         <div class="logo-titulo">
-            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine"
-                    class="logo-mini"></a>
+            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine" class="logo-mini"></a>
             <h1 class="titulo"><a href="../html/index.html">Multicines</a></h1>
         </div>
-
 
         <!--Parte centro del cuadro-->
         <nav class="menu">
             <a href="index.html">HOME</a>
             <a href="cartelera.html">PELÍCULAS</a>
             <a href="cines.html">CINES</a>
-            <a href="chocolateria.html" class="activo">CHOCOLATERÍA</a>
-            <a href="venta_corporativa.html">VENTA CORPORATIVA</a>
+            <a href="chocolateria.html">CHOCOLATERÍA</a>
+            <a href="#" class="activo">VENTA CORPORATIVA</a>
             <a href="#">PROMOCIONES</a>
         </nav>
+
         <!--Parte derecha del cuadro-->
         <div class="acciones">
             <label for="modal-toggle-login" class="btn-socio">¿Eres
                 socio?</label><!--el label actua como boton y activa el modal-->
 
-            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png"
-                    alt="Perfil" class="perfil-icon"></label>
+            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png" alt="Perfil"
+                    class="perfil-icon"></label>
         </div>
     </header>
 
@@ -82,6 +78,7 @@
 
                 <!-- Formulario de LOGIN -->
                 <div class="formulario-login formulario-toggle">
+                    <span><a href="index.html">x</a></span>
                     <h2 class="modal-titulo-login">Iniciar Sesión</h2>
                     <form action="index.html" method="get">
                         <input type="text" placeholder="Usuario" required>
@@ -112,96 +109,87 @@
     </section>
 
 
+
     <!-- =============== MAIN =============== -->
     <main>
-        <img class="choco-imagen" src="../img/chocolateria/chocolateria-wide.png" alt="item1">
+        <img class="venta-imagen" src="../img/venta_corporativa/sala_privada-Wide.png" alt="item1">
+        
+        <section class="venta-section">
+            <article class="venta-Ventas_Corporativas">
+                <div class="venta-Ventas_Corporativas-Parrafo">
+                    <div class="venta-Ventas_Corporativas-Parrafo-titulo">
+                        <h1>Ventas Corporativas</h1>
+                        <p>Te ofrecemos excelentes alternativas para anunciar y hacer crecer tu marca.</p>
+                    </div>
+                    
+                    <div class="venta-Ventas_Corporativas-Parrafo-subtitulo">
+                        <h2>Contáctanos:</h2>
+                        <p>metacinesmulticines@gmail.com</p>
+                    </div>
 
-
-        <!-- Sección chocolatería -->
-        <section class="section-chocolateria">
-            <article class="article-chocolateria">
-                <h1>Chocolatería</h1> <br>
-                <p>Saborea la experiencia completa del cine con nuestros exquísitos productos y los mejores combos.
-                    (disponible en todos nuestros cines)</p>
+                    <a href="contacto.html" class="venta-Ventas_Corporativas-PagContacto">
+                        <button class="venta-Ventas_Corporativas-PagContacto-Button">Página de Contacto</button>
+                    </a>
+                </div>
+        
+                <div class="venta-Ventas_Corporativas-Imagen">
+                    <img src="../img/img-login.jpg" alt="Comiendo canchita">
+                </div>
             </article>
-            <article>
-                <ul class="lista-chocolateria">
-                    <li>
-                        <img src="../img/chocolateria/combo-2gaseosas_con_canchagrande.png" alt="cancha">
-                        <div>
-                            <p class="lista-chocolateria_producto">Combo 2 Gaseosas con Canchita Mediana</p>
-                            <p class="lista-chocolateria_precio" data-precio="20.00">S./ 20.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
+        
+            <article class="venta-Servicios">
+                <div class="venta-Servicios-Titulo">
+                    <h2>Servicios</h2>
+                </div>
+        
+                <div class="venta-Servicios-Contenido"> <!--CAMBIAR LOS PX DEL GRID PARA RESPONSIVE-->
+                    <div class="venta-Servicios-Contenido-Seccion">
+                        <div class="venta-Servicios-Contenido-Seccion-Imagen">
+                            <img src="../img/venta_corporativa/funcion_especial.png" alt="Funnciones Especiales">
                         </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/combo-hotdog_con_gaseosa.png" alt="gaseosa con hotdog">
-                        <div>
-                            <p class="lista-chocolateria_producto">Combo Gaseosa con Hotdog</p>
-                            <p class="lista-chocolateria_precio" data-precio="11.00">S./ 11.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
+                        <div class="venta-Servicios-Contenido-Seccion-Texto">
+                            <h1>Funciones Especiales</h1>
+                            <p>Celebra tu cumpleaños con tus amigos o familiares, agasaja a tus colaboradores o ven con tu colegio para vivir la experiencia del cine con una función especial eligiendo una película de cartelera.</p>
                         </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/combo-churro_con_gaseosa.png" alt="gaseosa con churro">
-                        <div>
-                            <p class="lista-chocolateria_producto">Combo Gaseosa con Churro</p>
-                            <p class="lista-chocolateria_precio" data-precio="9.50">S./ 9.50</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
+                    </div>
+
+                    <div class="venta-Servicios-Contenido-Seccion">
+                        <div class="venta-Servicios-Contenido-Seccion-Imagen">
+                            <img src="../img/venta_corporativa/evento_privado.png" alt="Alquier de Sala">
                         </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/canchita_grande.jpeg" alt="cancha-grande">
-                        <div>
-                            <p class="lista-chocolateria_producto">Canchita Popcorn Tamaño Grande</p>
-                            <p class="lista-chocolateria_precio" data-precio="13.00">S./ 13.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
+                        <div class="venta-Servicios-Contenido-Seccion-Texto">
+                            <h1>Alquileres de Sala</h1>
+                            <p>Ponemos nuestras salas de cine a tu disposición para acompañarte en tus eventos más importantes. Ofrecemos espacios ideales para conferencias de prensa, seminarios, reuniones corporativas y mucho más.</p>
                         </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/canchita_mediana.jpg" alt="cancha-med">
-                        <div>
-                            <p class="lista-chocolateria_producto">Canchita Popcorn Tamaño Mediano</p>
-                            <p class="lista-chocolateria_precio" data-precio="10.00">S./ 10.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
+                    </div>
+
+                    <div class="venta-Servicios-Contenido-Seccion">
+                        <div class="venta-Servicios-Contenido-Seccion-Imagen">
+                            <img src="../img/venta_corporativa/publicidad.png" alt="Publicidad">
                         </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/canchita_pequena.jpg" alt="cancha-peq">
-                        <div>
-                            <p class="lista-chocolateria_producto">Canchita Popcorn Tamaño Pequeño</p>
-                            <p class="lista-chocolateria_precio" data-precio="6.50">S./ 6.50</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
+                        <div class="venta-Servicios-Contenido-Seccion-Texto">
+                            <h1>Publicidad</h1>
+                            <p>Impulsa tu marca y conecta con tu público aprovechando los espacios estratégicos de nuestros cines. Ofrecemos opciones como: publicidad en pantalla, exhibición en lobbies (stands, banners, módulos) y volanteo, publicidad en cajas de popcorn y en nuestros TV Walls.</p>
                         </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/vaso_gaseosa.png" alt="gaseosa">
-                        <div>
-                            <p class="lista-chocolateria_producto">Gaseosa (De cualquier sabor)</p>
-                            <p class="lista-chocolateria_precio" data-precio="7.00">S./ 7.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
+                    </div>
+
+                    <div class="venta-Servicios-Contenido-Seccion">
+                        <div class="venta-Servicios-Contenido-Seccion-Imagen">
+                            <img src="../img/venta_corporativa/entradas_y_combos.png" alt="Entradas y combos">
                         </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/churro.png" alt="churro">
-                        <div>
-                            <p class="lista-chocolateria_producto">Churro con manjar blanco</p>
-                            <p class="lista-chocolateria_precio" data-precio="3.00">S./ 3.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
+                        <div class="venta-Servicios-Contenido-Seccion-Texto">
+                            <h1>Entradas y Combos corporativos</h1>
+                            <p>Nuestras entradas y combos corporativos son ideales para fortalecer los lazos entre tus colaboradores. ¡Fomenta el trabajo en equipo e invierte en la integración de tu personal con nuestros vales corporativos!</p>
                         </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/hotdog_chocolateria.png" alt="pan con hotdog">
-                        <div>
-                            <p class="lista-chocolateria_producto">Pan con Hotdog</p>
-                            <p class="lista-chocolateria_precio" data-precio="4.50">S./ 4.50</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
-                        </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </article>
         </section>
+        
+        
     </main>
+
+
 
 
     <!-- =============== FOOTER =============== -->
@@ -248,7 +236,6 @@
             </div>
         </div>
     </footer>
-
     <!--script de encabezado-->
     <script>
         window.addEventListener("scroll", function () {

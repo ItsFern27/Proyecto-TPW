@@ -213,17 +213,31 @@
             </div>
 
             <a name="cartelera"></a>
-            <h1 class="cartelera"><b>Cartelera:</b></h1>
             <section>
-                <div class="grid">
-                    <div class="item item1">
-                        <a href="../peliculas/p1.html" target="_self"><img src="../img/p1.jpg" alt="p1" class="img-pelicula"></a>
+                <div class="grid cartelera">
+                    <div class="item item1"> <!-- película destacada -->
+                        <a href="../peliculas/p1.html" target="_self"><img src="../img/p1.jpg" alt="Película 1" class="img-pelicula-alt"></a>
+                        <div class="overlay"></div>
                     </div>
-                    <div class="item item2">2</div>
-                    <div class="item item3">3</div>
-                    <div class="item item4">4</div>
-                    <div class="item item5">5</div>
-                    <div class="item item6">6</div>
+                    <div class="item item2">
+                        <a href="../peliculas/p2.html" target="_self"><img src="../img/p2.jpg" alt="Película 2" class="img-pelicula-alt"></a>
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="item item3">
+                        <a href="../peliculas/p3.html" target="_self"><img src="../img/p3.jpg" alt="Película 3" class="img-pelicula-alt"></a>
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="item item4">
+                        <a href="../peliculas/p4.html" target="_self"><img src="../img/p4.jpg" alt="Película 4" class="img-pelicula-alt"></a>
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="item item5">
+                        <a href="../peliculas/p5.html" target="_self"><img src="../img/p5.jpg" alt="Película 5" class="img-pelicula-alt"></a>
+                        <div class="overlay"></div>
+                    </div>
+                    <a href="../html/cartelera.html" target="_self" class="item item6">
+                        <span>Ver más <br> películas</span></a>
+                    </a>
                 </div>
             </section>
         </section>
@@ -275,17 +289,8 @@
         </div>
     </footer>
     <!--script de encabezado-->
-    <script>
-        window.addEventListener("scroll", function () {
-            const header = document.querySelector(".encabezado");
-            if (window.scrollY > 620) {
-                header.classList.add("scrolled");
-            } else {
-                header.classList.remove("scrolled");
-            }
-        });
-
-    </script>
+    <script src="../javascript/funcionamiento.js"></script>
+    
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 
-// Primer script: cambio de color en header según scroll
+// Primer script: cambio de color en header según data-header="black"
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.encabezado');
     const body = document.body;
@@ -19,4 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  
+//script de encabezado
+window.addEventListener("scroll", function () {
+    const header = document.querySelector(".encabezado");
+    if (window.scrollY > 620) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+});
+

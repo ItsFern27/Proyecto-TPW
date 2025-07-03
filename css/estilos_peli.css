@@ -1,13 +1,6 @@
 /* ====== ESTILO GENERAL PARA LOS VIDEOS DE LAS PÁGINAS====== */
-
-   /* Fondo para la descripción de la película */
-   .fondo-pag-peli {
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
-
 /* Estilo y color para el Título de la película */
+
 .nombre-pelicula {
     font-family: "Helvetica", cursive;
     font-size: 75px;
@@ -24,6 +17,7 @@
  font-size: 18px;
  color: rgb(25, 25, 25);
 }
+
 /*ESTILO PARA EL FONDO DE CADA TRAILER ( LA IMAGEN LARGA) CADA PELI TENDRA UN ESTILO PARA ESO */
  /*FLOW */
 .fondo-trailer-flow {
@@ -33,7 +27,7 @@
     /* Cubre toda la parte de extremo a extremo */
     background-position: center;
     /* Centra la imagen */
-    height: 470px;
+    height: 600px;
     /* Altura de la imagen */
     display: flex;
     /* Activa lo de abajo para centrar los objetos */
@@ -41,6 +35,7 @@
     /* Centra el contenido horizontalmente (Osea el boton del play para el trailer) */
     align-items: center;
     /* Centra el contenido verticalmente (Osea el boton del play para el trailer) */
+    
 }
 
 
@@ -49,7 +44,7 @@
     background-image: url('../img/tiposmalos2.png');
     background-size: cover; 
     background-position: center;       
-    height: 470px;
+    height: 600px;
     display: flex; 
     justify-content: center; 
     align-items: center;
@@ -93,7 +88,7 @@
  background-image: url('../img/star.png');
  background-size: cover; 
  background-position: center;       
- height: 470px;
+ height: 390px;
  display: flex; 
  justify-content: center; 
  align-items: center;
@@ -244,6 +239,7 @@
     align-items: flex-start;
     /* Alinea los elementos al inicio verticalmente */
     margin-top: 20px;
+    padding: 50px;
 }
 
 /* Estilo para la columna de horarios */
@@ -308,4 +304,283 @@
     /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* Sombra para la imagen */
+}
+
+/*Estilo para la compra de entradas */
+/* Contenedor principal */
+#compra-entradas {
+  background: #fff;
+  padding: 48px 38px 38px 38px;
+  border-radius: 22px;
+  max-width: 540px;
+
+  margin: 100px auto 48px auto;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  border: 2px solid #e0e0e0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  transition: box-shadow 0.3s;
+  font-size: 1.25rem;
+}
+#compra-entradas:hover {
+  box-shadow: 0 16px 40px rgba(0,0,0,0.20);
+}
+
+/* Título */
+#compra-entradas h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 28px;
+  color: #222;
+  letter-spacing: 1px;
+  font-weight: 800;
+}
+
+/* Formularios y selects */
+#compra-entradas label {
+  display: block;
+  margin-top: 18px;
+  font-weight: 700;
+  color: #333;
+  font-size: 1.18rem;
+}
+#compra-entradas select {
+  width: 100%;
+  padding: 14px 14px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 2px solid #bdbdbd;
+  font-size: 1.15rem;
+  background: #fafafa;
+  margin-bottom: 16px;
+  transition: border 0.2s;
+}
+#compra-entradas select:focus {
+  border: 2px solid #4caf50;
+  outline: none;
+}
+
+/* Botones generales */
+#compra-entradas button {
+  background: linear-gradient(90deg, #4caf50 60%, #388e3c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: 16px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 22px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(76,175,80,0.13);
+  transition: background 0.2s, transform 0.2s;
+  display: block;
+  width: 100%;
+  letter-spacing: 1px;
+}
+#compra-entradas button:hover {
+  background: linear-gradient(90deg, #388e3c 60%, #4caf50 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Sección de asientos */
+#asientos-section h3,
+#resumen-section h3,
+#mensaje-final h3 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 18px;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+#asientos {
+  display: grid;
+  grid-template-columns: repeat(5, 48px);
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 24px;
+  margin-top: 16px;
+}
+.asiento {
+  width: 48px;
+  height: 48px;
+  background: #e0e0e0;
+  border: 2.5px solid #bdbdbd;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 48px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s, border 0.2s, color 0.2s;
+}
+.asiento.selected {
+  background: #4caf50;
+  border: 2.5px solid #388e3c;
+  color: #fff;
+}
+.asiento.occupied {
+  background: #bdbdbd;
+  border: 2.5px solid #888;
+  color: #fff;
+  cursor: not-allowed;
+}
+.pantalla-cine {
+  text-align: center;
+  margin-bottom: 18px;
+  background: #388e3c;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px 0;
+  letter-spacing: 2px;
+  font-size: 1.18rem;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 8px rgba(56,142,60,0.13);
+}
+
+/* Resumen de compra */
+#resumen-detalle {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin: 16px 0 22px 0;
+  color: #333;
+  font-size: 1.18rem;
+  line-height: 1.7;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+}
+
+/* Mensaje final */
+#mensaje-final {
+  text-align: center;
+  color: #388e3c;
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-top: 18px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  #compra-entradas {
+    padding: 18px 2vw;
+    max-width: 99vw;
+    font-size: 1.08rem;
+  }
+  #asientos {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+}
+
+/* ==== Estilos mejorados para el formulario de pago con tarjeta ==== */
+#pago-section {
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(76,175,80,0.10);
+  padding: 32px 22px 22px 22px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  border: 2px solid #e0e0e0;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 0.5s;
+  font-size: 1.15rem;
+}
+
+#pago-section h3 {
+  color: #388e3c;
+  text-align: center;
+  margin-bottom: 22px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+#form-pago label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 700;
+  font-size: 1.08rem;
+}
+
+#form-pago input[type="text"] {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 8px;
+  border: 2px solid #bdbdbd;
+  background: #fff;
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+#form-pago input[type="text"]:focus {
+  border: 2px solid #4caf50;
+  outline: none;
+  box-shadow: 0 0 0 2px #c8e6c9;
+}
+
+#btn-pagar {
+  background: linear-gradient(90deg, #4caf50 60%, #388e3c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: 16px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 22px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(76,175,80,0.13);
+  transition: background 0.2s, transform 0.2s;
+}
+
+#btn-pagar:hover {
+  background: linear-gradient(90deg, #388e3c 60%, #4caf50 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 700px) {
+  #pago-section {
+    padding: 14px 2vw 10px 2vw;
+    max-width: 99vw;
+    font-size: 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Estilo del botón Comprar Entradas*/
+.btn-comprar-entradas {
+  display: inline-block;
+  background: linear-gradient(90deg, #4caf50 60%, #388e3c 100%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 14px 32px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 24px auto 0 auto;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(76,175,80,0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-comprar-entradas:hover {
+  background: linear-gradient(90deg, #388e3c 60%, #4caf50 100%);
+  transform: translateY(-2px) scale(1.03);
 }

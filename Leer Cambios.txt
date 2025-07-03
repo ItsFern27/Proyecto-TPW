@@ -93,4 +93,17 @@ este es un guardado para empezar con el carrusel el cual estara en el lugar dond
 
 -el click en el logo ahora lleva a la pag principo
 
++ 12/05 - 03:04 - Rafael
+
+-Se añadio el qr con el easter egg xd
+-Mejore el modal login para que sea responsive
+-Ahora el conocenos esta en todos los footers donde llevara a la pag de nosotros
+-Mejora visual
+-footer arreglado
+
++ 19/05 - 17:50 - Rafael
+
+-Mejora visual en el header
+-Mejora visual en cada pagina de pelicula
+-Eliminacion de codigos obsoletos e inservibles
 

@@ -8,50 +8,61 @@ navegador */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100%;
 }
 
 main {
-    font-family: Arial;
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 83vh;
+    font-family: Arial;
 }
 
-/* BODY DE LA PAGINA DE LIBRO RECLAMACIONES*/
+
+
+
+/* BODY DE LA PAGINA DE CONTACTO*/
+
 .fondo_libro-reclamaciones {
     background: linear-gradient(rgba(0, 0, 0, 0.473)), url(../img/preview.jpg);
     background-size: cover;
     /* Cubre toda la pagina con la imagen (creo q también la estira) */
     background-attachment: fixed;
+    background-position: center;
     /* Hace que la img quede estática */
     margin: 0;
     /* Corta los bordes de los lados que tenía el cuadro de navegación */
 }
 
 
-
-
-/*<!-- Sección Libro Reclamaciones -->*/
-
+/*<+-- Sección Contacto --+>*/
 .section_libro-reclamaciones {
-    display: flex;
-    flex-direction: column;
-    margin: 3vw;
     background-color: white;
     border-radius: 20px;
-    padding-inline: 3%;
-    padding-block: 2.5%;
-    width: 100vh;
+
+    
+    width: 950px;
+    min-height: fit-content;
+
+    margin-block: 60px;
+    margin-inline: 30px;
+    padding-block: 50px;
+    padding-inline: 60px;
+    
+
+    display: flex;
+    flex-direction: column;
 }
 
-@media (max-width: 1000px) {
-    .section_libro-reclamaciones {
-        width: 78vh;
-    }
+.form-contenedor_libro-reclamaciones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+
 
 .titulo_libro-reclamaciones {
     color: black;
@@ -62,6 +73,7 @@ main {
 
 .subtitulo_libro-reclamaciones {
     color: rgb(75, 75, 75);
+    font-size: 25px;
 }
 
 /* Borde Separador de Secciones */
@@ -164,6 +176,9 @@ main {
     border: 1px solid rgba(0, 0, 0, 0.356);
     border-radius: 10px;
     resize: none;
+    width: 450px;
+    height: 150px;
+    font-family: Arial;
 }
 
 
@@ -188,4 +203,128 @@ main {
     outline: none;
     background: none;
     font-size: 20px;
+}
+
+
+/*=======================  MEDIA HORIZONTAL =======================*/
+@media (orientation: landscape) and (max-width: 1000px) {
+    .section_libro-reclamaciones {
+        width: auto;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 650px) {
+    .textarea-dtr_libro-reclamaciones {
+        width: 100%;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 550px) {
+    .section_libro-reclamaciones {
+        padding-block: 35px;
+        padding-inline: 40px;
+    }
+    
+    .titulo_libro-reclamaciones {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .subtitulo_libro-reclamaciones {
+        font-size: 20px;
+    }
+
+    .bordeseparador_libro-reclamaciones div p {
+        font-size: 15px;
+    }
+
+    .dtsr_libro-reclamaciones li label div h3 {
+        font-size: 18px;
+    }
+}
+
+/*=======================  MEDIA VERTICAL =======================*/
+@media (orientation: portrait) {
+    .section_libro-reclamaciones {
+        width: auto;
+    }
+    
+    .textarea-dtr_libro-reclamaciones {
+        width: 100%;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 550px) {
+    .titulo_libro-reclamaciones {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .subtitulo_libro-reclamaciones {
+        font-size: 20px;
+    }
+
+    .bordeseparador_libro-reclamaciones div p {
+        font-size: 15px;
+    }
+
+    .dtsr_libro-reclamaciones li label div h3 {
+        font-size: 18px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 480px) {
+    .section_libro-reclamaciones {
+        padding-block: 35px;
+        padding-inline: 40px;
+    }
+
+    .titulo_libro-reclamaciones {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .subtitulo_libro-reclamaciones {
+        font-size: 23px;
+    }
+
+    .bordeseparador_libro-reclamaciones div p {
+        font-size: 15px;
+    }
+
+    .dtsr_libro-reclamaciones li label div h3 {
+        font-size: 16px;
+    }
+
+    .idb_libro-reclamaciones {
+        font-size: 14px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 440px) {
+    .section_libro-reclamaciones {
+        padding-block: 25px;
+        padding-inline: 30px;
+    }
+
+    .titulo_libro-reclamaciones {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .subtitulo_libro-reclamaciones {
+        font-size: 23px;
+    }
+
+    .bordeseparador_libro-reclamaciones div p {
+        font-size: 15px;
+    }
+
+    .dtsr_libro-reclamaciones li label div h3 {
+        font-size: 16px;
+    }
+
+    .idb_libro-reclamaciones {
+        font-size: 14px;
+    }
 }

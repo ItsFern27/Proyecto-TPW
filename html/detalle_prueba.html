@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="detalle-producto">
+        <!-- Aquí se insertará la información del producto seleccionado -->
+        
+    </div>
+    <button onclick="window.history.back()">Volver</button> <br><br><br>
+    <button id="limpiar">Limpiar selección</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contenedor = document.getElementById("detalle-producto");
+            const producto = JSON.parse(localStorage.getItem("productoSeleccionado"));
+
+            if (producto) {
+                contenedor.innerHTML = `
+                    <h2>${producto.nombre}</h2>
+                    <img src="${producto.imagen}" alt="${producto.nombre}" style="max-width: 200px;">
+                    <p>Precio: ${producto.precio}</p>               
+                `;
+
+                // Agregamos funcionalidad al botón de limpiar
+                document.getElementById("limpiar").addEventListener("click", function () {
+                    localStorage.removeItem("productoSeleccionado");
+                    location.reload();
+                });
+                
+            } else {
+                contenedor.innerHTML = "<p>No hay producto seleccionado.</p>";
+            }
+        });
+    </script>
+</body>
+
+</html>

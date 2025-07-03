@@ -13,45 +13,42 @@
     <title>MetaCines</title> <!-- Título del sitio -->
 
     <link rel="stylesheet" href="../css/estilos.css"> <!-- Estilos generales -->
-    <link rel="stylesheet" href="../css/estilos_chocolateria2.css"> <!-- Estilos para contacto -->
+    <link rel="stylesheet" href="../css/estilos_contacto.css"> <!-- Estilos para contacto -->
     <link rel="stylesheet" href="../css/estilo_login.css"> <!-- Estilos para login -->
+    <link rel="stylesheet" href="../css/estilos_trabaja.css"> <!-- Estilos para trabaja con nosotros -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Íconos Font Awesome -->
-    <script src="../js/chocolateria/compra.js" defer></script>
-
 </head>
 
-<body class="fondo_contacto">
+<body data-header="black">
 
-    <!-- =============== HEADER =============== -->
+    <!--ENCABEZADO-->
     <header class="encabezado">
 
         <!--Parte izquierda del cuadro-->
         <input type="checkbox" id="hamburguesa" hidden>
         <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
         <div class="logo-titulo">
-            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine"
-                    class="logo-mini"></a>
+            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine" class="logo-mini"></a>
             <h1 class="titulo"><a href="../html/index.html">Multicines</a></h1>
         </div>
-
 
         <!--Parte centro del cuadro-->
         <nav class="menu">
             <a href="index.html">HOME</a>
-            <a href="cartelera.html">PELÍCULAS</a>
+            <a href="cartelera.html" class="activo">PELÍCULAS</a>
             <a href="cines.html">CINES</a>
-            <a href="chocolateria.html" class="activo">CHOCOLATERÍA</a>
+            <a href="chocolateria.html">CHOCOLATERÍA</a>
             <a href="venta_corporativa.html">VENTA CORPORATIVA</a>
             <a href="#">PROMOCIONES</a>
         </nav>
+
         <!--Parte derecha del cuadro-->
         <div class="acciones">
             <label for="modal-toggle-login" class="btn-socio">¿Eres
                 socio?</label><!--el label actua como boton y activa el modal-->
 
-            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png"
-                    alt="Perfil" class="perfil-icon"></label>
+            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png" alt="Perfil"
+                    class="perfil-icon"></label>
         </div>
     </header>
 
@@ -111,100 +108,93 @@
         </div>
     </section>
 
+    <script src="../javascript/funcionamiento.js"></script>
 
-    <!-- =============== MAIN =============== -->
     <main>
-        <img class="choco-imagen" src="../img/chocolateria/chocolateria-wide.png" alt="item1">
+        <!--SOLO SEGUIR LA SINTAXIS, NO AGREGAR ESTILOS-->
+        <section class="fondo-peliculas">
+            <!--filtro verpeliculas-->
+            <div class="filtro-peliculas">
+                <div class="contefiltro">
+                    <div class="">
+                        
+                    </div>
+                </div>
+            </div>
 
-
-        <!-- Sección chocolatería -->
-        <section class="section-chocolateria">
-            <article class="article-chocolateria">
-                <h1>Chocolatería</h1> <br>
-                <p>Saborea la experiencia completa del cine con nuestros exquísitos productos y los mejores combos.
-                    (disponible en todos nuestros cines)</p>
-            </article>
-            <article>
-                <ul class="lista-chocolateria">
-                    <li>
-                        <img src="../img/chocolateria/combo-2gaseosas_con_canchagrande.png" alt="cancha">
-                        <div>
-                            <p class="lista-chocolateria_producto">Combo 2 Gaseosas con Canchita Mediana</p>
-                            <p class="lista-chocolateria_precio" data-precio="20.00">S./ 20.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/combo-hotdog_con_gaseosa.png" alt="gaseosa con hotdog">
-                        <div>
-                            <p class="lista-chocolateria_producto">Combo Gaseosa con Hotdog</p>
-                            <p class="lista-chocolateria_precio" data-precio="11.00">S./ 11.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/combo-churro_con_gaseosa.png" alt="gaseosa con churro">
-                        <div>
-                            <p class="lista-chocolateria_producto">Combo Gaseosa con Churro</p>
-                            <p class="lista-chocolateria_precio" data-precio="9.50">S./ 9.50</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/canchita_grande.jpeg" alt="cancha-grande">
-                        <div>
-                            <p class="lista-chocolateria_producto">Canchita Popcorn Tamaño Grande</p>
-                            <p class="lista-chocolateria_precio" data-precio="13.00">S./ 13.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/canchita_mediana.jpg" alt="cancha-med">
-                        <div>
-                            <p class="lista-chocolateria_producto">Canchita Popcorn Tamaño Mediano</p>
-                            <p class="lista-chocolateria_precio" data-precio="10.00">S./ 10.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/canchita_pequena.jpg" alt="cancha-peq">
-                        <div>
-                            <p class="lista-chocolateria_producto">Canchita Popcorn Tamaño Pequeño</p>
-                            <p class="lista-chocolateria_precio" data-precio="6.50">S./ 6.50</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/vaso_gaseosa.png" alt="gaseosa">
-                        <div>
-                            <p class="lista-chocolateria_producto">Gaseosa (De cualquier sabor)</p>
-                            <p class="lista-chocolateria_precio" data-precio="7.00">S./ 7.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/churro.png" alt="churro">
-                        <div>
-                            <p class="lista-chocolateria_producto">Churro con manjar blanco</p>
-                            <p class="lista-chocolateria_precio" data-precio="3.00">S./ 3.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="../img/chocolateria/hotdog_chocolateria.png" alt="pan con hotdog">
-                        <div>
-                            <p class="lista-chocolateria_producto">Pan con Hotdog</p>
-                            <p class="lista-chocolateria_precio" data-precio="4.50">S./ 4.50</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
-                        </div>
-                    </li>
-                </ul>
-            </article>
+            <a name="cartelera"></a>
+            <h1 class="cartelera"><b>Cartelera:</b></h1>
+            <section class="tabla-peliculas-desplazamiento">
+                <table>
+                    <tr>
+                        <td>
+                            <a href="../peliculas/p1.html" target="_self"><img src="../img/p1.jpg" alt="p1"
+                                    class="pelicula"></a>
+                            <div class="subtitulo"> Flow </div>
+                        </td>
+                        <td>
+                            <a href="../peliculas/p2.html" target="_self"><img src="../img/p2.jpg" alt="p2"
+                                    class="pelicula"></a>
+                            <div class="subtitulo"> Los Tipos Malos </div>
+                        </td>
+                        <td>
+                            <a href="../peliculas/p3.html" target="_self"><img src="../img/p3.jpg" alt="p3"
+                                    class="pelicula"></a>
+                            <div class="subtitulo"> El gato con botas: El último deseo </div>
+                        </td>
+                        <td>
+                            <a href="../peliculas/p4.html" target="_self"><img src="../img/p4.jpg" alt="p4"
+                                    class="pelicula"></a> <br>
+                            <div class="subtitulo">Colorful Stage La Película: Miku no Puede cantar</div>
+                        </td>
+                        <td>
+                            <a href="../peliculas/p5.html" target="_self"><img src="../img/p5.jpg" alt="p5"
+                                    class="pelicula"></a> <br>
+                            <div class="subtitulo">Terremoto Magnitud 9.0</div>
+                        </td>
+                        <td>
+                            <a href="../peliculas/p6.html" target="_self"><img src="../img/p6.jpg" alt="p6"
+                                    class="pelicula"></a> <br>
+                            <div class="subtitulo">Star Wars III La Venganza de los Sith (20 Aniv)</div>
+                        </td>
+                        <td>
+                            <a href="../peliculas/p7.html" target="_self"><img src="../img/p7.jpg" alt="p7"
+                                    class="pelicula"></a> <br>
+                            <div class="subtitulo"> Jurassic Park </div>
+                        </td>
+                        <td>
+                            <a href="../peliculas/p8.html" target="_self"><img src="../img/p8.jpg" alt="p8"
+                                    class="pelicula"></a> <br>
+                            <div class="subtitulo"> Soy leyenda </div>
+                        </td>
+                        <td>
+                            <a href="../peliculas/p9.html" target="_self"><img src="../img/p9.jpg" alt="p9"
+                                    class="pelicula"></a> <br>
+                            <div class="subtitulo"> Avengers End Game </div>
+                        </td>
+                        <td>
+                            <a href="../peliculas/p10.html" target="_self"><img src="../img/p10.jpg" alt="p10"
+                                    class="pelicula"></a> <br>
+                            <div class="subtitulo"> Volver al Futuro </div>
+                        </td>
+                        <td>
+                            <a href="../peliculas/p11.html" target="_self"><img src="../img/p11.jpg" alt="p11"
+                                    class="pelicula"></a> <br>
+                            <div class="subtitulo"> WALL - E </div>
+                        </td>
+                        <td>
+                            <a href="../peliculas/p12.html" target="_self"><img src="../img/p12.jpg" alt="p12"
+                                    class="pelicula"></a> <br>
+                            <div class="subtitulo"> Ready Player One </div>
+                        </td>
+                    </tr>
+                </table>
+            </section>
         </section>
     </main>
 
 
-    <!-- =============== FOOTER =============== -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-row">
@@ -248,7 +238,6 @@
             </div>
         </div>
     </footer>
-
     <!--script de encabezado-->
     <script>
         window.addEventListener("scroll", function () {

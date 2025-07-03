@@ -1,0 +1,297 @@
+/* GENERAL */
+/* Para posicionar correctamente el cuerpo (header, main y footer)*/
+/* Oderna el header, main y footer en forma de filas,
+luego se modifica para que lo haga como columnas, y
+finalmente que ocupe el espacio de toda la ventana del
+navegador */
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 83vh;
+}
+
+
+
+
+/* BODY DE LA PAGINA DE CONTACTO*/
+
+.fondo_trabaja {
+    background: linear-gradient(rgba(0, 0, 0, 0.473)), url(../img/preview.jpg);
+    background-size: cover;
+    /* Cubre toda la pagina con la imagen (creo q también la estira) */
+    background-attachment: fixed;
+    background-position: center;
+    /* Hace que la img quede estática */
+    /*margin: 0;/*
+    /* Corta los bordes de los lados que tenía el cuadro de navegación */
+}
+
+
+/*<+-- Sección Contacto --+>*/
+.section_trabaja {
+    width: fit-content;
+    min-height: fit-content;
+    margin-inline: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-block: 5%;
+    gap: 100px;
+    color: aliceblue;
+    /*margin-block: 10%;*/
+}
+
+/*-- CONTENEDOR DEL TEXTO DE CONTACTO --*/
+.contenedor_trabaja {
+    align-content: center;
+    max-width: 460px;
+}
+
+.titulo_trabaja {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    letter-spacing: 5px;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.texto_trabaja {
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    color: #e0e0e0;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+
+
+
+
+/*+ CONTENEDOR DEL FORMULARIO DE TRABAJO +*/
+.form_trabaja {
+    font-family: Arial;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #5757574e;
+    
+    box-shadow: 0 8px 15px rgb(0, 0, 0);
+}
+
+
+
+.form_trabaja-subtitulo {
+    font-size: 1.5em;
+    text-align: center;
+    color: #cecece;
+}
+
+
+
+.form_trabaja-datos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;    
+}
+
+.form_trabaja-datos > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;    
+}
+
+.form_trabaja-datos > div > input {
+    height: 42px;
+    width: 220px;
+    font-size: 16px;
+    padding-inline: 10px;
+    font-family: Arial;
+    background-color: #6b6b6b42;
+    border: 1px solid #74696900;
+    color: white;
+    transition: 0.3s;
+}
+
+.form_trabaja-datos > div > input:hover {
+    background-color: #ffffff3d;    
+}
+
+.form_trabaja-datos > div > input::placeholder {
+    color: rgba(255, 255, 255, 0.363);
+}
+
+.form_trabaja-datos > div > input[type="date"] {
+    color: rgba(255, 255, 255, 0.363);
+}
+
+.form_trabaja-datos > div > input[type="date"]:valid {
+    color: white;
+}
+
+
+
+.form_trabaja-adjunto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.form_trabaja-adjunto > label {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    background-color: #a2a2a262;
+    border: 2px dashed #000000;
+    cursor: pointer;
+}
+
+.form_trabaja-adjunto> label > input {
+    display: none;
+}
+
+.form_trabaja-adjunto > div {
+    color: white;
+    font-size: 15px;
+}
+
+
+
+.form_trabaja-button {
+    padding: 14px 28px;
+    font-size: 16px;
+    background-color: #000000;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+.form_trabaja-button:hover {
+    background-color: rgb(53, 53, 53);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (orientation: portrait) {
+    .section_trabaja {
+        flex-direction: column;
+        gap: 50px;
+        margin-block: 10%;
+    }
+
+    .titulo_trabaja {
+        text-align: center;
+    }
+
+    .texto_trabaja{
+        text-align: center;
+    }
+
+    .texto_trabaja div {
+        margin-top: 20px;
+    }
+
+    .form_trabaja-datos > div > input {
+        width: 100%;
+        max-width: 220px;
+        min-width: 160px;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 375px) {
+    .texto_trabaja{
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .texto_trabaja div {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .form_trabaja-datos {
+        flex-direction: column;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 360px) {
+    .titulo_trabaja {
+        font-size: 40px;
+    }
+
+    .texto_trabaja {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .texto_trabaja div {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1100px) {
+    .section_trabaja {
+        gap: 40px
+    }
+    .form_trabaja-datos > div > input {
+        width: 100%;
+        max-width: 220px;
+        min-width: 160px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 850px) {
+    .section_trabaja {
+        flex-direction: column;
+        gap: 50px;
+        margin: 10%;
+    }
+
+    .titulo_trabaja {
+        text-align: center;
+    }
+
+    .texto_trabaja{
+        text-align: center;
+    }
+
+    .texto_trabaja div {
+        margin-top: 20px;
+    }
+}

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/estilo_login.css">
     <link rel="stylesheet" href="../css/estilos_trabaja.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/estilo-cines.css">
 </head>
 
 <body class="fondo" data-header="black">
@@ -102,16 +103,56 @@
     </section>
     <br>
 
-    <main style="margin-top: 100px;">
-        <section>
-            <div id="menu">
-                <button onclick="mostrarContenido('descripcion')">Descripción</button>
-                <button onclick="mostrarContenido('horario')">Horario</button>
-                <button onclick="mostrarContenido('mapa')">Mapa</button>
+    <main class="fondo-peliculas">
+        <section class="contenedor-cine">
+            <div>
+                <div class="nombre-cine">Cine Mall del Sur</div>
+                <img src="../img/cine1.jpg" alt="cine1" class="img-cines">
             </div>
+            <div class="lado-derecho">
+                <div class="menu">
+                <button onclick="mostrarContenido(this, 'descripcion')">Descripción</button>
+                <button onclick="mostrarContenido(this, 'horario')">Horario</button>
+                <button onclick="mostrarContenido(this, 'mapa')">Mapa</button>
+                </div>
 
-            <div id="contenido">
-                Aquí se mostrará el contenido.
+                <div class="contenido">
+                <!-- Aquí se mostrará el contenido -->
+                </div>
+            </div>
+        </section>
+        <section class="contenedor-cine">
+            <div>
+                <div class="nombre-cine">Cine V.E.S</div>
+                <img src="../img/cine2.jpg" alt="cine1" class="img-cines">
+            </div>
+            <div class="lado-derecho">
+                <div class="menu">
+                <button onclick="mostrarContenido(this, 'descripcion')">Descripción</button>
+                <button onclick="mostrarContenido(this, 'horario')">Horario</button>
+                <button onclick="mostrarContenido(this, 'mapa')">Mapa</button>
+                </div>
+
+                <div class="contenido">
+                <!-- Aquí se mostrará el contenido -->
+                </div>
+            </div>
+        </section>
+        <section class="contenedor-cine">
+            <div>
+                <div class="nombre-cine">Cine UTP</div>
+                <img src="../img/cine3.jpg" alt="cine1" class="img-cines">
+            </div>
+            <div class="lado-derecho">
+                <div class="menu">
+                <button onclick="mostrarContenido(this, 'descripcion')">Descripción</button>
+                <button onclick="mostrarContenido(this, 'horario')">Horario</button>
+                <button onclick="mostrarContenido(this, 'mapa')">Mapa</button>
+                </div>
+
+                <div class="contenido">
+                <!-- Aquí se mostrará el contenido -->
+                </div>
             </div>
         </section>
     </main>
@@ -160,6 +201,10 @@
             </div>
         </div>
     </footer>
+
+    <!--script de cines-->
+    <script src="../javascript/cines/logica-cines.js"></script>
+
     <!--script de encabezado-->
     <script src="../javascript/funcionamiento.js"></script>
 

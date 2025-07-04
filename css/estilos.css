@@ -86,29 +86,48 @@
        .menu {
            display: none;
            flex-direction: column;
-           background: #111;
+           background-color: #222;
+           padding: 0;
            position: absolute;
-           top: 0px;
-           left: 0;
-           width: 40%;
-           height: 1200px;
-           background-color: #000000;
+           top: 60px;
+           right: 0;
+           width: 100%;
+           border-radius: 0 0 10px 10px;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+           opacity: 0;
+           pointer-events: none;
+           transition: all 0.3s ease-in-out;
+           z-index: 1000;
+       }
+
+       #hamburguesa:checked~.menu {
+           display: flex;
+           opacity: 1;
+           pointer-events: auto;
+           padding: 10px 0;
+       }
+
+       .menu a {
+           color: white;
+           text-decoration: none;
+           padding: 15px 20px;
+           font-size: 1.5rem;
+           border-bottom: 1px solid #333;
+           transition: background 0.2s;
+       }
+
+       .menu a:last-child {
+           border-bottom: none;
+       }
+
+       .menu a:hover {
+           background-color: #333;
        }
 
        .encabezado {
            height: 56px;
        }
 
-       #hamburguesa:checked~.menu {
-           display: flex;
-           padding: 10px;
-       }
-
-       #hamburguesa:checked~.menu a {
-           padding: 5px;
-           margin-bottom: 100px;
-           font-size: 2rem;
-       }
 
        .icono-hamburguesa {
            display: block;
@@ -374,7 +393,7 @@
        pointer-events: none;
        /* para que el click pase a los botones */
    }
-   
+
    .flecha-carrusel button {
        background: none;
        border: none;
@@ -553,7 +572,7 @@
        height: 230px;
        clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%);
    }
-   
+
    .social-link a {
        display: inline-block;
        min-height: 40px;

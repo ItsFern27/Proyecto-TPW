@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../css/estilo_login.css"> <!-- Estilos para login -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Íconos Font Awesome -->
-    <script src="../js/chocolateria/compra.js" defer></script>
+    <script src="../javascript/chocolateria/compra.js" defer></script>
 
 </head>
 
@@ -112,6 +112,37 @@
     </section>
 
 
+
+    <!--|||||||||||||| Modal de COMPRA ||||||||||||||||||||||-->
+    <section id="modal-compra" style="display: none; position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;">
+        <div style="display: flex; flex-direction: column; width: 100%; height: 83vh; max-width: fit-content; max-height: fit-content; padding: 30px; border-radius: 20px; background-color: white; margin: 5vh; font-family: Arial; align-items: center; justify-content: center;">
+            <article class="article-chocolateria">
+                <h2>Compra de chocolatería en línea</h2>
+            </article>
+            
+            <div>
+                <label for="productoSelect">Selecciona un producto</label>
+                <select id="productoSelect" onchange="mostrarPrecio()">
+                    <option value="0">Selecciona</option>
+                    <option value="10">Manzana</option>
+                    <option value="20">Pera</option>
+                    <option value="30">Mango</option>
+                </select>
+            </div>            
+            <p style="margin-bottom: 30px;" id="precioTotal">Precio : 0 soles</p>
+            <button class="lista-chocolateria_button">Pasar a compra final</button>
+        </div>
+    </section>
+
     <!-- =============== MAIN =============== -->
     <main>
         <img class="choco-imagen" src="../img/chocolateria/chocolateria-wide.png" alt="item1">
@@ -122,7 +153,8 @@
             <article class="article-chocolateria">
                 <h1>Chocolatería</h1> <br>
                 <p>Saborea la experiencia completa del cine con nuestros exquísitos productos y los mejores combos.
-                    (disponible en todos nuestros cines)</p>
+                    (disponible en todos nuestros cines)</p> <br>
+                <button id="chocolateria_compra" class="lista-chocolateria_button">Comprar dulcería en línea <i class="fa-solid fa-wifi"></i></button>
             </article>
             <article>
                 <ul class="lista-chocolateria">
@@ -131,7 +163,6 @@
                         <div>
                             <p class="lista-chocolateria_producto">Combo 2 Gaseosas con Canchita Mediana</p>
                             <p class="lista-chocolateria_precio" data-precio="20.00">S./ 20.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
                         </div>
                     </li>
                     <li>
@@ -139,7 +170,6 @@
                         <div>
                             <p class="lista-chocolateria_producto">Combo Gaseosa con Hotdog</p>
                             <p class="lista-chocolateria_precio" data-precio="11.00">S./ 11.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
                         </div>
                     </li>
                     <li>
@@ -147,7 +177,6 @@
                         <div>
                             <p class="lista-chocolateria_producto">Combo Gaseosa con Churro</p>
                             <p class="lista-chocolateria_precio" data-precio="9.50">S./ 9.50</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
                         </div>
                     </li>
                     <li>
@@ -155,7 +184,6 @@
                         <div>
                             <p class="lista-chocolateria_producto">Canchita Popcorn Tamaño Grande</p>
                             <p class="lista-chocolateria_precio" data-precio="13.00">S./ 13.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
                         </div>
                     </li>
                     <li>
@@ -163,7 +191,6 @@
                         <div>
                             <p class="lista-chocolateria_producto">Canchita Popcorn Tamaño Mediano</p>
                             <p class="lista-chocolateria_precio" data-precio="10.00">S./ 10.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
                         </div>
                     </li>
                     <li>
@@ -171,7 +198,6 @@
                         <div>
                             <p class="lista-chocolateria_producto">Canchita Popcorn Tamaño Pequeño</p>
                             <p class="lista-chocolateria_precio" data-precio="6.50">S./ 6.50</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
                         </div>
                     </li>
                     <li>
@@ -179,7 +205,6 @@
                         <div>
                             <p class="lista-chocolateria_producto">Gaseosa (De cualquier sabor)</p>
                             <p class="lista-chocolateria_precio" data-precio="7.00">S./ 7.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
                         </div>
                     </li>
                     <li>
@@ -187,7 +212,6 @@
                         <div>
                             <p class="lista-chocolateria_producto">Churro con manjar blanco</p>
                             <p class="lista-chocolateria_precio" data-precio="3.00">S./ 3.00</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
                         </div>
                     </li>
                     <li>
@@ -195,7 +219,6 @@
                         <div>
                             <p class="lista-chocolateria_producto">Pan con Hotdog</p>
                             <p class="lista-chocolateria_precio" data-precio="4.50">S./ 4.50</p>
-                            <button class="lista-chocolateria_button">Comprar</button>
                         </div>
                     </li>
                 </ul>

@@ -9,6 +9,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'> <!-- Escala de la página -->
     <link rel='stylesheet' type='text/css' media='screen' href='../css/estilos.css'>
     <script src='main.js'></script>
+    <script src="../js/chocolateria/compra-entradas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <link rel="stylesheet" href="../css/estilos_contacto.css">
     <link rel="stylesheet" href="../css/estilos_peli.css">
     <link rel="stylesheet" href="../css/estilo_login.css">
@@ -23,7 +25,8 @@
         <input type="checkbox" id="hamburguesa" hidden>
         <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
         <div class="logo-titulo">
-            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine" class="logo-mini"></a>
+            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine"
+                    class="logo-mini"></a>
             <h1 class="titulo"><a href="../html/index.html">Multicines</a></h1>
         </div>
 
@@ -42,8 +45,8 @@
             <label for="modal-toggle-login" class="btn-socio">¿Eres
                 socio?</label><!--el label actua como boton y activa el modal-->
 
-            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png" alt="Perfil"
-                    class="perfil-icon"></label>
+            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png"
+                    alt="Perfil" class="perfil-icon"></label>
         </div>
     </header>
     <!--MODAL LOGIN-->
@@ -166,9 +169,11 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Botón para ir a la página de compra -->
+                <a href="../peliculas/Compra.html" id="btn-ir-compra" class="btn-comprar-entradas">Comprar entradas</a>
             </div>
-        </div>
-        </div>
+
     </main>
     <!-- Footer -->
     <footer class="footer">

@@ -1,53 +1,65 @@
+*{
+      font-family: 'Franklin Gothic Medium';
+}
+.contenedor-cine {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
 
-    .contenedor-cine {
-        display: flex;
-        align-items: flex-start;
-        gap: 30px;
+  margin-inline: 10.4vw;
+  margin-block: 5vh;
+  background-color: white;
+  border-radius: 30px;
+  padding-block: 35px;
+  padding-inline: 55px;
 
-        margin-inline: 10.4vw;
-        margin-block: 5vh;
-        background-color: white;
-        border-radius: 30px;
-        padding-block: 35px;
-        padding-inline: 55px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* opcional, da un efecto elegante */
+}
 
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* opcional, da un efecto elegante */
-    }
+.contenedor-cine>div:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
 
-    .contenedor-cine > div:first-child {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
+.lado-derecho {
+  display: flex;
+  flex-direction: column;
+  /* hace que el menú esté arriba y el contenido abajo */
+  flex-grow: 1;
+  /* ❗ Hace que este lado se expanda sin afectar la imagen */
+  max-width: calc(100% - 320px);
+  /* ❗ Asegura que no desborde por la imagen */
+}
 
-    .lado-derecho {
-      display: flex;
-      flex-direction: column; /* hace que el menú esté arriba y el contenido abajo */
-      flex-grow: 1;         /* ❗ Hace que este lado se expanda sin afectar la imagen */
-      max-width: calc(100% - 320px); /* ❗ Asegura que no desborde por la imagen */
-    }
+.img-cines {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  /* recorta para encajar sin deformar */
+  flex-shrink: 0;
+  /* ❗ Impide que la imagen se encoja si hay poco espacio */
+  object-fit: cover;
+  /* Recorta bien si la imagen no tiene proporción exacta */
+}
 
-    .img-cines {
-      width: 400px;
-      height: 300px;
-      object-fit: cover; /* recorta para encajar sin deformar */
-      flex-shrink: 0;       /* ❗ Impide que la imagen se encoja si hay poco espacio */
-      object-fit: cover;    /* Recorta bien si la imagen no tiene proporción exacta */
-    }
+#menu {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
-    #menu {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    button {
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-    #contenido {
-      border: 1px solid #ccc;
-      padding: 20px;
-      min-height: 150px;
-      max-width: 100%;      /* ❗ No deja que se pase del espacio disponible */
-      overflow-wrap: break-word;
-    }
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#contenido {
+  border: 1px solid #ccc;
+  padding: 20px;
+  min-height: 150px;
+  max-width: 100%;
+  /* ❗ No deja que se pase del espacio disponible */
+  overflow-wrap: break-word;
+}

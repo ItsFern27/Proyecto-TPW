@@ -13,7 +13,7 @@
     <title>MetaCines</title> <!-- Título del sitio -->
 
     <link rel="stylesheet" href="../css/estilos.css"> <!-- Estilos generales -->
-    <link rel="stylesheet" href="../css/estilos_librorec2.css"> <!-- Estilos para contacto -->
+    <link rel="stylesheet" href="../css/estilos_librorec.css"> <!-- Estilos para contacto -->
     <link rel="stylesheet" href="../css/estilo_login.css"> <!-- Estilos para login -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Íconos Font Awesome -->
@@ -29,7 +29,8 @@
         <input type="checkbox" id="hamburguesa" hidden>
         <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
         <div class="logo-titulo">
-            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine" class="logo-mini"></a>
+            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine"
+                    class="logo-mini"></a>
             <h1 class="titulo"><a href="../html/index.html">Multicines</a></h1>
         </div>
 
@@ -41,15 +42,15 @@
             <a href="cines.html">CINES</a>
             <a href="chocolateria.html">CHOCOLATERÍA</a>
             <a href="venta_corporativa.html">VENTA CORPORATIVA</a>
-            
+
         </nav>
         <!--Parte derecha del cuadro-->
         <div class="acciones">
             <label for="modal-toggle-login" class="btn-socio">¿Eres
                 socio?</label><!--el label actua como boton y activa el modal-->
 
-            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png" alt="Perfil"
-                    class="perfil-icon"></label>
+            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png"
+                    alt="Perfil" class="perfil-icon"></label>
         </div>
     </header>
 
@@ -116,7 +117,8 @@
         <section class="section_libro-reclamaciones">
 
             <!-- Se crea un formulario para guardar los datos -->
-            <form method="post" action="mailto:metacinesmulticines@gmail.com?subject=Mensaje" class="form-contenedor_libro-reclamaciones">
+            <form method="post" action="mailto:metacinesmulticines@gmail.com?subject=Mensaje"
+                class="form-contenedor_libro-reclamaciones">
                 <h1 class="titulo_libro-reclamaciones">Libro de Reclamaciones</h1>
 
                 <!--DATOS DEL CONSUMIDOR RECLAMANTE-->
@@ -160,64 +162,70 @@
                         </select>
                     </div>
                 </article>
-                
+
                 <!--DETALLE DE SU RECLAMO-->
                 <article class="bordeseparador_libro-reclamaciones">
-                
+
                     <h2 class="subtitulo_libro-reclamaciones">Detalle de su reclamo</h2>
-                
+
                     <ul class="dtsr_libro-reclamaciones">
                         <li>
                             <label>
-                                <input class="input1_libro-reclamaciones" type="radio" name="tipo_reclamo" value="Queja" required>
+                                <input class="input1_libro-reclamaciones" type="radio" name="tipo_reclamo" value="Queja"
+                                    required>
                                 <div>
                                     <h3 style="margin: 0;">Queja</h3>
-                                    <p style="margin: 0;">(Malestar o descontento respecto a la relación con el público)</p>
+                                    <p style="margin: 0;">(Malestar o descontento respecto a la relación con el público)
+                                    </p>
                                 </div>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input class="input1_libro-reclamaciones" type="radio" name="tipo_reclamo" value="Reclamo" required>
+                                <input class="input1_libro-reclamaciones" type="radio" name="tipo_reclamo"
+                                    value="Reclamo" required>
                                 <div>
                                     <h3 style="margin: 0;">Reclamo</h3>
-                                    <p style="margin: 0;">(Disconformidad relacionada a la calidad de productos y servicios)</p>
+                                    <p style="margin: 0;">(Disconformidad relacionada a la calidad de productos y
+                                        servicios)</p>
                                 </div>
                             </label>
                         </li>
                     </ul>
-                
+
                 </article>
 
 
                 <!--IDENTIFICACION DEL BIEN CONTRATADO-->
                 <article class="bordeseparador_libro-reclamaciones">
-                
+
                     <h2 class="subtitulo_libro-reclamaciones">Identificación del bien contratado</h2>
-                
+
                     <ul class="idb_libro-reclamaciones">
                         <li>
                             <label>
-                                <input class="input1_libro-reclamaciones" type="radio" name="bien_contratado" value="Productos" required>
+                                <input class="input1_libro-reclamaciones" type="radio" name="bien_contratado"
+                                    value="Productos" required>
                                 <h3>Productos</h3>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input class="input1_libro-reclamaciones" type="radio" name="bien_contratado" value="Servicios" required>
+                                <input class="input1_libro-reclamaciones" type="radio" name="bien_contratado"
+                                    value="Servicios" required>
                                 <h3>Servicios</h3>
                             </label>
                         </li>
                     </ul>
-                
+
                 </article>
 
                 <!--DETALLE DEL RECLAMO-->
                 <article class="bordeseparador_libro-reclamaciones">
-                
+
                     <h2 class="subtitulo_libro-reclamaciones">Detalle del reclamo</h2>
                     <textarea class="textarea-dtr_libro-reclamaciones" name="detalle_reclamo" required></textarea>
-                
+
                 </article>
 
                 <!--MONTO DEL RECLAMO-->
@@ -279,7 +287,7 @@
                         <li><img src="../img/qrcode-generado.png" alt="qrcode-generado"></li>
                     </ul>
                 </div>
-                
+
             </div>
         </div>
     </footer>

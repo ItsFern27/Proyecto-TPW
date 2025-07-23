@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.encabezado');
     const body = document.body;
-    const alwaysBlack = body.getAttribute('data-header') === 'black';
+    const alwaysBlack = body.getAttribute('data-header') == 'black';
   
     if (alwaysBlack) {
       header.style.backgroundColor = 'black';

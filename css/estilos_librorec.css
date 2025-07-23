@@ -8,6 +8,7 @@ navegador */
 * {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-sizing: border-box;
+    color: white;
 }
 
 body {
@@ -27,16 +28,30 @@ main {
 }
 
 input {
-    height: 42px;
-    width: 220px;
     font-size: 16px;
     padding-inline: 10px;
     font-family: Arial;
     background-color: #6b6b6b42;
     border: 1px solid #74696900;
-    color: white;
     transition: 0.3s;
 }
+
+/*Cambiar el estilo al autofill*/
+/* Estilo oscuro para el autocompletado */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #222 inset !important;
+    box-shadow: 0 0 0px 1000px #222 inset !important;
+    -webkit-text-fill-color: #fff !important;
+    color: #fff !important;
+    border: 1px solid #444 !important;
+}
+
+/* Estado de error para inputs vacíos */
+input:invalid {
+    border: 2px solid #e74c3c !important;
+    background-color: #4b1a1a !important;
+}
+
 
 select {
     height: 42px;
@@ -46,7 +61,6 @@ select {
     font-family: Arial;
     background-color: #6b6b6b42;
     border: 1px solid #74696900;
-    color: white;
     transition: 0.3s;
 }
 
@@ -65,13 +79,18 @@ select {
 
 
 /*<+-- Sección Contacto --+>*/
+.Titulo_general-LR {
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
 .section_libro-reclamaciones {
     background-color: #5757574e;
     box-shadow: 0 8px 15px rgb(0, 0, 0);
     width: 950px;
     min-height: fit-content;
-    margin-block: 60px;
     margin-inline: 30px;
+
     padding-block: 50px;
     padding-inline: 60px;
     display: flex;
@@ -86,15 +105,14 @@ select {
 
 
 .titulo_libro-reclamaciones {
-    color: black;
+    text-align: center;
     font-size: 50px;
     font-weight: bold;
     margin: 0;
 }
 
 .subtitulo_libro-reclamaciones {
-    color: rgb(75, 75, 75);
-    font-size: 25px;
+    font-size: 1.5rem;
 }
 
 /* Borde Separador de Secciones */
@@ -110,12 +128,12 @@ select {
     border-radius: 30px;
     cursor: pointer;
     background-color: black;
-    color: aliceblue;
     width: 150px;
     height: 50px;
     font-weight: bold;
     font-size: 16px;
     transition: .3s;
+    margin: auto;
 }
 
 .btnform_libro-reclamaciones:hover {
@@ -123,45 +141,57 @@ select {
     border-radius: 30px;
     cursor: pointer;
     background-color: rgb(163, 163, 163);
-    color: aliceblue;
     width: 150px;
     height: 50px;
     font-weight: bold;
     font-size: 16px;
 }
 
-
-
 /* ------- Datos del consumidor reclamante ------- */
+.dcr_libro-reclamaciones {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem 0px;
+}
 
 .dcr_libro-reclamaciones input {
     border: 1px solid rgba(0, 0, 0, 0.356);
-    border-radius: 20px;
     align-items: center;
     justify-content: center;
-    width: 130px;
-    height: 30px;
-
+    width: 200px;
+    height: 40px;
 }
 
 .dcr_libro-reclamaciones select {
-    border-radius: 20px;
     background: rgba(0, 0, 0, 0.158);
     width: 130px;
-    height: 30px;
+    height: 40px;
+}
+
+#direccion {
+    width: 500px;
+    height: 100px;
 }
 
 /* - Zona donde se registro el Caso - */
+.zrc_libro-reclamaciones {
+    display: flex;
+    justify-content: space-around;
+}
+
 .zrc_libro-reclamaciones select {
-    border-radius: 20px;
     background: rgba(0, 0, 0, 0.158);
-    width: 130px;
-    height: 30px;
+    width: 230px;
+    height: 40px;
 }
 
 /*Para los input tipo bolita*/
-.input1_libro-reclamaciones {
+input[type="radio"] {
+    accent-color: black;
+    width: 20px;
+    height: 20px;
     margin-right: 10px;
+
 }
 
 
@@ -169,8 +199,8 @@ select {
 
 .dtsr_libro-reclamaciones {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 10px;
+    margin: 10px;
 }
 
 .dtsr_libro-reclamaciones label {
@@ -178,12 +208,21 @@ select {
     align-items: center;
 }
 
+.dtsr_libro-reclamaciones h3 {
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+.dtsr_libro-reclamaciones p {
+    margin: 10px;
+    font-size: 1rem;
+}
 
 /* ------- Identificacion del Bien Contratado ------- */
 .idb_libro-reclamaciones {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 10px;
+    margin: 10px;
 }
 
 .idb_libro-reclamaciones label {
@@ -196,8 +235,11 @@ select {
 .textarea-dtr_libro-reclamaciones {
     border: 1px solid rgba(0, 0, 0, 0.356);
     background: rgba(255 255 255 / .1);
+    font-size: 10px;
+    padding: 10px;
     resize: none;
-    width: 450px;
+    width: 100%;
+    box-sizing: border-box;
     height: 150px;
 }
 
@@ -227,126 +269,54 @@ select {
     font-size: 20px;
 }
 
-
-/*=======================  MEDIA HORIZONTAL =======================*/
-@media (orientation: landscape) and (max-width: 1000px) {
+@media (max-width: 1000px) {
+   
+    
+    
     .section_libro-reclamaciones {
-        width: auto;
-    }
-}
-
-@media (orientation: landscape) and (max-width: 650px) {
-    .textarea-dtr_libro-reclamaciones {
         width: 100%;
-    }
-}
+        padding-inline: 20px;
 
-@media (orientation: landscape) and (max-width: 550px) {
-    .section_libro-reclamaciones {
-        padding-block: 35px;
-        padding-inline: 40px;
     }
 
-    .titulo_libro-reclamaciones {
-        font-size: 40px;
-        text-align: center;
+    .dcr_libro-reclamaciones input, select {
+        width: 100px;
+        font-size: 10px;
     }
 
-    .subtitulo_libro-reclamaciones {
-        font-size: 20px;
+    .zrc_libro-reclamaciones {
+        flex-direction: column;
     }
 
-    .bordeseparador_libro-reclamaciones div p {
-        font-size: 15px;
+    .zrc_libro-reclamaciones select {
+        width: 100%;
+        margin: 10px 0px;
+
     }
 
-    .dtsr_libro-reclamaciones li label div h3 {
-        font-size: 18px;
+    .dtsr_libro-reclamaciones label {
+        margin: 10px 0px;
     }
-}
 
-/*=======================  MEDIA VERTICAL =======================*/
-@media (orientation: portrait) {
-    .section_libro-reclamaciones {
-        width: auto;
+    .idb_libro-reclamaciones label {
+        margin: 10px 0px;
     }
 
     .textarea-dtr_libro-reclamaciones {
         width: 100%;
+        box-sizing: border-box;
     }
-}
-
-@media (orientation: portrait) and (max-width: 550px) {
-    .titulo_libro-reclamaciones {
-        font-size: 40px;
-        text-align: center;
+    .input-monto_libro-reclamaciones{
+        padding: 10px;
+        margin: 10px;
+        width: 100%;
+        box-sizing: border-box;
     }
-
-    .subtitulo_libro-reclamaciones {
-        font-size: 20px;
+    .input-monto_libro-reclamaciones input{
+        align-items: start;
     }
-
-    .bordeseparador_libro-reclamaciones div p {
-        font-size: 15px;
+    .btnform_libro-reclamaciones{
+        width: 100%;   
     }
 
-    .dtsr_libro-reclamaciones li label div h3 {
-        font-size: 18px;
-    }
-}
-
-@media (orientation: portrait) and (max-width: 480px) {
-    .section_libro-reclamaciones {
-        padding-block: 35px;
-        padding-inline: 40px;
-    }
-
-    .titulo_libro-reclamaciones {
-        font-size: 40px;
-        text-align: center;
-    }
-
-    .subtitulo_libro-reclamaciones {
-        font-size: 23px;
-    }
-
-    .bordeseparador_libro-reclamaciones div p {
-        font-size: 15px;
-    }
-
-    .dtsr_libro-reclamaciones li label div h3 {
-        font-size: 16px;
-    }
-
-    .idb_libro-reclamaciones {
-        font-size: 14px;
-    }
-}
-
-@media (orientation: portrait) and (max-width: 440px) {
-    .section_libro-reclamaciones {
-        padding-block: 25px;
-        padding-inline: 30px;
-    }
-
-    .titulo_libro-reclamaciones {
-        font-size: 35px;
-        text-align: center;
-    }
-
-    .subtitulo_libro-reclamaciones {
-        font-size: 23px;
-    }
-
-    .bordeseparador_libro-reclamaciones div p {
-        font-size: 15px;
-    }
-
-    .dtsr_libro-reclamaciones li label div h3 {
-        font-size: 16px;
-    }
-
-    .idb_libro-reclamaciones {
-        font-size: 14px;
-    }
 }

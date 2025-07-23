@@ -1,53 +1,164 @@
+/* ==== CONTENEDOR PRINCIPAL ==== */
+.contenedor-cine {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-inline: 10vw;
+  margin-block: 5vh;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex-wrap: wrap; /* para evitar overflow */
+}
 
-    .contenedor-cine {
-        display: flex;
-        align-items: flex-start;
-        gap: 30px;
+.contenedor-cine > div:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
 
-        margin-inline: 10.4vw;
-        margin-block: 5vh;
-        background-color: white;
-        border-radius: 30px;
-        padding-block: 35px;
-        padding-inline: 55px;
+/* ==== IMÁGENES DE LOS CINES ==== */
+.img-cines {
+  width: 100%;
+  max-width: 500px; /* en desktop no pasa de 500px */
+  height: auto; 
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #444;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
 
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* opcional, da un efecto elegante */
-    }
+/* ==== LADO DERECHO DEL CINE ==== */
+.lado-derecho {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 100%;
+  text-align: justify;
+}
 
-    .contenedor-cine > div:first-child {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
+/* ==== BOTONES DEL MENÚ DE CADA CINE ==== */
+.menu-cine {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
-    .lado-derecho {
-      display: flex;
-      flex-direction: column; /* hace que el menú esté arriba y el contenido abajo */
-      flex-grow: 1;         /* ❗ Hace que este lado se expanda sin afectar la imagen */
-      max-width: calc(100% - 320px); /* ❗ Asegura que no desborde por la imagen */
-    }
+.menu-cine button {
+  flex: 1 1 calc(33% - 10px); /* tres en fila en escritorio */
+  min-width: 100px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+  transition: 0.3s;
+}
 
-    .img-cines {
-      width: 400px;
-      height: 300px;
-      object-fit: cover; /* recorta para encajar sin deformar */
-      flex-shrink: 0;       /* ❗ Impide que la imagen se encoja si hay poco espacio */
-      object-fit: cover;    /* Recorta bien si la imagen no tiene proporción exacta */
-    }
+.menu-cine button:hover {
+  background: #bf6e6e;
+  transform: scale(1.05);
+}
 
-    #menu {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    button {
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-    #contenido {
-      border: 1px solid #ccc;
-      padding: 20px;
-      min-height: 150px;
-      max-width: 100%;      /* ❗ No deja que se pase del espacio disponible */
-      overflow-wrap: break-word;
-    }
+/* ==== CONTENIDO DESPLEGADO ==== */
+.contenido {
+  border: 1px solid #ccc;
+  padding: 15px;
+  overflow-x: auto; /* scroll horizontal si tabla es muy ancha */
+}
+
+.contenido p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ==== TABLAS ==== */
+.cines-horarios {
+  width: 100%;
+  background-color: azure;
+  border-collapse: collapse;
+  border-radius: 10px;
+  margin: 20px 0;
+  border: 1px solid #444;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.cines-horarios th,
+.cines-horarios td {
+  padding: 12px;
+  border: 1px solid #bf6e6e;
+  word-wrap: break-word;
+}
+
+.cines-horarios th {
+  background-color: #68a5ef;
+  color: #000;
+}
+
+/* ==== TEXTO GRANDE OPCIONAL ==== */
+.cines-tbltext {
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 20px;
+  color: rgb(29, 28, 28);
+  display: flex;
+  justify-content: center;
+}
+
+/* ==== BOTONES EXTRA (POR SI SE USAN EN OTRO LUGAR) ==== */
+.btn-horario {
+  margin-top: 20px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn-horario:hover {
+  background-color: #bf6e6e;
+  transform: scale(1.1);
+}
+
+/* ==== RESPONSIVE ==== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .contenedor-cine {
+    flex-direction: column;
+    margin-inline: 5vw;
+    padding: 20px;
+  }
+
+  .menu-cine button {
+    flex: 1 1 calc(50% - 10px); /* dos por fila */
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .contenedor-cine {
+    margin-inline: 3vw;
+    gap: 15px;
+  }
+
+  .menu-cine button {
+    flex: 1 1 100%; /* uno por fila */
+  }
+
+  .cines-tbltext {
+    font-size: 1.2rem;
+  }
+}

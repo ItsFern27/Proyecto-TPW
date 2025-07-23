@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function mostrarContenido(boton, seccion) {
+function mostrarContenido(boton, seccion, lat, lng, nombreCine) {
   const contenedor = boton.closest('.lado-derecho');
   const contenido = contenedor.querySelector('.contenido');
 
@@ -65,8 +65,22 @@ function mostrarContenido(boton, seccion) {
     `;
   } else if (seccion === 'mapa') {
     contenido.innerHTML = `
-      <br><br><h2>Mapa del Cine</h2>
-      <img src="../img/map1.png" alt="Mapa del Cine" style="max-width:100%; height:auto; border:1px solid #ccc;" />
+      <h2>Mapa del Cine</h2>
+      <div id="mapaCine" style="height:300px; width:100%; border-radius:10px;"></div>
     `;
+
+    // Esperamos a que el div exista
+    setTimeout(() => {
+      const coords = [lat, lng];
+      const map = L.map('mapaCine').setView(coords, 15);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+      }).addTo(map);
+
+      L.marker(coords).addTo(map)
+        .bindPopup(`<b>${nombreCine}</b><br>Aquí está el cine.`)
+        .openPopup();
+    }, 100);
   }
 }

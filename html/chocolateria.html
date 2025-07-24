@@ -43,7 +43,7 @@
             <a href="cines.html">CINES</a>
             <a href="chocolateria.html" class="activo">CHOCOLATERÍA</a>
             <a href="venta_corporativa.html">VENTA CORPORATIVA</a>
-            <a href="#">PROMOCIONES</a>
+            
         </nav>
         <!--Parte derecha del cuadro-->
         <div class="acciones">
@@ -124,23 +124,54 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1000;">
-        <div style="display: flex; flex-direction: column; width: 100%; height: 83vh; max-width: fit-content; max-height: fit-content; padding: 30px; border-radius: 20px; background-color: white; margin: 5vh; font-family: Arial; align-items: center; justify-content: center;">
+        <div
+            style="display: flex; flex-direction: column; width: 100%; height: 83vh; max-width: fit-content; max-height: fit-content; padding: 30px; border-radius: 20px; background-color: white; margin: 5vh; font-family: Arial; align-items: center; justify-content: center;">
             <article class="article-chocolateria">
                 <h2>Compra de chocolatería en línea</h2>
             </article>
-            
+
             <div>
-                <label for="productoSelect">Selecciona un producto</label>
-                <select id="productoSelect" onchange="mostrarPrecio()">
-                    <option value="0">Selecciona</option>
-                    <option value="10">Manzana</option>
-                    <option value="20">Pera</option>
-                    <option value="30">Mango</option>
-                </select>
-            </div>            
-            <p style="margin-bottom: 30px;" id="precioTotal">Precio : 0 soles</p>
-            <button class="lista-chocolateria_button">Pasar a compra final</button>
-        </div>
+                <div class="selector-producto">
+                    <label for="productoSelect" class="selector-label">Selecciona un producto</label>
+                    <select id="productoSelect" class="selector-dropdown">
+                        <option value="">Selecciona</option>
+                        <option value="Combo 2 Gaseosas con Canchita Mediana|20">Combo 2 Gaseosas con Canchita Mediana
+                        </option>
+                        <option value="Combo Gaseosa con Hotdog|11">Combo Gaseosa con Hotdog</option>
+                        <option value="Combo Gaseosa con Churro|9.5">Combo Gaseosa con Churro</option>
+                        <option value="Canchita Popcorn Tamaño Grande|13">Canchita Popcorn Tamaño Grande</option>
+                        <option value="Canchita Popcorn Tamaño Mediano|10">Canchita Popcorn Tamaño Mediano</option>
+                        <option value="Canchita Popcorn Tamaño Pequeño|6.5">Canchita Popcorn Tamaño Pequeño</option>
+                        <option value="Gaseosa (De cualquier sabor)|7">Gaseosa (De cualquier sabor)</option>
+                        <option value="Churro con manjar blanco|3">Churro con manjar blanco</option>
+                        <option value="Pan con Hotdog|4.5">Pan con Hotdog</option>
+                    </select>
+                    <button id="agregarProducto" class="boton-agregar">Agregar producto</button>
+                </div>
+
+                <!-- Carrito visual -->
+                <div id="carritoVisual" class="carrito-container">
+                    <div class="carrito-header">
+                        <h3 class="carrito-titulo">
+                            <i class="fa-solid fa-cart-shopping carrito-icono"></i> Carrito de Compras
+                        </h3>
+                        <button id="vaciarCarrito" class="carrito-vaciar">Vaciar carrito</button>
+                    </div>
+
+                    <ul id="listaProductos" class="carrito-lista">
+                        <!-- productos agregados dinámicamente -->
+                    </ul>
+
+                    <p id="precioTotal" class="carrito-total">Total: S/ 0.00</p>
+
+                    <div class="carrito-botones">
+                        <button id="calcularTotal" class="boton-calcular">Calcular Total</button>
+                        <button id="finalizarCompra" class="boton-finalizar" style="display: none;">Finalizar
+                            compra</button>
+                    </div>
+                </div>
+
+            </div>
     </section>
 
     <!-- =============== MAIN =============== -->
@@ -154,7 +185,8 @@
                 <h1>Chocolatería</h1> <br>
                 <p>Saborea la experiencia completa del cine con nuestros exquísitos productos y los mejores combos.
                     (disponible en todos nuestros cines)</p> <br>
-                <button id="chocolateria_compra" class="lista-chocolateria_button">Comprar dulcería en línea <i class="fa-solid fa-wifi"></i></button>
+                <button id="chocolateria_compra" class="lista-chocolateria_button">Comprar dulcería en línea <i
+                        class="fa-solid fa-wifi"></i></button>
             </article>
             <article>
                 <ul class="lista-chocolateria">
@@ -274,7 +306,7 @@
 
     <!--script de encabezado-->
     <script src="../javascript/funcionamiento.js"></script>
-    
+
 </body>
 
 </html>

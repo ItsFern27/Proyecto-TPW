@@ -1,0 +1,322 @@
+/* GENERAL */
+/* Para posicionar correctamente el cuerpo (header, main y footer)*/
+/* Oderna el header, main y footer en forma de filas,
+luego se modifica para que lo haga como columnas, y
+finalmente que ocupe el espacio de toda la ventana del
+navegador */
+
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 83vh;
+
+}
+
+input {
+    font-size: 16px;
+    padding-inline: 10px;
+    font-family: Arial;
+    background-color: #6b6b6b42;
+    border: 1px solid #74696900;
+    transition: 0.3s;
+}
+
+/*Cambiar el estilo al autofill*/
+/* Estilo oscuro para el autocompletado */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #222 inset !important;
+    box-shadow: 0 0 0px 1000px #222 inset !important;
+    -webkit-text-fill-color: #fff !important;
+    color: #fff !important;
+    border: 1px solid #444 !important;
+}
+
+/* Estado de error para inputs vacíos */
+input:invalid {
+    border: 2px solid #e74c3c !important;
+    background-color: #4b1a1a !important;
+}
+
+
+select {
+    height: 42px;
+    width: 220px;
+    font-size: 16px;
+    padding-inline: 10px;
+    font-family: Arial;
+    background-color: #6b6b6b42;
+    border: 1px solid #74696900;
+    transition: 0.3s;
+}
+
+/* BODY DE LA PAGINA DE CONTACTO*/
+
+.fondo_libro-reclamaciones {
+    background: linear-gradient(rgba(0, 0, 0, 0.473)), url(../img/preview.jpg);
+    background-size: cover;
+    /* Cubre toda la pagina con la imagen (creo q también la estira) */
+    background-attachment: fixed;
+    background-position: center;
+    /* Hace que la img quede estática */
+    margin: 0;
+    /* Corta los bordes de los lados que tenía el cuadro de navegación */
+}
+
+
+/*<+-- Sección Contacto --+>*/
+.Titulo_general-LR {
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.section_libro-reclamaciones {
+    background-color: #5757574e;
+    box-shadow: 0 8px 15px rgb(0, 0, 0);
+    width: 950px;
+    min-height: fit-content;
+    margin-inline: 30px;
+
+    padding-block: 50px;
+    padding-inline: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-contenedor_libro-reclamaciones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.titulo_libro-reclamaciones {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.subtitulo_libro-reclamaciones {
+    font-size: 1.5rem;
+}
+
+/* Borde Separador de Secciones */
+.bordeseparador_libro-reclamaciones {
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.349);
+    padding-bottom: 10px;
+}
+
+/* Botón del Form */
+.btnform_libro-reclamaciones {
+    border: none;
+    margin-top: 3%;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: black;
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: .3s;
+    margin: auto;
+}
+
+.btnform_libro-reclamaciones:hover {
+    margin-top: 3%;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: rgb(163, 163, 163);
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* ------- Datos del consumidor reclamante ------- */
+.dcr_libro-reclamaciones {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem 0px;
+}
+
+.dcr_libro-reclamaciones input {
+    border: 1px solid rgba(0, 0, 0, 0.356);
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+}
+
+.dcr_libro-reclamaciones select {
+    background: rgba(0, 0, 0, 0.158);
+    width: 130px;
+    height: 40px;
+}
+
+#direccion {
+    width: 500px;
+    height: 100px;
+}
+
+/* - Zona donde se registro el Caso - */
+.zrc_libro-reclamaciones {
+    display: flex;
+    justify-content: space-around;
+}
+
+.zrc_libro-reclamaciones select {
+    background: rgba(0, 0, 0, 0.158);
+    width: 230px;
+    height: 40px;
+}
+
+/*Para los input tipo bolita*/
+input[type="radio"] {
+    accent-color: black;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+}
+
+
+/* ------- Detalle de su Reclamo ------- */
+
+.dtsr_libro-reclamaciones {
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+.dtsr_libro-reclamaciones label {
+    display: flex;
+    align-items: center;
+}
+
+.dtsr_libro-reclamaciones h3 {
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+.dtsr_libro-reclamaciones p {
+    margin: 10px;
+    font-size: 1rem;
+}
+
+/* ------- Identificacion del Bien Contratado ------- */
+.idb_libro-reclamaciones {
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+.idb_libro-reclamaciones label {
+    display: flex;
+    align-items: center;
+}
+
+
+/* ------- Detalle del Reclamo ------- */
+.textarea-dtr_libro-reclamaciones {
+    border: 1px solid rgba(0, 0, 0, 0.356);
+    background: rgba(255 255 255 / .1);
+    font-size: 10px;
+    padding: 10px;
+    resize: none;
+    width: 100%;
+    box-sizing: border-box;
+    height: 150px;
+}
+
+
+/* ------- Monto del Reclamo ------- */
+.monto_libro-reclamaciones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.input-monto_libro-reclamaciones {
+    border: 1px solid rgba(0, 0, 0, 0.356);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.input-monto_libro-reclamaciones input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+   
+    
+    
+    .section_libro-reclamaciones {
+        width: 100%;
+        padding-inline: 20px;
+
+    }
+
+    .dcr_libro-reclamaciones input, select {
+        width: 100px;
+        font-size: 10px;
+    }
+
+    .zrc_libro-reclamaciones {
+        flex-direction: column;
+    }
+
+    .zrc_libro-reclamaciones select {
+        width: 100%;
+        margin: 10px 0px;
+
+    }
+
+    .dtsr_libro-reclamaciones label {
+        margin: 10px 0px;
+    }
+
+    .idb_libro-reclamaciones label {
+        margin: 10px 0px;
+    }
+
+    .textarea-dtr_libro-reclamaciones {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .input-monto_libro-reclamaciones{
+        padding: 10px;
+        margin: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .input-monto_libro-reclamaciones input{
+        align-items: start;
+    }
+    .btnform_libro-reclamaciones{
+        width: 100%;   
+    }
+
+}

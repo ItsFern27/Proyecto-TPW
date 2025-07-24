@@ -1,3 +1,6 @@
+*{
+  font-family: 'Franklin Gothic Medium';
+}
 /* ==== CONTENEDOR PRINCIPAL ==== */
 .contenedor-cine {
   display: flex;
@@ -70,12 +73,22 @@
 .contenido {
   border: 1px solid #ccc;
   padding: 15px;
-  overflow-x: auto; /* scroll horizontal si tabla es muy ancha */
+  overflow-x: hidden;      /* No permitir scroll horizontal */
+  max-width: 100%;         /* No crecer más del ancho */
+  word-wrap: break-word;   /* Romper texto largo */
+  white-space: normal;     /* Ajustar a varias líneas */
 }
 
 .contenido p {
   font-size: 1rem;
   line-height: 1.5;
+  max-width: 100%;         /* Que nunca se salga */
+  word-break: break-word;  /* Por si hay palabras MUY largas */
+}
+
+.contenido h2,
+.contenido table {
+  max-width: 100%;         /* Que tablas y títulos no desborden */
 }
 
 /* ==== TABLAS ==== */
@@ -130,6 +143,23 @@
 .btn-horario:hover {
   background-color: #bf6e6e;
   transform: scale(1.1);
+}
+
+/* ==== MAPA DENTRO DEL CONTENIDO ==== */
+.contenido .mapa {
+  width: 100%;          /* que siempre ocupe todo el ancho disponible */
+  min-height: 300px;    /* altura mínima para que no quede pequeño */
+  height: 400px;        /* altura cómoda para escritorio */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* En móviles, reducimos un poco la altura */
+@media (max-width: 600px) {
+  .contenido .mapa {
+    height: 250px;
+  }
 }
 
 /* ==== RESPONSIVE ==== */

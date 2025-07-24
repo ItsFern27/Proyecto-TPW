@@ -13,14 +13,14 @@
     <title>MetaCines</title> <!-- Título del sitio -->
 
     <link rel="stylesheet" href="../css/estilos.css"> <!-- Estilos generales -->
-    <link rel="stylesheet" href="../css/estilos_librorec2.css"> <!-- Estilos para contacto -->
+    <link rel="stylesheet" href="../css/estilos_librorec.css"> <!-- Estilos para contacto -->
     <link rel="stylesheet" href="../css/estilo_login.css"> <!-- Estilos para login -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Íconos Font Awesome -->
 
 </head>
 
-<body class="fondo_libro-reclamaciones">
+<body data-header="black" class="fondo_libro-reclamaciones">
 
     <!-- =============== HEADER =============== -->
     <header class="encabezado">
@@ -29,7 +29,8 @@
         <input type="checkbox" id="hamburguesa" hidden>
         <label for="hamburguesa" class="icono-hamburguesa">&#9776;</label> <!-- Icono de menú hamburguesa -->
         <div class="logo-titulo">
-            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine" class="logo-mini"></a>
+            <a href="../html/index.html"><img src="../img/logoMETACINES-removebg-preview.png" alt="Logo MetaCine"
+                    class="logo-mini"></a>
             <h1 class="titulo"><a href="../html/index.html">Multicines</a></h1>
         </div>
 
@@ -41,15 +42,15 @@
             <a href="cines.html">CINES</a>
             <a href="chocolateria.html">CHOCOLATERÍA</a>
             <a href="venta_corporativa.html">VENTA CORPORATIVA</a>
-            <a href="#">PROMOCIONES</a>
+
         </nav>
         <!--Parte derecha del cuadro-->
         <div class="acciones">
             <label for="modal-toggle-login" class="btn-socio">¿Eres
                 socio?</label><!--el label actua como boton y activa el modal-->
 
-            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png" alt="Perfil"
-                    class="perfil-icon"></label>
+            <label for="modal-toggle-login"><img src="../img/pngtree-user-icon-png-image_4479727-removebg-preview.png"
+                    alt="Perfil" class="perfil-icon"></label>
         </div>
     </header>
 
@@ -116,12 +117,17 @@
         <section class="section_libro-reclamaciones">
 
             <!-- Se crea un formulario para guardar los datos -->
-            <form method="post" action="mailto:metacinesmulticines@gmail.com?subject=Mensaje" class="form-contenedor_libro-reclamaciones">
-                <h1 class="titulo_libro-reclamaciones">Libro de Reclamaciones</h1>
+            <form method="post" action="mailto:metacinesmulticines@gmail.com?subject=Mensaje"
+                class="form-contenedor_libro-reclamaciones">
+                <div class="Titulo_general-LR">
+                    <h1 class="titulo_libro-reclamaciones">Libro de Reclamaciones</h1>
+                    <h2 class="subtitulo_libro-reclamaciones"> Metacines Multicines - RUC: 20000000183</h2>
+                    <h2 class="titulo-reclamaciones"> GERENTE GENERAL: Comandante choclito </h2>
+                </div>
 
                 <!--DATOS DEL CONSUMIDOR RECLAMANTE-->
                 <article class="bordeseparador_libro-reclamaciones">
-                    <h2 class="subtitulo_libro-reclamaciones">Datos del consumidor reclamante</h2>
+                    <h2 class="subtitulo_libro-reclamaciones">1. Datos del consumidor reclamante</h2>
 
                     <div class="dcr_libro-reclamaciones">
                         <input type="text" name="Nombres" placeholder="Nombres" required>
@@ -134,15 +140,17 @@
                             <option value="op1">DNI</option>
                             <option value="op2">C. Extranjería</option>
                         </select>
-                        <input type="tel" name="numero_de_documento" placeholder="" required>
+                        <input type="tel" name="numero_de_documento" placeholder="ej. 60759303" required>
+                    </div>
+                    <div class="dcr_libro-reclamaciones">
+                    <input id="direccion" type="text" name="direccion" placeholder="Direccion" required>
                     </div>
                 </article>
 
                 <!--ZONA DONDE SE REGISTRO EL CASO-->
                 <article class="bordeseparador_libro-reclamaciones">
                     <div>
-                        <h2 class="subtitulo_libro-reclamaciones">Zona donde se registró el caso</h2>
-                        <p>Selecciona los datos exactos donde se registró el caso</p>
+                        <h2 class="subtitulo_libro-reclamaciones">2. Zona donde se registró el caso</h2>
                     </div>
                     <div class="zrc_libro-reclamaciones">
                         <select name="departamento" required>
@@ -160,64 +168,68 @@
                         </select>
                     </div>
                 </article>
-                
+
                 <!--DETALLE DE SU RECLAMO-->
                 <article class="bordeseparador_libro-reclamaciones">
-                
-                    <h2 class="subtitulo_libro-reclamaciones">Detalle de su reclamo</h2>
-                
+
+                    <h2 class="subtitulo_libro-reclamaciones">3. Detalle de su reclamo</h2>
+
                     <ul class="dtsr_libro-reclamaciones">
                         <li>
                             <label>
-                                <input class="input1_libro-reclamaciones" type="radio" name="tipo_reclamo" value="Queja" required>
+                                <input type="radio" name="tipo_reclamo" value="Queja" required>
                                 <div>
                                     <h3 style="margin: 0;">Queja</h3>
-                                    <p style="margin: 0;">(Malestar o descontento respecto a la relación con el público)</p>
+                                    <p style="margin: 0;">(Malestar o descontento respecto a la relación con el público)
+                                    </p>
                                 </div>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input class="input1_libro-reclamaciones" type="radio" name="tipo_reclamo" value="Reclamo" required>
+                                <input type="radio" name="tipo_reclamo" value="Reclamo" required>
                                 <div>
                                     <h3 style="margin: 0;">Reclamo</h3>
-                                    <p style="margin: 0;">(Disconformidad relacionada a la calidad de productos y servicios)</p>
+                                    <p style="margin: 0;">(Disconformidad relacionada a la calidad de productos y
+                                        servicios)</p>
                                 </div>
                             </label>
                         </li>
                     </ul>
-                
+
                 </article>
 
 
                 <!--IDENTIFICACION DEL BIEN CONTRATADO-->
                 <article class="bordeseparador_libro-reclamaciones">
-                
+
                     <h2 class="subtitulo_libro-reclamaciones">Identificación del bien contratado</h2>
-                
+
                     <ul class="idb_libro-reclamaciones">
                         <li>
                             <label>
-                                <input class="input1_libro-reclamaciones" type="radio" name="bien_contratado" value="Productos" required>
+                                <input class="input1_libro-reclamaciones" type="radio" name="bien_contratado"
+                                    value="Productos" required>
                                 <h3>Productos</h3>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input class="input1_libro-reclamaciones" type="radio" name="bien_contratado" value="Servicios" required>
+                                <input class="input1_libro-reclamaciones" type="radio" name="bien_contratado"
+                                    value="Servicios" required>
                                 <h3>Servicios</h3>
                             </label>
                         </li>
                     </ul>
-                
+
                 </article>
 
                 <!--DETALLE DEL RECLAMO-->
                 <article class="bordeseparador_libro-reclamaciones">
-                
+
                     <h2 class="subtitulo_libro-reclamaciones">Detalle del reclamo</h2>
                     <textarea class="textarea-dtr_libro-reclamaciones" name="detalle_reclamo" required></textarea>
-                
+
                 </article>
 
                 <!--MONTO DEL RECLAMO-->
@@ -227,7 +239,7 @@
                     <div class="monto_libro-reclamaciones">
                         <div class="input-monto_libro-reclamaciones">
                             <label>S/.</label>
-                            <input type="number" step="0.01" name="monto_reclamacion" placeholder="00.00" required>
+                            <input type="number" min="10" max="10000" step="1" name="monto_reclamacion" placeholder="00.00" >
                         </div>
                     </div>
 
@@ -279,10 +291,12 @@
                         <li><img src="../img/qrcode-generado.png" alt="qrcode-generado"></li>
                     </ul>
                 </div>
-                
+
             </div>
         </div>
     </footer>
+
+    <script src="../javascript/funcionamiento.js"></script>
 
 </body>
 

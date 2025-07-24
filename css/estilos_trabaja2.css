@@ -90,7 +90,6 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #5757574e;
-    
     box-shadow: 0 8px 15px rgb(0, 0, 0);
 }
 
@@ -191,21 +190,6 @@ main {
 .form_trabaja-button:hover {
     background-color: rgb(53, 53, 53);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (orientation: portrait) {
     .section_trabaja {

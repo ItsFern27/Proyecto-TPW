@@ -1,4 +1,5 @@
 
+
 window.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.lado-derecho').forEach(lado => {
         mostrarContenido(lado.querySelector('button'), 'descripcion');
@@ -11,7 +12,7 @@ function mostrarContenido(boton, seccion, lat, lng, nombreCine) {
 
   if (seccion === 'descripcion') {
     contenido.innerHTML = `
-      <br><br><p class="subtitulo"><strong>"MEGACINES"</strong>, <br>
+      <p class="subtitulo"><strong>"MEGACINES"</strong>, <br>
       ofrece una experiencia moderna y confortable para <br>
       disfrutar de las mejores películas. <br>
       Con salas amplias, proyección en 4K y sonido envolvente, <br> 

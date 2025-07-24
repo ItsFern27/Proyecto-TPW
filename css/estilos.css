@@ -17,7 +17,7 @@
    }
 
    .subtitulo {
-       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           font-family: 'Franklin Gothic Medium';
        font-size: 25px;
        font-weight: 600px;
        color: black;
@@ -86,29 +86,48 @@
        .menu {
            display: none;
            flex-direction: column;
-           background: #111;
+           background-color: #222;
+           padding: 0;
            position: absolute;
-           top: 0px;
-           left: 0;
-           width: 40%;
-           height: 1200px;
-           background-color: #000000;
+           top: 60px;
+           right: 0;
+           width: 100%;
+           border-radius: 0 0 10px 10px;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+           opacity: 0;
+           pointer-events: none;
+           transition: all 0.3s ease-in-out;
+           z-index: 1000;
+       }
+
+       #hamburguesa:checked~.menu {
+           display: flex;
+           opacity: 1;
+           pointer-events: auto;
+           padding: 10px 0;
+       }
+
+       .menu a {
+           color: white;
+           text-decoration: none;
+           padding: 15px 20px;
+           font-size: 1.5rem;
+           border-bottom: 1px solid #333;
+           transition: background 0.2s;
+       }
+
+       .menu a:last-child {
+           border-bottom: none;
+       }
+
+       .menu a:hover {
+           background-color: #333;
        }
 
        .encabezado {
            height: 56px;
        }
 
-       #hamburguesa:checked~.menu {
-           display: flex;
-           padding: 10px;
-       }
-
-       #hamburguesa:checked~.menu a {
-           padding: 5px;
-           margin-bottom: 100px;
-           font-size: 2rem;
-       }
 
        .icono-hamburguesa {
            display: block;
@@ -299,7 +318,7 @@
    .item-carrusel-descripcion {
 
        font-size: 2.5em;
-       font-family: Arial, Helvetica, sans-serif;
+       font-family: 'Franklin Gothic Medium';
        max-width: 90%;
    }
 
@@ -309,7 +328,7 @@
        text-decoration: none;
        font-size: 1.5em;
        font-weight: bold;
-       font-family: Arial, Helvetica, sans-serif;
+       font-family: 'Franklin Gothic Medium';
        padding: 1em 2.5em;
        margin-top: 2.5em;
        display: inline-block;
@@ -374,7 +393,7 @@
        pointer-events: none;
        /* para que el click pase a los botones */
    }
-   
+
    .flecha-carrusel button {
        background: none;
        border: none;
@@ -497,7 +516,7 @@
        margin: 0;
        padding: 0;
        box-sizing: border-box;
-
+       font-family: 'Franklin Gothic Medium';
    }
 
    .footer {
@@ -553,7 +572,7 @@
        height: 230px;
        clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%);
    }
-   
+
    .social-link a {
        display: inline-block;
        min-height: 40px;
@@ -573,31 +592,6 @@
        color: #000000;
    }
 
-   .contenido {
-  border: 1px solid #ccc;
-  padding: 15px;
-  overflow-x: auto; /* mantiene scroll para tablas grandes */
-  max-width: 100%; /* asegura que no se pase del ancho */
-    }
-
-    .contenido p {
-    text-align: left;   /* distribuye el texto bonito */
-    word-wrap: break-word; /* si hay palabras MUY largas, las corta */
-    overflow-wrap: break-word; /* hace lo mismo pero mejor soportado */
-    white-space: normal; /* evita que se mantenga todo en una sola línea */
-    font-size: 1rem; /* tamaño base legible */
-    line-height: 1.6; /* mejora la lectura */
-    }
-
-
-
-    @media (max-width: 600px) {
-    .contenido p {
-        font-size: 0.95rem; /* achica un poquito en móvil */
-    }
-    }
-
-
    @media (max-width:1000px) {
        .footer-row {
            text-align: center;
@@ -610,3 +604,96 @@
    }
 
 
+
+   .cinestbl {
+       background-color: azure;
+       border-radius: 10px;
+       margin: 30px;
+       /*espaciado mejor*/
+       object-fit: cover;
+       border: 1px solid #444;
+       transition: transform 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   }
+
+   /* clase de las tablas de los cines */
+   .img-cines {
+       width: 500px;
+       height: 300px;
+       border-radius: 10px;
+       margin: 30px;
+       /*espaciado mejor*/
+       object-fit: cover;
+       border: 1px solid #444;
+       transition: transform 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   }
+
+   /* clase de text de las tablas de cine.html */
+   .cines-tbltext {
+       text-align: center;
+       vertical-align: middle;
+       width: 500px;
+       height: 300px;
+       font-size: 30px;
+       padding: 0 20px;
+       color: rgb(29, 28, 28);
+       display: flex;
+       justify-content: center;
+       padding-top: 60px;
+   }
+
+   /* clase de configuración de los elementos de las tablas de cines.html */
+   .horario-configposicion-textbtn {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: flex-start;
+       gap: 20px;
+   }
+
+   /* clase de text de las tablas de cines.html */
+   .btn-horario {
+       margin-top: 20px;
+       font-size: 20px;
+       padding: 10px 20px;
+       background-color: #333;
+       color: white;
+       border: none;
+       border-radius: 8px;
+       cursor: pointer;
+       transition: .3s;
+   }
+
+   /* clase de boton de la tabla en cines.html */
+   .btn-horario:hover {
+       background-color: #bf6e6e;
+       transform: scale(1.1);
+   }
+
+   /* clase de tabla horarios del modal cine1 en cines.html */
+   .cines-horarios {
+       background-color: azure;
+       width: 90%;
+       padding: 8px;
+       text-align: center;
+       border-collapse: collapse;
+       border-radius: 10px;
+       margin: 30px;
+       /*espaciado mejor*/
+       border: 1px solid #444;
+       transition: transform 0.3s ease;
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   }
+
+   /* Opcional: Estilos para celdas */
+   .cines-horarios th,
+   .cines-horarios td {
+       padding: 12px;
+       border: 1px solid #bf6e6e;
+   }
+
+   /* clase de color de las tablas del horario de cines.html */
+   .cines-horarios th {
+       background-color: #68a5ef;
+   }

@@ -49,7 +49,7 @@ input:-webkit-autofill {
 /* Estado de error para inputs vacíos */
 input:invalid {
     border: 2px solid #e74c3c !important;
-    background-color: #4b1a1a !important;
+    
 }
 
 

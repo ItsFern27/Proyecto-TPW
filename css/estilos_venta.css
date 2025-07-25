@@ -6,21 +6,12 @@ main {
     font-family: Arial;
 }
 
-
-
-
-
-
-
 /* >>>>>>>>>>>>| IMAGEN |<<<<<<<<<<<< */
 .venta-imagen {
     width: 100%;
     height: 100%;
     display: block;
 }
-
-
-
 
 /* >>>>>>>>>>>>| SECCION INFO |<<<<<<<<<<<< */
 .venta-section {
@@ -65,11 +56,11 @@ main {
     gap: 20px;
 }
 
-.venta-Ventas_Corporativas-Parrafo-titulo > h1 {
+.venta-Ventas_Corporativas-Parrafo-titulo>h1 {
     font-size: 2.5rem;
 }
 
-.venta-Ventas_Corporativas-Parrafo-titulo > p {
+.venta-Ventas_Corporativas-Parrafo-titulo>p {
     font-size: 1.25rem;
     letter-spacing: 1px;
     color: #474747;
@@ -228,4 +219,4 @@ main {
     }
 
 
-}    
+}

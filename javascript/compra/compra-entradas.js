@@ -60,7 +60,7 @@ Asientos: ${asientosSeleccionados.join(", ")}
 Total: S/ ${(asientosSeleccionados.length * 15).toFixed(2)}`;
   };
 
- // Paso 4: Confirmar compra
+  // Paso 4: Confirmar compra
   btnConfirmar.onclick = function () {
     resumenSection.style.display = "none";
     // Mostrar formulario de pago
@@ -69,7 +69,7 @@ Total: S/ ${(asientosSeleccionados.length * 15).toFixed(2)}`;
     document.getElementById("comprobante-section").style.display = "none";
   };
 
-    // Paso 5: Pago y comprobante
+  // Paso 5: Pago y comprobante
   document.getElementById("btn-pagar").onclick = function () {
     const nombre = document.getElementById("nombre-tarjeta").value.trim();
     const numero = document.getElementById("numero-tarjeta").value.trim();

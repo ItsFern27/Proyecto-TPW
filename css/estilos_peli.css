@@ -212,7 +212,6 @@
     position: relative;
     background-color: #000;
     padding: 20px;
-    border-radius: 10px;
     text-align: center;
 }
 
@@ -284,7 +283,6 @@
     background-color: #000000;
     color: white;
     border: none;
-    border-radius: 5px;
     padding: 8px 12px;
     margin: 5px;
     cursor: pointer;
@@ -300,7 +298,6 @@
 .imagen-pelicula img {
     height: 400px;
     /* Mantiene la proporción de la imagen */
-    border-radius: 10px;
     /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* Sombra para la imagen */
@@ -311,7 +308,6 @@
 #compra-entradas {
   background: #fff;
   padding: 48px 38px 38px 38px;
-  border-radius: 22px;
   max-width: 540px;
 
   margin: 100px auto 48px auto;
@@ -347,7 +343,6 @@
   width: 100%;
   padding: 14px 14px;
   margin-top: 6px;
-  border-radius: 8px;
   border: 2px solid #bdbdbd;
   font-size: 1.15rem;
   background: #fafafa;
@@ -355,16 +350,15 @@
   transition: border 0.2s;
 }
 #compra-entradas select:focus {
-  border: 2px solid #4caf50;
+  border: 2px solid #6a6a6a;
   outline: none;
 }
 
 /* Botones generales */
 #compra-entradas button {
-  background: linear-gradient(90deg, #4caf50 60%, #388e3c 100%);
+  background: linear-gradient(90deg, #463e3e 60%, #000000 100%);
   color: #fff;
   border: none;
-  border-radius: 9px;
   padding: 16px 0;
   font-size: 1.25rem;
   font-weight: 700;
@@ -378,7 +372,7 @@
   letter-spacing: 1px;
 }
 #compra-entradas button:hover {
-  background: linear-gradient(90deg, #388e3c 60%, #4caf50 100%);
+  background: linear-gradient(90deg, #000000 60%, #515050 100%);
   transform: translateY(-2px) scale(1.04);
 }
 
@@ -406,7 +400,6 @@
   height: 48px;
   background: #e0e0e0;
   border: 2.5px solid #bdbdbd;
-  border-radius: 10px;
   text-align: center;
   line-height: 48px;
   font-weight: 700;
@@ -417,8 +410,8 @@
   transition: background 0.2s, border 0.2s, color 0.2s;
 }
 .asiento.selected {
-  background: #4caf50;
-  border: 2.5px solid #388e3c;
+  background: black;
+  border: 2.5px solid black;
   color: #fff;
 }
 .asiento.occupied {
@@ -430,10 +423,9 @@
 .pantalla-cine {
   text-align: center;
   margin-bottom: 18px;
-  background: #388e3c;
+  background: black;
   color: #fff;
   font-weight: bold;
-  border-radius: 8px;
   padding: 10px 0;
   letter-spacing: 2px;
   font-size: 1.18rem;
@@ -446,7 +438,6 @@
 /* Resumen de compra */
 #resumen-detalle {
   background: #f5f5f5;
-  border-radius: 10px;
   padding: 18px 22px;
   margin: 16px 0 22px 0;
   color: #333;
@@ -458,7 +449,7 @@
 /* Mensaje final */
 #mensaje-final {
   text-align: center;
-  color: #388e3c;
+  color: black;
   font-size: 1.35rem;
   font-weight: 800;
   margin-top: 18px;
@@ -480,7 +471,6 @@
 /* ==== Estilos mejorados para el formulario de pago con tarjeta ==== */
 #pago-section {
   background: #f8fafc;
-  border-radius: 16px;
   box-shadow: 0 4px 18px rgba(76,175,80,0.10);
   padding: 32px 22px 22px 22px;
   margin-top: 22px;
@@ -494,7 +484,7 @@
 }
 
 #pago-section h3 {
-  color: #388e3c;
+  color: black;
   text-align: center;
   margin-bottom: 22px;
   font-size: 1.35rem;
@@ -514,7 +504,6 @@
 #form-pago input[type="text"] {
   width: 100%;
   padding: 13px 16px;
-  border-radius: 8px;
   border: 2px solid #bdbdbd;
   background: #fff;
   font-size: 1.15rem;
@@ -524,16 +513,15 @@
 }
 
 #form-pago input[type="text"]:focus {
-  border: 2px solid #4caf50;
+  border: 2px solid #000000;
   outline: none;
   box-shadow: 0 0 0 2px #c8e6c9;
 }
 
 #btn-pagar {
-  background: linear-gradient(90deg, #4caf50 60%, #388e3c 100%);
+  background: linear-gradient(90deg, black 60%, black 100%);
   color: #fff;
   border: none;
-  border-radius: 9px;
   padding: 16px 0;
   font-size: 1.25rem;
   font-weight: 700;
@@ -546,7 +534,7 @@
 }
 
 #btn-pagar:hover {
-  background: linear-gradient(90deg, #388e3c 60%, #4caf50 100%);
+  background: linear-gradient(90deg, black 60%, black 100%);
   transform: translateY(-2px) scale(1.04);
 }
 
@@ -566,10 +554,9 @@
 /* Estilo del botón Comprar Entradas*/
 .btn-comprar-entradas {
   display: inline-block;
-  background: linear-gradient(90deg, #4caf50 60%, #388e3c 100%);
+  background: linear-gradient(90deg, black 60%, black 100%);
   color: #fff;
   border: none;
-  border-radius: 7px;
   padding: 14px 32px;
   font-size: 1.2rem;
   font-weight: 700;
@@ -581,6 +568,6 @@
   transition: background 0.2s, transform 0.2s;
 }
 .btn-comprar-entradas:hover {
-  background: linear-gradient(90deg, #388e3c 60%, #4caf50 100%);
+  background: linear-gradient(90deg, black 60%, black 100%);
   transform: translateY(-2px) scale(1.03);
 }
